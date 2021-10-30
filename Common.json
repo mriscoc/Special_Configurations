@@ -1,0 +1,675 @@
+{
+"Configuration_adv.h" : [
+  {
+    "op": "InsertAfter",
+    "searchfor": "#pragma once",
+    "newline": "\n// Created by configs generator for Professional firmware\n// https://github.com/mriscoc/Marlin_Ender3v2"
+  }, 
+  {
+    "op": "CustomVal",
+    "searchfor": "WATCH_TEMP_PERIOD",
+    "value": "40",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "THERMAL_PROTECTION_BED_PERIOD",
+    "value": "180",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "WATCH_BED_TEMP_PERIOD",
+    "value": "180",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "FAN_MIN_PWM",
+    "value": "50",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "QUICK_HOME",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ADAPTIVE_STEP_SMOOTHING",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "InsertAfter",
+    "searchfor": "#if ENABLED\\(ENCODER_RATE_MULTIPLIER\\)",
+    "newline": "  #define ENCODER_5X_STEPS_PER_SEC    30  // Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "ENCODER_10X_STEPS_PER_SEC",
+    "value": "80",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "ENCODER_100X_STEPS_PER_SEC",
+    "value": "130",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "InsertAfter",
+    "searchfor": "#endif // HAS_LCD_MENU",
+    "newline": "\n#define LCD_SET_PROGRESS_MANUALLY",
+    "comment": "MRiscoC Allow display feedback of host printing through GCode M73"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "POWER_LOSS_RECOVERY",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "PLR_ENABLED_DEFAULT",
+    "mask": "false",
+    "value": "true",
+    "comment": "MRiscoC Enable Power Loss Recovery by default"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "SDCARD_SORT_ALPHA",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "SDSORT_LIMIT",
+    "value": "60",
+    "comment": "MRiscoC Increase number of sorted items"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "SDSORT_GCODE",
+    "mask": "false",
+    "value": "true",
+    "comment": "MRiscoC Allows disable file sort by M34 g-code"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "SDSORT_USES_RAM",
+    "mask": "false",
+    "value": "true",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "SDSORT_CACHE_NAMES",
+    "mask": "false",
+    "value": "true",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "SDSORT_DYNAMIC_RAM",
+    "mask": "false",
+    "value": "true",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "LONG_FILENAME_HOST_SUPPORT",
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "SCROLL_LONG_FILENAMES",
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "SD_ABORT_ON_ENDSTOP_HIT",
+    "comment": "MRiscoC Allows emergency stop of SD printing by hitting any end-stop"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "BINARY_FILE_TRANSFER",
+    "comment": "MRiscoC Enabled for easy firmware upgrade"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "NO_SD_HOST_DRIVE",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "BABYSTEPPING",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "BABYSTEP_WITHOUT_HOMING",
+    "comment": "MRiscoC Enabled BbS without home"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "BABYSTEP_ALWAYS_AVAILABLE",
+    "comment": "MRiscoC Active BbS always"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BABYSTEP_MULTIPLICATOR_Z",
+    "value": "40",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ARC_P_CIRCLES",
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "TX_BUFFER_SIZE",
+    "value": "32",
+    "comment": "MRiscoC Advanced ok support"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "EMERGENCY_PARSER",
+    "comment": "MRiscoC Enabled instantaneous response to emergency commands"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ADVANCED_OK",
+    "comment": "MRiscoC better management of buffer by host"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "FWRETRACT",
+    "comment": "MRiscoC Enabled support for firmware based retract"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ADVANCED_PAUSE_FEATURE",
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "FILAMENT_CHANGE_UNLOAD_FEEDRATE",
+    "value": "20",
+    "comment": "MRiscoC Increased filament unload speed"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "FILAMENT_CHANGE_FAST_LOAD_FEEDRATE",
+    "value": "12",
+    "comment": "MRiscoC Increased filament load speed"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "PARK_HEAD_ON_PAUSE",
+    "comment": "MRiscoC Enabled park head when pause command was issued"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "FILAMENT_LOAD_UNLOAD_GCODES",
+    "comment": "MRiscoC Enabled load/unload Filament G-codes"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "SQUARE_WAVE_STEPPING",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "M115_GEOMETRY_REPORT",
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "HOST_ACTION_COMMANDS",
+    "comment": "MRiscoC Enabled actions from host"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "HOST_PROMPT_SUPPORT",
+    "comment": "MRiscoC Enabled responses from host"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "CANCEL_OBJECTS",
+    "comment": "MRiscoC Enabled M486 to skip objects"
+  }
+],
+"Configuration.h" : [
+  {
+    "op": "InsertAfter",
+    "searchfor": "#pragma once",
+    "newline": "\n// Created by configs generator for Professional firmware\n// https://github.com/mriscoc/Marlin_Ender3v2"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "STRING_CONFIG_H_AUTHOR",
+    "mask" : "\".*\"",
+    "value": "\"Miguel A. Risco-Castillo (MRiscoC)\""
+  },
+  {
+    "op": "Enable",
+    "searchfor": "CUSTOM_VERSION_FILE"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "SERIAL_PORT",
+    "value": "1",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BAUDRATE",
+    "value": "250000",
+    "comment": "MRiscoC increase serial performace"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "BAUD_RATE_GCODE",
+    "comment": "MRiscoC Enables change the baudrate"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "TEMP_SENSOR_BED",
+    "value": "1",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "HEATER_0_MINTEMP",
+    "value": "0",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BED_MINTEMP",
+    "value": "0",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BED_MAXTEMP",
+    "value": "120",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kp",
+    "value": "22.89",
+    "comment": "MRiscoC Stock Ender3v2 PID"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Ki",
+    "value": "1.87",
+    "comment": "MRiscoC Stock Ender3v2 PID"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kd",
+    "value": " 70.18",
+    "comment": "MRiscoC Stock Ender3v2 PID"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "PIDTEMPBED",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKp",
+    "value": "462.10",
+    "comment": "MRiscoC Stock Ender3v2 PID"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKi",
+    "value": " 85.47",
+    "comment": "MRiscoC Stock Ender3v2 PID"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKd",
+    "value": "624.59",
+    "comment": "MRiscoC Stock Ender3v2 PID"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "EXTRUDE_MINTEMP",
+    "value": "185",
+    "comment": "MRiscoC Customizable by menu"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "EXTRUDE_MAXLENGTH",
+    "value": "1000",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "THERMAL_PROTECTION_CHAMBER",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "X_DRIVER_TYPE",
+    "mask" : ".*",
+    "value": "TMC2208_STANDALONE",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Y_DRIVER_TYPE",
+    "mask" : ".*",
+    "value": "TMC2208_STANDALONE",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Z_DRIVER_TYPE",
+    "mask" : ".*",
+    "value": "TMC2208_STANDALONE",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "E0_DRIVER_TYPE",
+    "mask" : ".*",
+    "value": "TMC2208_STANDALONE",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ENDSTOP_INTERRUPTS_FEATURE",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
+    "mask": "{.*}",
+    "value":"{ 80, 80, 400, 93 }",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "DEFAULT_MAX_FEEDRATE",
+    "mask": "{.*}",
+    "value":"{ 500, 500, 20, 75 }",
+    "comment": "MRiscoC increased Z speed, increased E speed for BMG"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "DEFAULT_MAX_ACCELERATION",
+    "mask": "{.*}",
+    "value":"{ 1000, 1000, 200, 2500 }",
+    "comment": "MRiscoC Acceleration limits increased"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_ACCELERATION",
+    "value": "500",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_RETRACT_ACCELERATION",
+    "value": "500",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_TRAVEL_ACCELERATION",
+    "value": "1000",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "CLASSIC_JERK",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "S_CURVE_ACCELERATION",
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PROBING_MARGIN",
+    "value": "25",
+    "comment": "MRiscoC center probe area"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "XY_PROBE_FEEDRATE",
+    "mask": "\\(.*\\)",
+    "value":"(200*60)",
+    "comment": "MRiscoC increase travel speed between probes"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Z_PROBE_FEEDRATE_FAST",
+    "mask": "\\(.*\\)",
+    "value":"(16*60)",
+    "comment": "MRiscoC increase probe Z speed"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "INVERT_Y_DIR",
+    "mask": "true",
+    "value":"false",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "INVERT_Z_DIR",
+    "mask": "false",
+    "value":"true",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "HOME_AFTER_DEACTIVATE",
+    "comment": "MRiscoC Enabled for safety"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_BED_SIZE",
+    "value": "230",
+    "comment": "MRiscoC Max usable bed size"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_BED_SIZE",
+    "value": "230",
+    "comment": "MRiscoC Max usable bed size"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "X_MAX_POS",
+    "mask": ".+",
+    "value": "248",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Y_MAX_POS",
+    "mask": ".+",
+    "value": "231",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_MAX_POS",
+    "value": "250",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "FILAMENT_RUNOUT_SENSOR",
+    "comment": "MRiscoC Enabled runout sensor support"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "FILAMENT_RUNOUT_DISTANCE_MM",
+    "value": "25",
+    "comment": "MRiscoC Customizable by menu"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "PREHEAT_BEFORE_LEVELING",
+    "comment": "MRiscoC Heatting to compensate thermal expansions"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "GRID_MAX_POINTS_X",
+    "value": "5",
+    "comment": "MRiscoC Customizable by menu"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "EXTRAPOLATE_BEYOND_GRID",
+    "comment": "MRiscoC Disabled for better precision at edges"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "MESH_INSET",
+    "value": "25",
+    "comment": "MRiscoC Center mesh"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "HOMING_FEEDRATE_MM_M",
+    "mask": "{.*}",
+    "value":"{ (50*60), (50*60), (10*60) }",
+    "comment": "MRiscoC Homming speed-up"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "EEPROM_SETTINGS",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "EEPROM_AUTO_INIT",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_1_TEMP_HOTEND",
+    "value": "195"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_1_TEMP_BED",
+    "value": "60"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_1_FAN_SPEED",
+    "value": "128"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_2_TEMP_HOTEND",
+    "value": "230"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_2_TEMP_BED",
+    "value": " 80"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_2_FAN_SPEED",
+    "value": "128"
+  },
+  {
+    "op": "InsertAfter",
+    "searchfor": "#define PREHEAT_2_FAN_SPEED",
+    "newline": "\n#define PREHEAT_3_LABEL       \"CUSTOM\"\n#define PREHEAT_3_TEMP_HOTEND 240\n#define PREHEAT_3_TEMP_BED     60\n#define PREHEAT_3_FAN_SPEED   128"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "NOZZLE_PARK_FEATURE",
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "NOZZLE_PARK_POINT",
+    "mask": "{.*}",
+    "value":"{ (X_BED_SIZE + 10), (Y_MAX_POS - 10), 20 }",
+    "comment": "MRiscoC Customizable by menu"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "SDSUPPORT",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "ENCODER_PULSES_PER_STEP",
+    "value": "4",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "ENCODER_STEPS_PER_MENU_ITEM",
+    "value": "1",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "INDIVIDUAL_AXIS_HOMING_SUBMENU"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "LCD_FEEDBACK_FREQUENCY_DURATION_MS",
+    "value": "2",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "LCD_FEEDBACK_FREQUENCY_HZ",
+    "value": "5000",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "DWIN_CREALITY_LCD_ENHANCED"
+  }
+],
+"Version.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "SHORT_BUILD_VERSION",
+    "mask" : "\".*\"",
+    "value": "\"2.0.9.3 MRiscoC\""
+  },
+  {
+    "op": "InsertAfter",
+    "searchfor": "#define STRING_DISTRIBUTION_DATE",
+    "newline": "\n#define STRING_DISTRIBUTION_DATE __DATE__\n#define STRING_DISTRIBUTION_TIME __TIME__"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "MACHINE_NAME",
+    "mask": ".+",
+    "value": "\"Ender 3v2\""
+  },
+  {
+    "op": "Custom",
+    "searchfor": "SOURCE_CODE_URL",
+    "mask": ".+",
+    "value": "\"github.com/mriscoc/Marlin_Ender3v2\""
+  },
+  {
+    "op": "Custom",
+    "searchfor": "WEBSITE_URL",
+    "mask": ".+",
+    "value": "\"github.com/mriscoc/Marlin_Ender3v2/wiki\""
+  }
+]   
+}

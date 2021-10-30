@@ -1,0 +1,15 @@
+{
+"Configuration_adv.h" : [
+],
+"Configuration.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "MOTHERBOARD",
+    "mask" : ".*",
+    "value": "BOARD_CREALITY_V427",
+    "comment": "Board v4.2.7"
+  }
+],
+"Version.h" : [
+]   
+}
