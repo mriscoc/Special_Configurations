@@ -57,9 +57,13 @@
     "comment": "Ender3v2 Configs"
   },
   {
-    "op": "InsertAfter",
-    "searchfor": "#endif // HAS_LCD_MENU",
-    "newline": "\n#define LCD_SET_PROGRESS_MANUALLY",
+    "op": "Enable",
+    "searchfor": "STATUS_MESSAGE_SCROLLING",
+    "comment": "MRiscoC Allow scrolling of large status messages"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "LCD_SET_PROGRESS_MANUALLY",
     "comment": "MRiscoC Allow display feedback of host printing through GCode M73"
   },
   {
@@ -646,7 +650,7 @@
     "op": "Custom",
     "searchfor": "SHORT_BUILD_VERSION",
     "mask" : "\".*\"",
-    "value": "\"2.0.9.3 MRiscoC\""
+    "value": "\"2.0.9.4 MRiscoC\""
   },
   {
     "op": "InsertAfter",
