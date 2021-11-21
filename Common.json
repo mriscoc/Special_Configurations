@@ -58,6 +58,11 @@
   },
   {
     "op": "Enable",
+    "searchfor": "SOUND_MENU_ITEM",
+    "comment": "MRiscoC Enable Sound Menu Item"
+  },
+  {
+    "op": "Enable",
     "searchfor": "STATUS_MESSAGE_SCROLLING",
     "comment": "MRiscoC Allow scrolling of large status messages"
   },
@@ -606,6 +611,11 @@
     "mask": "{.*}",
     "value":"{ (X_BED_SIZE + 10), (Y_MAX_POS - 10), 20 }",
     "comment": "MRiscoC Customizable by menu"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "PRINTCOUNTER",
+    "comment": "MRiscoC Enable Print Statistics"
   },
   {
     "op": "Enable",
