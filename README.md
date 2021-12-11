@@ -35,7 +35,7 @@ special build that have a hotend volcano, bltouch and 4.2.2 board it is necessar
 
 Then, request to the `CreateConfigs.py` to build a configuration with `Generate(['422','BLTouch','Volcano'])`; the last "Volcano" will overwrite the necessary values in the configuration file.
 
-The `CreateConfigs.py` script supports five basic operation over the configuration files:
+The `CreateConfigs.py` script supports five basic operations over the configuration files:
 
 > **InsertAfter**: allows to insert text after match a given mask.  
 > **Custom**: allows to replace text  after match a given mask.  
