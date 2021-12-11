@@ -222,6 +222,13 @@
     "comment": "MRiscoC Enabled load/unload Filament G-codes"
   },
   {
+    "op": "Custom",
+    "searchfor": "CHOPPER_TIMING",
+    "mask": "CHOPPER_DEFAULT_12V",
+    "value": "CHOPPER_DEFAULT_24V",
+    "comment": "MRiscoC Correct value for UART mode drivers"
+  },
+  {
     "op": "Enable",
     "searchfor": "SQUARE_WAVE_STEPPING",
     "comment": "Ender3v2 Configs"
