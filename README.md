@@ -34,3 +34,31 @@ special build that have a hotend volcano, bltouch and 4.2.2 board it is necessar
 ```
 
 Then, request to the `CreateConfigs.py` to build a configuration with `Generate(['422','BLTouch','Volcano'])`; the last "Volcano" will overwrite the necessary values in the configuration file.
+
+The `CreateConfigs.py` script supports five basic operation over the configuration files:
+
+> **InsertAfter**: allows to insert text after match a given mask.  
+> **Custom**: allows to replace text  after match a given mask.  
+> **CustomVal**: allows to replace numeric values.  
+> **Enable**: allows to enable a feature.  
+> **Disable**: allows to disable a feature.  
+
+For example to change the default tramming points you can write in the "Configuration_adv.h" section of the json the command:
+```json
+  {
+    "op": "Custom",
+    "searchfor": "TRAMMING_POINT_XY",
+    "mask": "{.*}",
+    "value":"{ { 29, 29 }, { 299, 29 }, { 299, 299 }, { 29, 299 } }"
+  }
+```
+
+For disable Multiple probing you can write in the "Configuration.h" section of the json the command:
+```json
+  {
+    "op": "Disable",
+    "searchfor": "MULTIPLE_PROBING",
+    "comment": "Custom disable"
+  }
+```
+The comment line is optional. Masks are in regex format, use the provided json as examples.
