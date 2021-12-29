@@ -573,6 +573,11 @@
     "comment": "Ender3v2 Configs"
   },
   {
+    "op": "Enable",
+    "searchfor": "EEPROM_INIT_NOW",
+    "comment": "MRiscoC Reset EEPROM on first boot"
+  },
+  {
     "op": "CustomVal",
     "searchfor": "PREHEAT_1_TEMP_HOTEND",
     "value": "195"
