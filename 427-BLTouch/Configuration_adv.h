@@ -352,6 +352,10 @@
   #define WATCH_COOLER_TEMP_INCREASE            3 // Degrees Celsius
 #endif
 
+#if ANY(THERMAL_PROTECTION_HOTENDS, THERMAL_PROTECTION_BED, THERMAL_PROTECTION_CHAMBER, THERMAL_PROTECTION_COOLER)
+  #define THERMAL_PROTECTION_VARIANCE_MONITOR     // Detect a sensor malfunction preventing temperature updates
+#endif
+
 #if ENABLED(PIDTEMP)
   // Add an experimental additional term to the heater power, proportional to the extrusion speed.
   // A well-chosen Kc value should add just enough power to melt the increased material volume.
@@ -2979,6 +2983,9 @@
   //#define CHOPPER_TIMING_Z2 CHOPPER_TIMING_Z
   //#define CHOPPER_TIMING_Z3 CHOPPER_TIMING_Z
   //#define CHOPPER_TIMING_Z4 CHOPPER_TIMING_Z
+  //#define CHOPPER_TIMING_I  CHOPPER_TIMING
+  //#define CHOPPER_TIMING_J  CHOPPER_TIMING
+  //#define CHOPPER_TIMING_K  CHOPPER_TIMING
   //#define CHOPPER_TIMING_E  CHOPPER_TIMING        // For Extruders (override below)
   //#define CHOPPER_TIMING_E1 CHOPPER_TIMING_E
   //#define CHOPPER_TIMING_E2 CHOPPER_TIMING_E

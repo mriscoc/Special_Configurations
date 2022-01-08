@@ -665,6 +665,11 @@
   {
     "op": "Enable",
     "searchfor": "DWIN_CREALITY_LCD_ENHANCED"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "FAN_SOFT_PWM",
+    "comment": "Ender3v2 Configs"
   }
 ],
 "Version.h" : [
