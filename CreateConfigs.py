@@ -4,8 +4,8 @@
 # Configurations generator script for the Professional Firmware
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Marlin_Configurations
-# version: 2.1
-# date: 2021/10/30
+# version: 2.2
+# date: 2022/01/19
 # ------------------------------------------------------------------------------
 
 import sys
@@ -37,6 +37,16 @@ class Customize:
       quit()
       #return lines
 
+  def Replace(self) :
+    global lines
+    lines, n = re.subn(self.searchfor, self.value, lines)
+    if n :
+      if verbose: print('>>>> found',n,self.searchfor)
+    else:
+      print('>>>> Not found '+self.searchfor)
+      quit()
+    return lines
+  
   def Custom(self) :
     global lines
     self.mask = '('+self.mask+')'
@@ -45,7 +55,7 @@ class Customize:
     if n :
       if verbose: print('>>>> found',n,self.searchfor)
     else:
-      print('>>>> Not found '+self.searchfor)
+      print('>>>> Not found '+self.searchfor+' mask:'+self.mask)
       quit()
     return lines
 
@@ -95,7 +105,7 @@ def ProcessLines(jsonfile, config):
     j.close()
   return lines
 
-def CustomizeFile(SourceDir, TargetDir, Mode, config) :  
+def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :  
   global lines
   Source = SourceDir+config
   Target = TargetDir+config
@@ -114,8 +124,12 @@ def CustomizeFile(SourceDir, TargetDir, Mode, config) :
         quit()
       lines = ProcessLines(JsonFile, config)
 
-    lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+'Ender 3v2 '+' '.join(Mode)+'"')
-    lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+' '.join(Mode)+', based on bugfix-2.0.x"')
+    if Machine_Name :
+      lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+Machine_Name+'"')
+      lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION "based on bugfix-2.0.x"')
+    else :
+      lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+'Ender 3v2 '+' '.join(Mode)+'"')
+      lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+' '.join(Mode)+', based on bugfix-2.0.x"')
     with open(Target, "w", encoding="utf8") as of:
       of.write(lines)
       of.close()
@@ -125,24 +139,28 @@ def CustomizeFile(SourceDir, TargetDir, Mode, config) :
     print('Source file:', Source,'not found')
     quit()
 
-def Generate(Mode) :
-  TargetDir = '-'.join(Mode)
-  CustomizeFile(SourceDir, TargetDir+'/', Mode, 'Configuration.h')
-  CustomizeFile(SourceDir, TargetDir+'/', Mode, 'Configuration_adv.h')
-  CustomizeFile(SourceDir, TargetDir+'/', Mode, 'Version.h')
+def Generate(Machine_Name, Mode) :
+  if Machine_Name:
+    TargetDir = Machine_Name+'/'
+  else:
+    TargetDir = '-'.join(Mode)+'/'
+  CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Configuration.h')
+  CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Configuration_adv.h')
+  CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Version.h')
 
 print('Configurations generator script for the Professional Firmware')
 print('Author: Miguel A. Risco Castillo (c) 2021\n')
 
 SourceDir = 'Original Configs/'
 
-Generate(['422','BLTouch'])
-Generate(['422','BLTouch','Volcano'])
-Generate(['422','ManualMesh'])
-Generate(['422','ManualMesh','Volcano'])
-Generate(['427','BLTouch'])
-Generate(['427','BLTouch','Volcano'])
-Generate(['427','ManualMesh'])
-Generate(['427','ManualMesh','Volcano'])
+Generate('', ['422','ManualMesh'])
+Generate('', ['422','ManualMesh','Volcano'])
+Generate('', ['422','BLTouch'])
+Generate('', ['422','BLTouch','Volcano'])
+Generate('', ['427','ManualMesh'])
+Generate('', ['427','ManualMesh','Volcano'])
+Generate('', ['427','BLTouch'])
+Generate('', ['427','BLTouch','Volcano'])
+Generate('Ender 3S1', ['S1'])
 
 

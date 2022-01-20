@@ -1,71 +1,81 @@
 {
 "Configuration_adv.h" : [
   {
+    "op": "CustomVal",
+    "searchfor": "E0_AUTO_FAN_PIN",
+    "value": "FAN1_PIN",
+    "comment": "Ender3S1 Configs"
+  },
+  {
     "op": "Enable",
     "searchfor": "BLTOUCH_HS_MODE",
-    "comment": "MRiscoC Enabled for BLTouch version"
-  },
-  {
-    "op": "Enable",
-    "searchfor": "ASSISTED_TRAMMING",
-    "comment": "MRiscoC Enabled for BLTouch version"
-  },
-  {
-    "op": "Custom",
-    "searchfor": "TRAMMING_POINT_XY",
-    "mask": "{.*}",
-    "value":"{ { 29, 29 }, { 199, 29 }, { 199, 199 }, { 29, 199 } }",
-    "comment": "MRiscoC Enabled for BLTouch version"
-  },
-  {
-    "op": "CustomVal",
-    "searchfor": "TRAMMING_SCREW_THREAD",
-    "value": "40",
-    "comment": "MRiscoC Enabled for BLTouch version"
-  },
-  {
-    "op": "Enable",
-    "searchfor": "BACKLASH_COMPENSATION",
-    "comment": "MRiscoC Enable"
-  },
-  {
-    "op": "Enable",
-    "searchfor": "BACKLASH_GCODE",
-    "comment": "MRiscoC Enable"
+    "comment": "MRiscoC BLTouch High Speed mode enabled"
   },
   {
     "op": "Enable",
     "searchfor": "BABYSTEP_ZPROBE_OFFSET",
-    "comment": "MRiscoC Enabled for BLTouch version"
+    "comment": "MRiscoC Enabled"
   },
   {
     "op": "Enable",
     "searchfor": "G29_RETRY_AND_RECOVER",
-    "comment": "MRiscoC Enabled for BLTouch version"
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "Replace",
+    "searchfor": "Ender3v2",
+    "value": "Ender3S1"
   }
 ],
 "Configuration.h" : [
   {
-    "op": "Disable",
-    "searchfor": "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
-    "comment": "MRiscoC Probe connected to BLTouch port"
+    "op": "Custom",
+    "searchfor": "MOTHERBOARD",
+    "mask" : ".*",
+    "value": "BOARD_CREALITY_V24S1_301",
+    "comment": "Ender 3S1 v301"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "X_MIN_ENDSTOP_INVERTING",
+    "mask" : "false",
+    "value": "true",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Y_MIN_ENDSTOP_INVERTING",
+    "mask" : "false",
+    "value": "true",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
+    "mask": "{.*}",
+    "value":"{ 80, 80, 400, 430 }"
   },
   {
     "op": "Enable",
+    "searchfor": "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Disable",
     "searchfor": "USE_PROBE_FOR_Z_HOMING",
-    "comment": "MRiscoC Probe connected to BLTouch port"
+    "comment": "Ender3S1 Configs"   
   },
   {
     "op": "Enable",
     "searchfor": "BLTOUCH",
-    "comment": "MRiscoC BLTouch version"
+    "comment": "Ender3S1 Configs"
   },
   {
     "op": "Custom",
     "searchfor": "NOZZLE_TO_PROBE_OFFSET",
     "mask": "{.*}",
-    "value":"{ -41.5, -7, 0 }",
-    "comment": "MRiscoC BLTouch offset for support: https://www.thingiverse.com/thing:4605354 (z-offset = -1.80 mm)"
+    "value":"{ -37, -39, -3 }",
+    "comment": "Ender3S1 Configs"
   },
   {
     "op": "Enable",
@@ -132,8 +142,41 @@
     "op": "Enable",
     "searchfor": "Z_SAFE_HOMING",
     "comment": "MRiscoC Homing Z at center of bed"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "FIL_RUNOUT_STATE",
+    "mask": "LOW",
+    "value":"HIGH",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "FIL_RUNOUT_PULLUP",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "FIL_RUNOUT_PULLDOWN",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Replace",
+    "searchfor": "Ender3v2",
+    "value": "Ender3S1"
   }
 ],
 "Version.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "MACHINE_NAME",
+    "mask": ".+",
+    "value": "\"Ender 3S1\""
+  },
+  {
+    "op": "Replace",
+    "searchfor": "Ender3v2",
+    "value": "Ender3S1"
+  }
 ]   
 }

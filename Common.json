@@ -24,6 +24,18 @@
     "comment": "Ender3v2 Configs"
   },
   {
+    "op": "Enable",
+    "searchfor": "HOTEND_IDLE_TIMEOUT",
+    "comment": "MRiscoC Disable heaters after timeout"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "HOTEND_IDLE_TIMEOUT_SEC",
+    "mask": "\\([0-9,*]+\\)",
+    "value": "(10*60)",
+    "comment": "MRiscoC 10 minutes for heaters timeout"
+  },
+  {
     "op": "CustomVal",
     "searchfor": "FAN_MIN_PWM",
     "value": "50",
@@ -77,13 +89,6 @@
     "comment": "Ender3v2 Configs"
   },
   {
-    "op": "Custom",
-    "searchfor": "PLR_ENABLED_DEFAULT",
-    "mask": "false",
-    "value": "true",
-    "comment": "MRiscoC Enable Power Loss Recovery by default"
-  },
-  {
     "op": "Enable",
     "searchfor": "SDCARD_SORT_ALPHA",
     "comment": "Ender3v2 Configs"
@@ -129,6 +134,11 @@
   },
   {
     "op": "Enable",
+    "searchfor": "LONG_FILENAME_WRITE_SUPPORT",
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "Enable",
     "searchfor": "SCROLL_LONG_FILENAMES",
     "comment": "MRiscoC Enabled"
   },
@@ -140,6 +150,11 @@
   {
     "op": "Enable",
     "searchfor": "BINARY_FILE_TRANSFER",
+    "comment": "MRiscoC Enabled for easy firmware upgrade"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "CUSTOM_FIRMWARE_UPLOAD",
     "comment": "MRiscoC Enabled for easy firmware upgrade"
   },
   {
@@ -193,6 +208,29 @@
     "op": "Enable",
     "searchfor": "FWRETRACT",
     "comment": "MRiscoC Enabled support for firmware based retract"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "FWRETRACT_AUTORETRACT",
+    "comment": "MRiscoC use slicer retract"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_LENGTH",
+    "value": "5",
+    "comment": "MRiscoC Bowden"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_FEEDRATE",
+    "value": "40",
+    "comment": "MRiscoC Bowden"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_RECOVER_FEEDRATE",
+    "value": "40",
+    "comment": "MRiscoC Bowden"
   },
   {
     "op": "Enable",
@@ -460,14 +498,14 @@
   {
     "op": "Custom",
     "searchfor": "XY_PROBE_FEEDRATE",
-    "mask": "\\(.*\\)",
+    "mask": "\\([0-9,*]+\\)",
     "value":"(200*60)",
     "comment": "MRiscoC increase travel speed between probes"
   },
   {
     "op": "Custom",
     "searchfor": "Z_PROBE_FEEDRATE_FAST",
-    "mask": "\\(.*\\)",
+    "mask": "\\([0-9,*]+\\)",
     "value":"(16*60)",
     "comment": "MRiscoC increase probe Z speed"
   },
