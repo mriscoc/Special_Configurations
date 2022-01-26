@@ -290,7 +290,12 @@
     "op": "Enable",
     "searchfor": "CANCEL_OBJECTS",
     "comment": "MRiscoC Enabled M486 to skip objects"
-  }
+  },
+  {
+    "op": "Replace",
+    "searchfor": "DWIN_CREALITY_LCD_ENHANCED",
+    "value": "DWIN_LCD_PROUI"
+  }  
 ],
 "Configuration.h" : [
   {
@@ -701,8 +706,9 @@
     "comment": "Ender3v2 Configs"
   },
   {
-    "op": "Enable",
-    "searchfor": "DWIN_CREALITY_LCD_ENHANCED"
+    "op": "InsertAfter",
+    "searchfor": "#define DWIN_CREALITY_LCD_ENHANCED",
+    "newline"  : "  #define DWIN_LCD_PROUI              // MRiscoC Enable ProUI"
   },
   {
     "op": "Enable",
@@ -732,13 +738,13 @@
     "op": "Custom",
     "searchfor": "SOURCE_CODE_URL",
     "mask": ".+",
-    "value": "\"github.com/mriscoc/Marlin_Ender3v2\""
+    "value": "\"github.com/mriscoc/Ender3v2\""
   },
   {
     "op": "Custom",
     "searchfor": "WEBSITE_URL",
     "mask": ".+",
-    "value": "\"github.com/mriscoc/Marlin_Ender3v2/wiki\""
+    "value": "\"github.com/mriscoc/Ender3v2/wiki\""
   }
 ]   
 }
