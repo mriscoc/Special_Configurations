@@ -25,16 +25,6 @@
   },
   {
     "op": "Enable",
-    "searchfor": "BACKLASH_COMPENSATION",
-    "comment": "MRiscoC Enable"
-  },
-  {
-    "op": "Enable",
-    "searchfor": "BACKLASH_GCODE",
-    "comment": "MRiscoC Enable"
-  },
-  {
-    "op": "Enable",
     "searchfor": "BABYSTEP_ZPROBE_OFFSET",
     "comment": "MRiscoC Enabled for BLTouch version"
   },

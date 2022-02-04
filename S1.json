@@ -22,6 +22,12 @@
     "comment": "MRiscoC Enabled"
   },
   {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_LENGTH",
+    "value": "1",
+    "comment": "MRiscoC Directdrive"
+  },
+  {
     "op": "Replace",
     "searchfor": "Ender3v2",
     "value": "Ender3S1"
@@ -53,7 +59,17 @@
     "op": "Custom",
     "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
     "mask": "{.*}",
-    "value":"{ 80, 80, 400, 430 }"
+    "value":"{ 80, 80, 400, 424.9 }"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_RETRACT_ACCELERATION",
+    "value": "800"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_TRAVEL_ACCELERATION",
+    "value": "500"
   },
   {
     "op": "Enable",
@@ -74,7 +90,7 @@
     "op": "Custom",
     "searchfor": "NOZZLE_TO_PROBE_OFFSET",
     "mask": "{.*}",
-    "value":"{ -37, -39, 0 }",
+    "value":"{ -31.80, -40.50, 0 }",
     "comment": "Ender3S1 Configs"
   },
   {
@@ -169,6 +185,56 @@
     "op": "CustomVal",
     "searchfor": "Z_MAX_POS",
     "value": "270"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_XJERK",
+    "value": "5"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_YJERK",
+    "value": "5"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_ZJERK",
+    "value": "0.3"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "GRID_MAX_POINTS_X",
+    "value": "4"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kp",
+    "value": "17.10"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Ki",
+    "value": "1.39"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kd",
+    "value": "52.79"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKp",
+    "value": "54.86"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKi",
+    "value": "10.06"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKd",
+    "value": "199.38"
   },
   {
     "op": "Replace",

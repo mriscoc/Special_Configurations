@@ -608,9 +608,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.89  // MRiscoC Stock Ender3S1 PID
-    #define DEFAULT_Ki   1.87  // MRiscoC Stock Ender3S1 PID
-    #define DEFAULT_Kd  70.18  // MRiscoC Stock Ender3S1 PID
+    #define DEFAULT_Kp  17.10  // MRiscoC Stock Ender3S1 PID
+    #define DEFAULT_Ki   1.39  // MRiscoC Stock Ender3S1 PID
+    #define DEFAULT_Kd  52.79  // MRiscoC Stock Ender3S1 PID
   #endif
 #endif // PIDTEMP
 
@@ -649,9 +649,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 462.10  // MRiscoC Stock Ender3S1 PID
-  #define DEFAULT_bedKi  85.47  // MRiscoC Stock Ender3S1 PID
-  #define DEFAULT_bedKd 624.59  // MRiscoC Stock Ender3S1 PID
+  #define DEFAULT_bedKp 54.86  // MRiscoC Stock Ender3S1 PID
+  #define DEFAULT_bedKi  10.06  // MRiscoC Stock Ender3S1 PID
+  #define DEFAULT_bedKd 199.38  // MRiscoC Stock Ender3S1 PID
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -935,7 +935,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 430 }  // Ender3S1 Configs
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 424.9 }  // Ender3S1 Configs
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -971,8 +971,8 @@
  *   M204 T    Travel Acceleration
  */
 #define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves  // Ender3S1 Configs
-#define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts  // Ender3S1 Configs
-#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves  // Ender3S1 Configs
+#define DEFAULT_RETRACT_ACCELERATION  800    // E acceleration for retracts  // Ender3S1 Configs
+#define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves  // Ender3S1 Configs
 
 /**
  * Default Jerk limits (mm/s)
@@ -984,8 +984,8 @@
  */
 #define CLASSIC_JERK  // Ender3S1 Configs
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 10.0
-  #define DEFAULT_YJERK 10.0
+  #define DEFAULT_XJERK 5
+  #define DEFAULT_YJERK 5
   #define DEFAULT_ZJERK  0.3
   //#define DEFAULT_IJERK  0.3
   //#define DEFAULT_JJERK  0.3
@@ -1198,7 +1198,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -37, -39, 0 }  // Ender3S1 Configs
+#define NOZZLE_TO_PROBE_OFFSET { -31.80, -40.50, 0 }  // Ender3S1 Configs
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1631,7 +1631,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 5  // MRiscoC Customizable by menu
+  #define GRID_MAX_POINTS_X 4  // MRiscoC Customizable by menu
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
@@ -1664,7 +1664,7 @@
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
   #define MESH_INSET 25              // Set Mesh bounds as an inset region of the bed  // MRiscoC Center mesh
-  #define GRID_MAX_POINTS_X 5      // Don't use more than 15 points per axis, implementation limited.  // MRiscoC Customizable by menu
+  #define GRID_MAX_POINTS_X 4      // Don't use more than 15 points per axis, implementation limited.  // MRiscoC Customizable by menu
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   //#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
@@ -1684,7 +1684,7 @@
   //===========================================================================
 
   #define MESH_INSET 25          // Set Mesh bounds as an inset region of the bed  // MRiscoC Center mesh
-  #define GRID_MAX_POINTS_X 5    // Don't use more than 7 points per axis, implementation limited.  // MRiscoC Customizable by menu
+  #define GRID_MAX_POINTS_X 4    // Don't use more than 7 points per axis, implementation limited.  // MRiscoC Customizable by menu
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   //#define MESH_G28_REST_ORIGIN // After homing all axes ('G28' or 'G28 XYZ') rest Z at Z_MIN_POS
