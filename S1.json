@@ -8,8 +8,14 @@
   },
   {
     "op": "Enable",
+    "searchfor": "BLTOUCH_HS_MODE"
+  },
+  {
+    "op": "Custom",
     "searchfor": "BLTOUCH_HS_MODE",
-    "comment": "MRiscoC BLTouch High Speed mode enabled"
+    "mask" : "true",
+    "value": "false",
+    "comment": "Ender3S1: disabled by default"
   },
   {
     "op": "Enable",
