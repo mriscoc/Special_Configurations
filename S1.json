@@ -172,6 +172,20 @@
   },
   {
     "op": "Custom",
+    "searchfor": "X_MIN_POS",
+    "mask": ".+",
+    "value": "-5",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Y_MIN_POS",
+    "mask": ".+",
+    "value": "-5",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "Custom",
     "searchfor": "FIL_RUNOUT_STATE",
     "mask": "LOW",
     "value":"HIGH",

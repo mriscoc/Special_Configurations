@@ -456,14 +456,14 @@
     "op": "Custom",
     "searchfor": "DEFAULT_MAX_FEEDRATE",
     "mask": "{.*}",
-    "value":"{ 500, 500, 20, 75 }",
+    "value":"{ 500, 500, 10, 50 }",
     "comment": "MRiscoC increased Z speed, increased E speed for BMG"
   },
   {
     "op": "Custom",
     "searchfor": "DEFAULT_MAX_ACCELERATION",
     "mask": "{.*}",
-    "value":"{ 1000, 1000, 200, 2500 }",
+    "value":"{ 500, 500, 100, 5000 }",
     "comment": "MRiscoC Acceleration limits increased"
   },
   {
@@ -475,13 +475,13 @@
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_RETRACT_ACCELERATION",
-    "value": "500",
+    "value": "1000",
     "comment": "Ender3v2 Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_TRAVEL_ACCELERATION",
-    "value": "1000",
+    "value": "500",
     "comment": "Ender3v2 Configs"
   },
   {
@@ -489,6 +489,30 @@
     "searchfor": "CLASSIC_JERK",
     "comment": "Ender3v2 Configs"
   },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_XJERK",
+    "value": "8.0",
+    "comment": "Ender3v2 Configs"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_YJERK",
+    "value": "8.0",
+    "comment": "Ender3v2 Configs"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_ZJERK",
+    "value": "0.4",
+    "comment": "Ender3v2 Configs"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_EJERK",
+    "value": "5.0",
+    "comment": "Ender3v2 Configs"
+  },  
   {
     "op": "Enable",
     "searchfor": "S_CURVE_ACCELERATION",

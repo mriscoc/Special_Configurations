@@ -942,7 +942,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 20, 75 }  // MRiscoC increased Z speed, increased E speed for BMG
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 10, 50 }  // MRiscoC increased Z speed, increased E speed for BMG
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -955,7 +955,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 200, 2500 }  // MRiscoC Acceleration limits increased
+#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 5000 }  // MRiscoC Acceleration limits increased
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -984,9 +984,9 @@
  */
 #define CLASSIC_JERK  // Ender3S1 Configs
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 5
-  #define DEFAULT_YJERK 5
-  #define DEFAULT_ZJERK  0.3
+  #define DEFAULT_XJERK 5  // Ender3S1 Configs
+  #define DEFAULT_YJERK 5  // Ender3S1 Configs
+  #define DEFAULT_ZJERK  0.3  // Ender3S1 Configs
   //#define DEFAULT_IJERK  0.3
   //#define DEFAULT_JJERK  0.3
   //#define DEFAULT_KJERK  0.3
@@ -999,7 +999,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
+#define DEFAULT_EJERK    5.0  // May be used by Linear Advance  // Ender3S1 Configs
 
 /**
  * Junction Deviation Factor
@@ -1401,8 +1401,8 @@
 #define Y_BED_SIZE 230  // MRiscoC Max usable bed size
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define X_MIN_POS -5  // MRiscoC Stock physical limit
+#define Y_MIN_POS -5  // MRiscoC Stock physical limit
 #define Z_MIN_POS 0
 #define X_MAX_POS 248  // MRiscoC Stock physical limit
 #define Y_MAX_POS 231  // MRiscoC Stock physical limit
