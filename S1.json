@@ -172,20 +172,6 @@
   },
   {
     "op": "Custom",
-    "searchfor": "X_MIN_POS",
-    "mask": ".+",
-    "value": "-5",
-    "comment": "MRiscoC Stock physical limit"
-  },
-  {
-    "op": "Custom",
-    "searchfor": "Y_MIN_POS",
-    "mask": ".+",
-    "value": "-5",
-    "comment": "MRiscoC Stock physical limit"
-  },
-  {
-    "op": "Custom",
     "searchfor": "FIL_RUNOUT_STATE",
     "mask": "LOW",
     "value":"HIGH",
@@ -202,9 +188,28 @@
     "comment": "Ender3S1 Configs"
   },
   {
+    "op": "Custom",
+    "searchfor": "X_MIN_POS",
+    "mask": ".+",
+    "value": "-5",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Y_MIN_POS",
+    "mask": ".+",
+    "value": "-5",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
     "op": "CustomVal",
     "searchfor": "Z_MAX_POS",
     "value": "270"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_MAX_POS",
+    "value": "230"
   },
   {
     "op": "CustomVal",
