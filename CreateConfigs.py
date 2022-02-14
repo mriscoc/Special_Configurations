@@ -4,8 +4,8 @@
 # Configurations generator script for the Professional Firmware
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Marlin_Configurations
-# version: 2.2
-# date: 2022/01/19
+# version: 3.1
+# date: 2022/02/14
 # ------------------------------------------------------------------------------
 
 import sys
@@ -15,6 +15,8 @@ import io
 import json
 
 verbose = True
+
+SourceDir = 'Original Configs/'
 
 class Customize:
   op = ''
@@ -128,7 +130,7 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
       lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+Machine_Name+'"')
       lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION "based on bugfix-2.0.x"')
     else :
-      lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+'Ender 3v2 '+' '.join(Mode)+'"')
+      lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+'Ender3v2 '+' '.join(Mode)+'"')
       lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+' '.join(Mode)+', based on bugfix-2.0.x"')
     with open(Target, "w", encoding="utf8") as of:
       of.write(lines)
@@ -140,6 +142,9 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
     quit()
 
 def Generate(Machine_Name, Mode) :
+  print('Configurations generator script for the Professional Firmware')
+  print('Author: Miguel A. Risco Castillo (c) 2022\n')
+
   if Machine_Name:
     TargetDir = Machine_Name+'/'
   else:
@@ -147,20 +152,5 @@ def Generate(Machine_Name, Mode) :
   CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Configuration.h')
   CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Configuration_adv.h')
   CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Version.h')
-
-print('Configurations generator script for the Professional Firmware')
-print('Author: Miguel A. Risco Castillo (c) 2021\n')
-
-SourceDir = 'Original Configs/'
-
-Generate('', ['422','ManualMesh'])
-Generate('', ['422','ManualMesh','Volcano'])
-Generate('', ['422','BLTouch'])
-Generate('', ['422','BLTouch','Volcano'])
-Generate('', ['427','ManualMesh'])
-Generate('', ['427','ManualMesh','Volcano'])
-Generate('', ['427','BLTouch'])
-Generate('', ['427','BLTouch','Volcano'])
-Generate('Ender 3S1', ['S1'])
 
 

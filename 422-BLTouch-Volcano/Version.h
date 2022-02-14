@@ -57,7 +57,7 @@
  * has a distinct Github fork— the Source Code URL should just be the main
  * Marlin repository.
  */
-#define SOURCE_CODE_URL "github.com/mriscoc/Ender3v2"
+#define SOURCE_CODE_URL "github.com/mriscoc/Ender3V2S1"
 
 /**
  * Default generic printer UUID.
@@ -68,7 +68,7 @@
  * The WEBSITE_URL is the location where users can get more information such as
  * documentation about a specific Marlin release.
  */
-#define WEBSITE_URL "github.com/mriscoc/Ender3v2/wiki"
+#define WEBSITE_URL "github.com/mriscoc/Ender3V2S1/wiki"
 
 /**
  * Set the vendor info the serial USB interface, if changable

@@ -3,7 +3,7 @@
   {
     "op": "InsertAfter",
     "searchfor": "#pragma once",
-    "newline": "\n// Created by configs generator for Professional firmware\n// https://github.com/mriscoc/Marlin_Ender3v2"
+    "newline": "\n// Created by configs generator for Professional firmware\n// https://github.com/mriscoc/Ender3V2S1"
   }, 
   {
     "op": "CustomVal",
@@ -762,13 +762,13 @@
     "op": "Custom",
     "searchfor": "SOURCE_CODE_URL",
     "mask": ".+",
-    "value": "\"github.com/mriscoc/Ender3v2\""
+    "value": "\"github.com/mriscoc/Ender3V2S1\""
   },
   {
     "op": "Custom",
     "searchfor": "WEBSITE_URL",
     "mask": ".+",
-    "value": "\"github.com/mriscoc/Ender3v2/wiki\""
+    "value": "\"github.com/mriscoc/Ender3V2S1/wiki\""
   }
 ]   
 }

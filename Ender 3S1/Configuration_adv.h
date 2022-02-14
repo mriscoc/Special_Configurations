@@ -22,7 +22,7 @@
 #pragma once
 
 // Created by configs generator for Professional firmware
-// https://github.com/mriscoc/Marlin_Ender3S1
+// https://github.com/mriscoc/Ender3V2S1
 
 /**
  * Configuration_adv.h
