@@ -1,0 +1,134 @@
+{
+"Configuration_adv.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "BLTOUCH_HS_MODE",
+    "comment": "MRiscoC Enabled for BLTouch version"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ASSISTED_TRAMMING",
+    "comment": "MRiscoC Enabled for BLTouch version"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "TRAMMING_POINT_XY",
+    "mask": "{.*}",
+    "value":"{ { 29, 29 }, { 199, 29 }, { 199, 199 }, { 29, 199 } }",
+    "comment": "MRiscoC Enabled for BLTouch version"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "TRAMMING_SCREW_THREAD",
+    "value": "40",
+    "comment": "MRiscoC Enabled for BLTouch version"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "BABYSTEP_ZPROBE_OFFSET",
+    "comment": "MRiscoC Enabled for BLTouch version"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "G29_RETRY_AND_RECOVER",
+    "comment": "MRiscoC Enabled for BLTouch version"
+  }
+],
+"Configuration.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
+    "comment": "MRiscoC Probe connected to BLTouch port"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "USE_PROBE_FOR_Z_HOMING",
+    "comment": "MRiscoC Probe connected to BLTouch port"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "FIX_MOUNTED_PROBE",
+    "comment": "MRiscoC AutoLev from Substancia3D"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "BLTOUCH",
+    "comment": "MRiscoC BLTouch version"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "NOZZLE_TO_PROBE_OFFSET",
+    "mask": "{.*}",
+    "value":"{ 0, 0, 0 }",
+    "comment": "MRiscoC AutoLev from Substancia3D"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "MULTIPLE_PROBING",
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "EXTRA_PROBING",
+    "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_CLEARANCE_DEPLOY_PROBE",
+    "value": "3",
+    "comment": "MRiscoC AutoLev from Substancia3D"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_CLEARANCE_BETWEEN_PROBES",
+    "value": "2",
+    "comment": "MRiscoC AutoLev from Substancia3D"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_CLEARANCE_MULTI_PROBE",
+    "value": "2",
+    "comment": "AutoLev from Substancia3D"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_PROBE_LOW_POINT",
+    "value": "-2",
+    "comment": "MRiscoC AutoLev from Substancia3D"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "Z_MIN_PROBE_REPEATABILITY_TEST",
+    "comment": "MRiscoC Enable M48 repeatability test"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "PROBING_FANS_OFF",
+    "comment": "MRiscoC Turn fans off for avoid vibrations and interference"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DELAY_BEFORE_PROBING",
+    "value": "200",
+    "comment": "MRiscoC Wait for stability"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "AUTO_BED_LEVELING_BILINEAR",
+    "comment": "MRiscoC BLTouch auto level"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "LEVELING_NOZZLE_TEMP",
+    "value": "  0",
+    "comment": "MRiscoC No necessary for BLTouch"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "Z_SAFE_HOMING",
+    "comment": "MRiscoC Homing Z at center of bed"
+  }
+],
+"Version.h" : [
+]   
+}
