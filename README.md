@@ -1,5 +1,6 @@
 # Marlin_Configurations
-In this repository there are the configuration files for several Marlin firmware features for the Ender3v2 printer
+In this repository there are the configuration files for several Marlin firmware features for the Ender3 V2/S1 printer, the main
+project files are in the firmware repository: https://github.com/mriscoc/Ender3V2S1
 
 For have a special build you must to provide a config json with only your personal choices, for example: for get a
 special build that have a hotend volcano, bltouch and 4.2.2 board it is necessary only write a Volcano.json with this content:
