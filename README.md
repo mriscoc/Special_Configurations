@@ -1,5 +1,6 @@
 # Marlin_Configurations
-In this repository there are the configuration files for several Marlin firmware features for the Ender3v2 printer
+In this repository there are the configuration files for several Marlin firmware features for the Ender3 V2/S1 printer, the main
+project files are in the firmware repository: https://github.com/mriscoc/Ender3V2S1
 
 For have a special build you must to provide a config json with only your personal choices, for example: for get a
 special build that have a hotend volcano, bltouch and 4.2.2 board it is necessary only write a Volcano.json with this content:
@@ -33,7 +34,7 @@ special build that have a hotend volcano, bltouch and 4.2.2 board it is necessar
 }
 ```
 
-Then, request to the `CreateConfigs.py` to build a configuration with `Generate(['422','BLTouch','Volcano'])`; the last "Volcano" will overwrite the necessary values in the configuration file.
+Then, request to the `CreateConfigs.py` to build a configuration with `CreateConfigs.Generate('', ['422','BLTouch','Volcano'])`; the last "Volcano" will overwrite the necessary values in the configuration file.
 
 The `CreateConfigs.py` script supports five basic operations over the configuration files:
 
@@ -62,3 +63,9 @@ For disable Multiple probing you can write in the "Configuration.h" section of t
   }
 ```
 The comment line is optional. Masks are in regex format, use the provided json as examples.
+
+# Disclaimer
+THIS FIRMWARE AND ALL OTHER FILES IN THE DOWNLOAD ARE PROVIDED FREE OF CHARGE WITH NO WARRANTY OR GUARANTEE. SUPPORT IS NOT INCLUDED JUST BECAUSE YOU DOWNLOADED THE FIRMWARE. WE ARE NOT LIABLE FOR ANY DAMAGE TO YOUR PRINTER, PERSON, OR ANY OTHER PROPERTY DUE TO USE OF THIS FIRMWARE. IF YOU DO NOT AGREE TO THESE TERMS THEN DO NOT USE THE FIRMWARE.
+
+# LICENSE
+For the license, check the header of each file, if the license is not specified there, the project license will be used. Marlin is licensed under the GPL.
