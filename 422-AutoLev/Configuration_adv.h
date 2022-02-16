@@ -919,7 +919,7 @@
    *
    * Set the default state here, change with 'M401 S' or UI, use M500 to save, M502 to reset.
    */
-  #define BLTOUCH_HS_MODE true  // MRiscoC Enabled for BLTouch version
+  #define BLTOUCH_HS_MODE true  // MRiscoC Enabled for AutoLev version
 
   // Safety: Enable voltage mode settings in the LCD menu.
   //#define BLTOUCH_LCD_VOLTAGE_MENU
@@ -989,11 +989,11 @@
 //
 // Add the G35 command to read bed corners to help adjust screws. Requires a bed probe.
 //
-#define ASSISTED_TRAMMING  // MRiscoC Enabled for BLTouch version
+#define ASSISTED_TRAMMING  // MRiscoC Enabled for AutoLev version
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define positions for probe points.
-  #define TRAMMING_POINT_XY { { 29, 29 }, { 199, 29 }, { 199, 199 }, { 29, 199 } }  // MRiscoC Enabled for BLTouch version
+  #define TRAMMING_POINT_XY { { 29, 29 }, { 199, 29 }, { 199, 199 }, { 29, 199 } }  // MRiscoC Enabled for AutoLev version
 
   // Define position names for probe points.
   #define TRAMMING_POINT_NAME_1 "Front-Left"
@@ -1014,7 +1014,7 @@
    *   M4: 40 = Clockwise, 41 = Counter-Clockwise
    *   M5: 50 = Clockwise, 51 = Counter-Clockwise
    */
-  #define TRAMMING_SCREW_THREAD 40  // MRiscoC Enabled for BLTouch version
+  #define TRAMMING_SCREW_THREAD 40  // MRiscoC Enabled for AutoLev version
 
 #endif
 
@@ -1964,7 +1964,7 @@
 
   //#define BABYSTEP_DISPLAY_TOTAL          // Display total babysteps since last G28
 
-  #define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping  // MRiscoC Enabled for BLTouch version
+  #define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping  // MRiscoC Enabled for AutoLev version
   #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
     //#define BABYSTEP_HOTEND_Z_OFFSET      // For multiple hotends, babystep relative Z offsets
     //#define BABYSTEP_ZPROBE_GFX_OVERLAY   // Enable graphical overlay on Z-offset editor
@@ -2054,7 +2054,7 @@
  * Repeatedly attempt G29 leveling until it succeeds.
  * Stop after G29_MAX_RETRIES attempts.
  */
-#define G29_RETRY_AND_RECOVER  // MRiscoC Enabled for BLTouch version
+#define G29_RETRY_AND_RECOVER  // MRiscoC Enabled for AutoLev version
 #if ENABLED(G29_RETRY_AND_RECOVER)
   #define G29_MAX_RETRIES 3
   #define G29_HALT_ON_FAILURE

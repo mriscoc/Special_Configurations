@@ -1042,10 +1042,10 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN  // MRiscoC Probe connected to BLTouch port
+#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN  // MRiscoC Probe connected to AutoLev port
 
 // Force the use of the probe for Z-axis homing
-#define USE_PROBE_FOR_Z_HOMING  // MRiscoC Probe connected to BLTouch port
+#define USE_PROBE_FOR_Z_HOMING  // MRiscoC Probe connected to AutoLev port
 
 /**
  * Z_MIN_PROBE_PIN
@@ -1099,7 +1099,7 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-#define BLTOUCH  // MRiscoC BLTouch version
+//#define BLTOUCH
 
 /**
  * MagLev V4 probe by MDD
@@ -1568,7 +1568,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-#define AUTO_BED_LEVELING_BILINEAR  // MRiscoC BLTouch auto level
+#define AUTO_BED_LEVELING_BILINEAR  // MRiscoC AutoLev auto level
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
@@ -1585,7 +1585,7 @@
  */
 #define PREHEAT_BEFORE_LEVELING  // MRiscoC Heatting to compensate thermal expansions
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
-  #define LEVELING_NOZZLE_TEMP   0   // (°C) Only applies to E0 at this time  // MRiscoC No necessary for BLTouch
+  #define LEVELING_NOZZLE_TEMP   0   // (°C) Only applies to E0 at this time  // MRiscoC No necessary for AutoLev
   #define LEVELING_BED_TEMP     50
 #endif
 
