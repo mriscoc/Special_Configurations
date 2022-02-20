@@ -76,14 +76,14 @@
   {
     "op": "CustomVal",
     "searchfor": "Z_CLEARANCE_BETWEEN_PROBES",
-    "value": "7",
+    "value": "5",
     "comment": "MRiscoC Increase probe compatibility"
   },
   {
     "op": "CustomVal",
     "searchfor": "Z_CLEARANCE_MULTI_PROBE",
-    "value": "7",
-    "comment": "MRiscoC Increase probe compatibility"
+    "value": "4",
+    "comment": "MRiscoC Increase speed"
   },
   {
     "op": "CustomVal",

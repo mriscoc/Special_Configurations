@@ -11,13 +11,6 @@
     "searchfor": "BLTOUCH_HS_MODE"
   },
   {
-    "op": "Custom",
-    "searchfor": "BLTOUCH_HS_MODE",
-    "mask" : "true",
-    "value": "false",
-    "comment": "Ender3S1: disabled by default"
-  },
-  {
     "op": "Enable",
     "searchfor": "BABYSTEP_ZPROBE_OFFSET",
     "comment": "MRiscoC Enabled"
@@ -102,7 +95,7 @@
   {
     "op": "CustomVal",
     "searchfor": "PROBING_MARGIN",
-    "value": "40"
+    "value": "41"
   },
   {
     "op": "Enable",
@@ -207,14 +200,14 @@
     "op": "Custom",
     "searchfor": "X_MIN_POS",
     "mask": ".+",
-    "value": "-5",
+    "value": "-10",
     "comment": "MRiscoC Stock physical limit"
   },
   {
     "op": "Custom",
     "searchfor": "Y_MIN_POS",
     "mask": ".+",
-    "value": "-5",
+    "value": "-8",
     "comment": "MRiscoC Stock physical limit"
   },
   {
@@ -225,12 +218,12 @@
   {
     "op": "CustomVal",
     "searchfor": "Y_MAX_POS",
-    "value": "225"
+    "value": "220"
   },
   {
     "op": "CustomVal",
     "searchfor": "X_MAX_POS",
-    "value": "225"
+    "value": "230"
   },
   {
     "op": "CustomVal",
