@@ -292,6 +292,11 @@
     "comment": "MRiscoC Enabled M486 to skip objects"
   },
   {
+    "op": "Disable",
+    "searchfor": "THERMAL_PROTECTION_VARIANCE_MONITOR",
+    "comment": "MRiscoC disabled because it gives false positives"
+  },
+  {
     "op": "Replace",
     "searchfor": "DWIN_CREALITY_LCD_ENHANCED",
     "value": "DWIN_LCD_PROUI"
