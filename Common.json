@@ -564,7 +564,7 @@
     "op": "Custom",
     "searchfor": "XY_PROBE_FEEDRATE",
     "mask": "\\([0-9,*]+\\)",
-    "value":"(500*60)",
+    "value":"(200*60)",
     "comment": "MRiscoC increase travel speed between probes"
   },
   {
@@ -596,13 +596,13 @@
   {
     "op": "CustomVal",
     "searchfor": "Z_HOMING_HEIGHT",
-    "value": "10",
+    "value": "5",
     "comment": "MRiscoC Crearance over the bed"
   },
   {
     "op": "CustomVal",
     "searchfor": "Z_AFTER_HOMING",
-    "value": "10",
+    "value": "5",
     "comment": "MRiscoC Crearance over the bed"
   },
   {
@@ -675,7 +675,7 @@
     "searchfor": "HOMING_FEEDRATE_MM_M",
     "mask": "{.*}",
     "value":"{ (50*60), (50*60), (10*60) }",
-    "comment": "MRiscoC Homming speed-up"
+    "comment": "MRiscoC Homing speed-up"
   },
   {
     "op": "Enable",
