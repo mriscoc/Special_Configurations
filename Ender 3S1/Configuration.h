@@ -1652,7 +1652,7 @@
     // Experimental Subdivision of the grid by Catmull-Rom method.
     // Synthesizes intermediate points to produce a more detailed mesh.
     //
-    #define ABL_BILINEAR_SUBDIVISION  // Ender3S1 Configs
+    //#define ABL_BILINEAR_SUBDIVISION  // Ender3S1 Configs, disabled by incompatibility with bed visualizer
     #if ENABLED(ABL_BILINEAR_SUBDIVISION)
       // Number of subdivisions between probe points
       #define BILINEAR_SUBDIVISIONS 5  // Ender3S1 Configs

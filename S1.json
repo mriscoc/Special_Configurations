@@ -296,9 +296,9 @@
     "comment": "Ender3S1 Configs"
   },
   {
-    "op": "Enable",
+    "op": "Disable",
     "searchfor": "ABL_BILINEAR_SUBDIVISION",
-    "comment": "Ender3S1 Configs"
+    "comment": "Ender3S1 Configs, disabled by incompatibility with bed visualizer"
   },
   {
     "op": "CustomVal",
