@@ -56,19 +56,16 @@
   },
   {
     "op": "Custom",
+    "searchfor": "Z_MIN_ENDSTOP_INVERTING",
+    "mask" : "false",
+    "value": "true",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Custom",
     "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
     "mask": "{.*}",
     "value":"{ 80, 80, 400, 424.9 }"
-  },
-  {
-    "op": "CustomVal",
-    "searchfor": "DEFAULT_RETRACT_ACCELERATION",
-    "value": "800"
-  },
-  {
-    "op": "CustomVal",
-    "searchfor": "DEFAULT_TRAVEL_ACCELERATION",
-    "value": "500"
   },
   {
     "op": "Enable",
@@ -89,13 +86,13 @@
     "op": "Custom",
     "searchfor": "NOZZLE_TO_PROBE_OFFSET",
     "mask": "{.*}",
-    "value":"{ -31.80, -40.50, 0 }",
+    "value":"{ -31.8, -40.5, 0 }",
     "comment": "Ender3S1 Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "PROBING_MARGIN",
-    "value": "41"
+    "value": "3"
   },
   {
     "op": "Enable",
@@ -110,26 +107,26 @@
   {
     "op": "CustomVal",
     "searchfor": "Z_CLEARANCE_DEPLOY_PROBE",
-    "value": "7",
-    "comment": "MRiscoC Increase speed"
+    "value": "10",
+    "comment": "Ender3S1 Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "Z_CLEARANCE_BETWEEN_PROBES",
-    "value": "7",
-    "comment": "MRiscoC Increase probe compatibility"
+    "value": "5",
+    "comment": "Ender3S1 Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "Z_CLEARANCE_MULTI_PROBE",
-    "value": "7",
-    "comment": "MRiscoC Increase probe compatibility"
+    "value": "5",
+    "comment": "Ender3S1 Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "Z_PROBE_LOW_POINT",
-    "value": "-4",
-    "comment": "MRiscoC allows reach lower points"
+    "value": "-2",
+    "comment": "Ender3S1 Configs"
   },
   {
     "op": "Enable",
@@ -247,6 +244,11 @@
   },
   {
     "op": "CustomVal",
+    "searchfor": "BED_MAXTEMP",
+    "value": "110"
+  },
+  {
+    "op": "CustomVal",
     "searchfor": "DEFAULT_Kp",
     "value": "17.10"
   },
@@ -274,6 +276,42 @@
     "op": "CustomVal",
     "searchfor": "DEFAULT_bedKd",
     "value": "199.38"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "ENDSTOPPULLUPS",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ENDSTOPPULLUP_ZMIN",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ENDSTOPPULLUP_ZMIN_PROBE",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "RESTORE_LEVELING_AFTER_G28",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "PREHEAT_BEFORE_LEVELING",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ABL_BILINEAR_SUBDIVISION",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BILINEAR_SUBDIVISIONS",
+    "value": "5",
+    "comment": "Ender3S1 Configs"
   },
   {
     "op": "Replace",

@@ -413,11 +413,6 @@
     "comment": "Ender3v2 Configs"
   },
   {
-    "op": "Disable",
-    "searchfor": "THERMAL_PROTECTION_CHAMBER",
-    "comment": "Ender3v2 Configs"
-  },
-  {
     "op": "Custom",
     "searchfor": "X_DRIVER_TYPE",
     "mask" : ".*",
@@ -461,15 +456,39 @@
     "op": "Custom",
     "searchfor": "DEFAULT_MAX_FEEDRATE",
     "mask": "{.*}",
-    "value":"{ 500, 500, 10, 50 }",
-    "comment": "MRiscoC increased Z speed, increased E speed for BMG"
+    "value":"{ 300, 300, 5, 25 }",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "LIMITED_MAX_FR_EDITING",
+    "comment": "MRiscoC allows higher limits"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "MAX_FEEDRATE_EDIT_VALUES",
+    "mask": "{.*}",
+    "value":"{ 1000, 1000, 20, 200 }",
+    "comment": "MRiscoC allows higher limits"
   },
   {
     "op": "Custom",
     "searchfor": "DEFAULT_MAX_ACCELERATION",
     "mask": "{.*}",
-    "value":"{ 500, 500, 100, 5000 }",
-    "comment": "MRiscoC Acceleration limits increased"
+    "value":"{ 500, 500, 100, 1000 }",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "LIMITED_MAX_ACCEL_EDITING",
+    "comment": "MRiscoC allows higher limits"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "MAX_ACCEL_EDIT_VALUES",
+    "mask": "{.*}",
+    "value":"{ 3000, 3000, 100, 9999 }",
+    "comment": "MRiscoC allows higher limits"
   },
   {
     "op": "CustomVal",
@@ -480,13 +499,13 @@
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_RETRACT_ACCELERATION",
-    "value": "1000",
+    "value": "800",
     "comment": "Ender3v2 Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_TRAVEL_ACCELERATION",
-    "value": "500",
+    "value": "1000",
     "comment": "Ender3v2 Configs"
   },
   {
@@ -520,6 +539,18 @@
   },  
   {
     "op": "Enable",
+    "searchfor": "LIMITED_JERK_EDITING",
+    "comment": "Ender3v2 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "MAX_JERK_EDIT_VALUES",
+    "mask": "{.*}",
+    "value":"{ 20, 20, 1, 20 }",
+    "comment": "MRiscoC allows higher limits"
+  },
+  {
+    "op": "Enable",
     "searchfor": "S_CURVE_ACCELERATION",
     "comment": "MRiscoC Enabled"
   },
@@ -527,13 +558,13 @@
     "op": "CustomVal",
     "searchfor": "PROBING_MARGIN",
     "value": "25",
-    "comment": "MRiscoC center probe area"
+    "comment": "MRiscoC for center probing area increase this value"
   },
   {
     "op": "Custom",
     "searchfor": "XY_PROBE_FEEDRATE",
     "mask": "\\([0-9,*]+\\)",
-    "value":"(200*60)",
+    "value":"(500*60)",
     "comment": "MRiscoC increase travel speed between probes"
   },
   {
@@ -561,6 +592,18 @@
     "op": "Enable",
     "searchfor": "HOME_AFTER_DEACTIVATE",
     "comment": "MRiscoC Enabled for safety"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_HOMING_HEIGHT",
+    "value": "10",
+    "comment": "MRiscoC Crearance over the bed"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_AFTER_HOMING",
+    "value": "10",
+    "comment": "MRiscoC Crearance over the bed"
   },
   {
     "op": "CustomVal",

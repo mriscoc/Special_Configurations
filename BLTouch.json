@@ -88,7 +88,7 @@
   {
     "op": "CustomVal",
     "searchfor": "Z_PROBE_LOW_POINT",
-    "value": "-4",
+    "value": "-3",
     "comment": "MRiscoC allows reach lower points"
   },
   {
