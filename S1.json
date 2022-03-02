@@ -56,13 +56,6 @@
   },
   {
     "op": "Custom",
-    "searchfor": "Z_MIN_ENDSTOP_INVERTING",
-    "mask" : "false",
-    "value": "true",
-    "comment": "Ender3S1 Configs"
-  },
-  {
-    "op": "Custom",
     "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
     "mask": "{.*}",
     "value":"{ 80, 80, 400, 424.9 }"
