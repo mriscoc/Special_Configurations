@@ -751,7 +751,7 @@
 
 #define THERMAL_PROTECTION_HOTENDS // Enable thermal protection for all extruders
 #define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
-//#define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber  // Ender3v2 Configs
+#define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber
 #define THERMAL_PROTECTION_COOLER  // Enable thermal protection for the laser cooling
 
 //===========================================================================
@@ -947,11 +947,11 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 10, 50 }  // MRiscoC increased Z speed, increased E speed for BMG
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }  // Ender3v2 Configs
 
-//#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
+#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2  // MRiscoC allows higher limits
 #if ENABLED(LIMITED_MAX_FR_EDITING)
-  #define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 10, 50 } // ...or, set your own edit limits
+  #define MAX_FEEDRATE_EDIT_VALUES    { 1000, 1000, 20, 200 } // ...or, set your own edit limits  // MRiscoC allows higher limits
 #endif
 
 /**
@@ -960,11 +960,11 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 5000 }  // MRiscoC Acceleration limits increased
+#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 1000 }  // Ender3v2 Configs
 
-//#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
+#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2  // MRiscoC allows higher limits
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
-  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 20000 } // ...or, set your own edit limits
+  #define MAX_ACCEL_EDIT_VALUES       { 3000, 3000, 100, 9999 } // ...or, set your own edit limits  // MRiscoC allows higher limits
 #endif
 
 /**
@@ -976,8 +976,8 @@
  *   M204 T    Travel Acceleration
  */
 #define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves  // Ender3v2 Configs
-#define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts  // Ender3v2 Configs
-#define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves  // Ender3v2 Configs
+#define DEFAULT_RETRACT_ACCELERATION  800    // E acceleration for retracts  // Ender3v2 Configs
+#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves  // Ender3v2 Configs
 
 /**
  * Default Jerk limits (mm/s)
@@ -998,9 +998,9 @@
 
   //#define TRAVEL_EXTRA_XYJERK 0.0     // Additional jerk allowance for all travel moves
 
-  //#define LIMITED_JERK_EDITING        // Limit edit via M205 or LCD to DEFAULT_aJERK * 2
+  #define LIMITED_JERK_EDITING        // Limit edit via M205 or LCD to DEFAULT_aJERK * 2  // Ender3v2 Configs
   #if ENABLED(LIMITED_JERK_EDITING)
-    #define MAX_JERK_EDIT_VALUES { 20, 20, 0.6, 10 } // ...or, set your own edit limits
+    #define MAX_JERK_EDIT_VALUES { 20, 20, 1, 20 } // ...or, set your own edit limits  // MRiscoC allows higher limits
   #endif
 #endif
 
@@ -1207,7 +1207,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 25  // MRiscoC center probe area
+#define PROBING_MARGIN 25  // MRiscoC for center probing area increase this value
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (200*60)  // MRiscoC increase travel speed between probes
@@ -1285,7 +1285,7 @@
 #define Z_CLEARANCE_MULTI_PROBE     4 // Z Clearance between multiple probes  // MRiscoC Increase speed
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
-#define Z_PROBE_LOW_POINT          -4 // Farthest distance below the trigger-point to go before stopping  // MRiscoC allows reach lower points
+#define Z_PROBE_LOW_POINT          -3 // Farthest distance below the trigger-point to go before stopping  // MRiscoC allows reach lower points
 
 // For M851 give a range for adjusting the Z probe offset
 #define Z_PROBE_OFFSET_RANGE_MIN -20
@@ -1385,10 +1385,10 @@
  */
 //#define Z_IDLE_HEIGHT Z_HOME_POS
 
-//#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
+//#define Z_HOMING_HEIGHT  5      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...  // MRiscoC Crearance over the bed
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
-//#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
+//#define Z_AFTER_HOMING  5      // (mm) Height to move to after homing Z  // MRiscoC Crearance over the bed
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
@@ -1778,7 +1778,7 @@
 #endif
 
 // Homing speeds (mm/min)
-#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (10*60) }  // MRiscoC Homming speed-up
+#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (10*60) }  // MRiscoC Homing speed-up
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
