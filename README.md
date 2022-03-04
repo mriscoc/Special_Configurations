@@ -43,7 +43,7 @@ The `CreateConfigs.py` script supports five basic operations over the configurat
 > **CustomVal**: allows to replace numeric values.  
 > **Enable**: allows to enable a feature.  
 > **Disable**: allows to disable a feature.  
-> **Replace**: allows to replace a keyword for another.  
+> **Replace**: allows to replace a mask with other text.
 
 For example to change the default tramming points you can write in the "Configuration_adv.h" section of the json the command:
 ```json
