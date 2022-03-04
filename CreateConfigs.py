@@ -128,7 +128,7 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
 
     if Machine_Name :
       lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+Machine_Name+'"')
-      lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION "based on bugfix-2.0.x"')
+      lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION "'+Machine_Name+' based on bugfix-2.0.x"')
     else :
       lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+'Ender3v2 '+' '.join(Mode)+'"')
       lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+' '.join(Mode)+', based on bugfix-2.0.x"')

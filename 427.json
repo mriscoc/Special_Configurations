@@ -11,5 +11,11 @@
   }
 ],
 "Version.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "MACHINE_NAME",
+    "mask": ".+",
+    "value": "\"Ender3v2\""
+  }
 ]   
 }

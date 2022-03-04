@@ -802,12 +802,6 @@
   },
   {
     "op": "Custom",
-    "searchfor": "MACHINE_NAME",
-    "mask": ".+",
-    "value": "\"Ender 3v2\""
-  },
-  {
-    "op": "Custom",
     "searchfor": "SOURCE_CODE_URL",
     "mask": ".+",
     "value": "\"github.com/mriscoc/Ender3V2S1\""
