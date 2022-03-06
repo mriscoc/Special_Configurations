@@ -1,7 +1,8 @@
 #!/usr/bin/python
 
 # ------------------------------------------------------------------------------
-# AutoLev from Substancia3D Configurations generator script for the Professional Firmware
+# Configurations generator script for the Professional Firmware
+# AutoLev from Substancia3D 
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Marlin_Configurations
 # ------------------------------------------------------------------------------

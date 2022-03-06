@@ -2,15 +2,12 @@
 
 # ------------------------------------------------------------------------------
 # Configurations generator script for the Professional Firmware
-# Standard Volcano All Metal with thermistor #05 upto 300°C
+# All Metal with 3950 Thermistor Type #13 upto 300°C
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Marlin_Configurations
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('', ['422','ManualMesh','Volcano'])
-CreateConfigs.Generate('', ['422','BLTouch','Volcano'])
-CreateConfigs.Generate('', ['427','ManualMesh','Volcano'])
-CreateConfigs.Generate('', ['427','BLTouch','Volcano'])
+CreateConfigs.Generate('Ender3S1-AllMetal-3950', ['S1','AM3950T13'])
 
 
