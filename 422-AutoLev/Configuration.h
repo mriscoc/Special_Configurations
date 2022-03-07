@@ -947,7 +947,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }  // Ender3v2 Configs
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 15, 25 }  // Ender3v2 Configs
 
 #define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2  // MRiscoC allows higher limits
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -964,7 +964,7 @@
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2  // MRiscoC allows higher limits
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
-  #define MAX_ACCEL_EDIT_VALUES       { 3000, 3000, 100, 9999 } // ...or, set your own edit limits  // MRiscoC allows higher limits
+  #define MAX_ACCEL_EDIT_VALUES       { 3000, 3000, 300, 9999 } // ...or, set your own edit limits  // MRiscoC allows higher limits
 #endif
 
 /**
