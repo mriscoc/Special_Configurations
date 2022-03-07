@@ -2,7 +2,7 @@
 
 # ------------------------------------------------------------------------------
 # Configurations generator script for the Professional Firmware
-# All Metal with 3950 Thermistor Type #13 upto 300°C
+# Adafruit Neopixels NEO_GRB
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Marlin_Configurations
 # ------------------------------------------------------------------------------
