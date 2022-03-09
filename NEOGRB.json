@@ -18,7 +18,7 @@
     "op": "Custom",
     "searchfor": "NEOPIXEL_PIN",
     "mask" : ".*",
-    "value": "PB2",
+    "value": "PA14",
     "comment": "Adafruit Neopixels"
   },
   {
