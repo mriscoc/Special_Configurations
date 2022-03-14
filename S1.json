@@ -61,12 +61,12 @@
     "value":"{ 80, 80, 400, 424.9 }"
   },
   {
-    "op": "Enable",
+    "op": "Disable",
     "searchfor": "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
     "comment": "Ender3S1 Configs"
   },
   {
-    "op": "Disable",
+    "op": "Enable",
     "searchfor": "USE_PROBE_FOR_Z_HOMING",
     "comment": "Ender3S1 Configs"   
   },

@@ -8,6 +8,6 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('', ['422','BLTouch','3950T13'])
+CreateConfigs.Generate('Ender3V2-422BLT-3950', ['422','BLTouch','3950T13'])
 
 

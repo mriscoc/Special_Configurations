@@ -1043,10 +1043,10 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN  // Ender3S1 Configs
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN  // Ender3S1 Configs
 
 // Force the use of the probe for Z-axis homing
-//#define USE_PROBE_FOR_Z_HOMING  // Ender3S1 Configs
+#define USE_PROBE_FOR_Z_HOMING  // Ender3S1 Configs
 
 /**
  * Z_MIN_PROBE_PIN
