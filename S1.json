@@ -287,18 +287,13 @@
   },
   {
     "op": "Enable",
-    "searchfor": "RESTORE_LEVELING_AFTER_G28",
-    "comment": "Ender3S1 Configs"
-  },
-  {
-    "op": "Disable",
     "searchfor": "PREHEAT_BEFORE_LEVELING",
     "comment": "Ender3S1 Configs"
   },
   {
     "op": "Disable",
     "searchfor": "ABL_BILINEAR_SUBDIVISION",
-    "comment": "Ender3S1 Configs, disabled by incompatibility with bed visualizer"
+    "comment": "Original Ender3S1 Configs set this to Enable"
   },
   {
     "op": "CustomVal",

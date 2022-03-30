@@ -8,6 +8,6 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender3S1-AllMetal-3950', ['S1','AM3950T13'])
+CreateConfigs.Generate('Ender3S1-AM3950', ['S1','AM3950T13'])
 
 
