@@ -1,36 +1,36 @@
 {
 "Configuration_adv.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "LED_CONTROL_MENU",
+    "comment" : "For use with NeoPixel"
+  }
 ],
 "Configuration.h" : [
   {
     "op": "Enable",
-    "searchfor": "NEOPIXEL_LED",
-    "comment": "Adafruit Neopixels"
+    "searchfor": "NEOPIXEL_LED"
   },
   {
     "op": "Custom",
     "searchfor": "NEOPIXEL_TYPE",
-    "mask" : ".*",
-    "value": "NEO_GRB",
-    "comment": "Adafruit Neopixels"
+    "mask" : "[^ ]*",
+    "value": "NEO_GRB"
   },
   {
     "op": "Custom",
     "searchfor": "NEOPIXEL_PIN",
-    "mask" : ".*",
-    "value": "PA14",
-    "comment": "Adafruit Neopixels"
+    "mask" : "[^ ]*",
+    "value": "PA13"
   },
   {
     "op": "CustomVal",
     "searchfor": "NEOPIXEL_PIXELS",
-    "value": "15",
-    "comment": "Adafruit Neopixels"
+    "value": "15"
   },
   {
     "op": "Enable",
-    "searchfor": "NEOPIXEL_STARTUP_TEST",
-    "comment": "Adafruit Neopixels"
+    "searchfor": "NEOPIXEL_STARTUP_TEST"
   }
 ],
 "Version.h" : [

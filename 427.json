@@ -5,7 +5,7 @@
   {
     "op": "Custom",
     "searchfor": "MOTHERBOARD",
-    "mask" : ".*",
+    "mask" : "[A-Z0-9_]+",
     "value": "BOARD_CREALITY_V427",
     "comment": "Board v4.2.7"
   }

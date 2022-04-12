@@ -9,5 +9,3 @@
 import CreateConfigs
 
 CreateConfigs.Generate('Ender3S1-NEOGRB', ['S1','NEOGRB'])
-
-
