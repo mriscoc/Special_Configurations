@@ -295,12 +295,7 @@
     "op": "Disable",
     "searchfor": "THERMAL_PROTECTION_VARIANCE_MONITOR",
     "comment": "MRiscoC disabled because it gives false positives"
-  },
-  {
-    "op": "Replace",
-    "searchfor": "DWIN_CREALITY_LCD_ENHANCED",
-    "value": "DWIN_LCD_PROUI"
-  }  
+  }
 ],
 "Configuration.h" : [
   {
@@ -740,6 +735,12 @@
     "comment": "MRiscoC Customizable by menu"
   },
   {
+    "op": "CustomVal",
+    "searchfor": "NOZZLE_PARK_Z_RAISE_MIN",
+    "value": "0",
+    "comment": "MRiscoC uses Park Z Raise from 0 to avoid backlash issues"
+  },
+  {
     "op": "Enable",
     "searchfor": "PRINTCOUNTER",
     "comment": "MRiscoC Enable Print Statistics"
@@ -778,9 +779,9 @@
     "comment": "Ender3v2 Configs"
   },
   {
-    "op": "InsertAfter",
-    "searchfor": "#define DWIN_CREALITY_LCD_ENHANCED",
-    "newline"  : "  #define DWIN_LCD_PROUI              // MRiscoC Enable ProUI"
+    "op": "Enable",
+    "searchfor": "DWIN_LCD_PROUI",
+    "comment"  : "MRiscoC Enable ProUI"
   },
   {
     "op": "Enable",
@@ -793,7 +794,7 @@
     "op": "Custom",
     "searchfor": "SHORT_BUILD_VERSION",
     "mask" : "\".*\"",
-    "value": "\"2.0.9.4 MRiscoC\""
+    "value": "\"2.1.0.1 MRiscoC\""
   },
   {
     "op": "InsertAfter",
