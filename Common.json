@@ -295,7 +295,23 @@
     "op": "Disable",
     "searchfor": "THERMAL_PROTECTION_VARIANCE_MONITOR",
     "comment": "MRiscoC disabled because it gives false positives"
-  }
+  },
+  {
+    "op": "Enable",
+    "searchfor": "MESH_MIN_X"
+  }, 
+  {
+    "op": "Enable",
+    "searchfor": "MESH_MAX_X"
+  }, 
+  {
+    "op": "Enable",
+    "searchfor": "MESH_MIN_Y"
+  }, 
+  {
+    "op": "Enable",
+    "searchfor": "MESH_MAX_Y"
+  }  
 ],
 "Configuration.h" : [
   {
@@ -398,7 +414,7 @@
   {
     "op": "CustomVal",
     "searchfor": "EXTRUDE_MINTEMP",
-    "value": "185",
+    "value": "180",
     "comment": "MRiscoC Customizable by menu"
   },
   {
@@ -552,8 +568,8 @@
   {
     "op": "CustomVal",
     "searchfor": "PROBING_MARGIN",
-    "value": "25",
-    "comment": "MRiscoC for center probing area increase this value"
+    "value": "10",
+    "comment": "MRiscoC Avoid clips on borders"
   },
   {
     "op": "Custom",

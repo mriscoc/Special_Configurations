@@ -27,6 +27,30 @@
     "comment": "MRiscoC Directdrive"
   },
   {
+    "op": "Custom",
+    "searchfor": "MESH_MIN_X",
+    "mask" : ".*",
+    "value": "10"
+  }, 
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MAX_X",
+    "mask" : ".*",
+    "value": "195"
+  }, 
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MIN_Y",
+    "mask" : ".*",
+    "value": "10"
+  }, 
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MAX_Y",
+    "mask" : ".*",
+    "value": "175"
+  }, 
+  {
     "op": "Replace",
     "searchfor": "Ender3v2",
     "value": "Ender3S1"
@@ -81,11 +105,6 @@
     "mask": "{.*}",
     "value":"{ -31.8, -40.5, 0 }",
     "comment": "Ender3S1 Configs"
-  },
-  {
-    "op": "CustomVal",
-    "searchfor": "PROBING_MARGIN",
-    "value": "3"
   },
   {
     "op": "Enable",

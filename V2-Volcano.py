@@ -8,9 +8,14 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('', ['422','ManualMesh','Volcano'])
-CreateConfigs.Generate('', ['422','BLTouch','Volcano'])
-CreateConfigs.Generate('', ['427','ManualMesh','Volcano'])
-CreateConfigs.Generate('', ['427','BLTouch','Volcano'])
+CreateConfigs.Generate('Ender3V2-422MM-Volc', ['422','ManualMesh','Volcano'])
+CreateConfigs.Generate('Ender3V2-422BLT-Volc', ['422','BLTouch','Volcano'])
+CreateConfigs.Generate('Ender3V2-427MM-Volc', ['427','ManualMesh','Volcano'])
+CreateConfigs.Generate('Ender3V2-427BLT-Volc', ['427','BLTouch','Volcano'])
+CreateConfigs.Generate('Ender3V2-422MMUBL-Volc', ['422','ManualMesh','Volcano','UBL'])
+CreateConfigs.Generate('Ender3V2-422BLTUBL-Volc', ['422','BLTouch','Volcano','UBL'])
+CreateConfigs.Generate('Ender3V2-427MMUBL-Volc', ['427','ManualMesh','Volcano','UBL'])
+CreateConfigs.Generate('Ender3V2-427BLTUBL-Volc', ['427','BLTouch','Volcano','UBL'])
+
 
 
