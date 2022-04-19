@@ -36,20 +36,6 @@
 ],
 "Configuration.h" : [
   {
-    "op": "Custom",
-    "searchfor": "Z_MIN_ENDSTOP_INVERTING",
-    "mask": "false",
-    "value":"true",
-    "comment": "MRiscoC EZABL from TH3DStudio"
-  },
-  {
-    "op": "Custom",
-    "searchfor": "Z_MIN_PROBE_ENDSTOP_INVERTING",
-    "mask": "false",
-    "value":"true",
-    "comment": "MRiscoC EZABL from TH3DStudio"
-  },
-  {
     "op": "Enable",
     "searchfor": "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
     "comment": "MRiscoC Probe connected to EZABL port"
@@ -58,6 +44,11 @@
     "op": "Enable",
     "searchfor": "USE_PROBE_FOR_Z_HOMING",
     "comment": "MRiscoC Probe connected to EZABL port"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "BLTOUCH",
+    "comment": "MRiscoC disabled for EZABL from TH3DStudio"
   },
   {
     "op": "Enable",

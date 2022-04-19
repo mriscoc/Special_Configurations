@@ -787,7 +787,7 @@
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
 #define PREVENT_COLD_EXTRUSION
-#define EXTRUDE_MINTEMP 185  // MRiscoC Customizable by menu
+#define EXTRUDE_MINTEMP 180  // MRiscoC Customizable by menu
 
 /**
  * Prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
@@ -926,7 +926,7 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.  // Ender3S1 Configs
 #define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.  // Ender3S1 Configs
-#define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.  // MRiscoC EZABL from TH3DStudio
+#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define K_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -942,7 +942,7 @@
 #define U_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define V_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define W_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING true // Set to true to invert the logic of the probe.  // MRiscoC EZABL from TH3DStudio
+#define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
 
 /**
  * Stepper Drivers
@@ -1194,7 +1194,7 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-#define BLTOUCH  // Ender3S1 Configs
+//#define BLTOUCH  // Ender3S1 Configs  // MRiscoC disabled for EZABL from TH3DStudio
 
 /**
  * MagLev V4 probe by MDD
@@ -1301,7 +1301,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 3  // MRiscoC for center probing area increase this value
+#define PROBING_MARGIN 10  // MRiscoC Avoid clips on borders
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (200*60)  // MRiscoC increase travel speed between probes
