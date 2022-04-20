@@ -61,13 +61,6 @@
     "comment": "MRiscoC Enabled for EZABL version"
   },
   {
-    "op": "Custom",
-    "searchfor": "NOZZLE_TO_PROBE_OFFSET",
-    "mask": "{.*}",
-    "value":"{ 0, 0, 0 }",
-    "comment": "MRiscoC EZABL from TH3DStudio"
-  },
-  {
     "op": "Enable",
     "searchfor": "MULTIPLE_PROBING",
     "comment": "MRiscoC Enabled"
