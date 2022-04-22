@@ -311,7 +311,12 @@
   {
     "op": "Enable",
     "searchfor": "MESH_MAX_Y"
-  }  
+  },
+  {
+    "op": "Enable",
+    "searchfor": "STATUS_MESSAGE_TIMEOUT_SEC",
+    "comment": "MRiscoC Enable Status Message Timeout"
+  }    
 ],
 "Configuration.h" : [
   {

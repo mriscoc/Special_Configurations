@@ -8,8 +8,8 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('', ['422','AutoLev'])
-CreateConfigs.Generate('', ['427','AutoLev'])
+CreateConfigs.Generate('Ender3V2-422-AutoLev', ['422','AutoLev'])
+CreateConfigs.Generate('Ender3V2-427-AutoLev', ['427','AutoLev'])
 
 
 

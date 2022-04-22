@@ -7,7 +7,7 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('', ['422','ManualMesh'])
-CreateConfigs.Generate('', ['422','BLTouch'])
-CreateConfigs.Generate('', ['427','ManualMesh'])
-CreateConfigs.Generate('', ['427','BLTouch'])
+CreateConfigs.Generate('Ender3V2-422MM', ['422','ManualMesh'])
+CreateConfigs.Generate('Ender3V2-422BLT', ['422','BLTouch'])
+CreateConfigs.Generate('Ender3V2-427MM', ['427','ManualMesh'])
+CreateConfigs.Generate('Ender3V2-427BLT', ['427','BLTouch'])

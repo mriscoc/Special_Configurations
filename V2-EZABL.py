@@ -8,8 +8,8 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('', ['422','EZABL'])
-CreateConfigs.Generate('', ['427','EZABL'])
+CreateConfigs.Generate('Ender3V2-422-EZABL', ['422','EZABL'])
+CreateConfigs.Generate('Ender3V2-427-EZABL', ['427','EZABL'])
 
 
 
