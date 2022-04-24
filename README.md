@@ -36,6 +36,8 @@ special build that have a hotend volcano, bltouch and 4.2.2 board it is necessar
 
 Then, request to the `CreateConfigs.py` to build a configuration with `CreateConfigs.Generate('', ['422','BLTouch','Volcano'])`; the last "Volcano" will overwrite the necessary values in the configuration file.
 
+The above can be done using a GUI by running the zen-configurator.py script. The script requires Python (tested with 3.9.5+) to have been installed with TKInter (Tcl/Tk).
+
 The `CreateConfigs.py` script supports five basic operations over the configuration files:
 
 > **InsertAfter**: allows to insert text after match a given mask.  
