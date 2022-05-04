@@ -8,4 +8,6 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('E3S1-EZABL-UBL-NEO', ['S1','EZABL','UBL','NEOGRB'])
+CreateConfigs.Generate('Ender3S1-NEOGRB', ['S1','NEOGRB'])
+CreateConfigs.Generate('Ender3V2-422BLT-NEOGRB', ['422','BLTouch','NEOGRB'])
+CreateConfigs.Generate('Ender3V2-427BLT-NEOGRB', ['427','BLTouch','NEOGRB'])

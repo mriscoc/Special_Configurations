@@ -8,4 +8,5 @@
 import CreateConfigs
 
 CreateConfigs.Generate('Ender3S1F4', ['S1F4'])
+CreateConfigs.Generate('Ender3S1F4-ManualMesh', ['S1F4-ManualMesh'])
 

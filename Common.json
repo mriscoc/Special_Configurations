@@ -472,7 +472,7 @@
     "op": "Custom",
     "searchfor": "DEFAULT_MAX_FEEDRATE",
     "mask": "{.*}",
-    "value":"{ 300, 300, 15, 25 }",
+    "value":"{ 300, 300, 20, 25 }",
     "comment": "Ender3v2 Configs"
   },
   {
