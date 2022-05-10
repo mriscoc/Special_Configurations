@@ -1,0 +1,91 @@
+{
+"Configuration_adv.h" : [
+],
+"Configuration.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "MOTHERBOARD",
+    "mask" : "[A-Z0-9_]+",
+    "value": "BOARD_CREALITY_V423",
+    "comment": "Creality Board v4.2.3"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BED_MAXTEMP",
+    "value": "80"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kp",
+    "value": "28.72"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Ki",
+    "value": "2.62"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kd",
+    "value": "78.81"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_BED_SIZE",
+    "value": "165"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_BED_SIZE",
+    "value": "165"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "X_MIN_POS",
+    "mask": ".+",
+    "value": "-18"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Y_MIN_POS",
+    "mask": ".+",
+    "value": "-2"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "X_MAX_POS",
+    "mask": ".+",
+    "value": "165"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Y_MAX_POS",
+    "mask": ".+",
+    "value": "165"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_MAX_POS",
+    "value": "180"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "NOZZLE_PARK_POINT",
+    "mask": "{.*}",
+    "value":"{ (X_MIN_POS + 10), (Y_MAX_POS - 10), 20 }"
+  },
+  {
+    "op": "Replace",
+    "searchfor": "Ender3v2",
+    "value": "Ender2Pro"
+  }
+],
+"Version.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "MACHINE_NAME",
+    "mask": ".+",
+    "value": "\"Ender2Pro\""
+  }
+]   
+}

@@ -9,19 +9,19 @@
     "op": "CustomVal",
     "searchfor": "WATCH_TEMP_PERIOD",
     "value": "40",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "THERMAL_PROTECTION_BED_PERIOD",
     "value": "180",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "WATCH_BED_TEMP_PERIOD",
     "value": "180",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -39,34 +39,34 @@
     "op": "CustomVal",
     "searchfor": "FAN_MIN_PWM",
     "value": "50",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
     "searchfor": "QUICK_HOME",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
     "searchfor": "ADAPTIVE_STEP_SMOOTHING",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "InsertAfter",
     "searchfor": "#if ENABLED\\(ENCODER_RATE_MULTIPLIER\\)",
-    "newline": "  #define ENCODER_5X_STEPS_PER_SEC    30  // Ender3v2 Configs"
+    "newline": "  #define ENCODER_5X_STEPS_PER_SEC    30  // Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "ENCODER_10X_STEPS_PER_SEC",
     "value": "80",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "ENCODER_100X_STEPS_PER_SEC",
     "value": "130",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -86,12 +86,12 @@
   {
     "op": "Enable",
     "searchfor": "POWER_LOSS_RECOVERY",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
     "searchfor": "SDCARD_SORT_ALPHA",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
@@ -111,21 +111,21 @@
     "searchfor": "SDSORT_USES_RAM",
     "mask": "false",
     "value": "true",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Custom",
     "searchfor": "SDSORT_CACHE_NAMES",
     "mask": "false",
     "value": "true",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Custom",
     "searchfor": "SDSORT_DYNAMIC_RAM",
     "mask": "false",
     "value": "true",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -160,12 +160,12 @@
   {
     "op": "Enable",
     "searchfor": "NO_SD_HOST_DRIVE",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
     "searchfor": "BABYSTEPPING",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -181,7 +181,7 @@
     "op": "CustomVal",
     "searchfor": "BABYSTEP_MULTIPLICATOR_Z",
     "value": "40",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -269,7 +269,7 @@
   {
     "op": "Enable",
     "searchfor": "SQUARE_WAVE_STEPPING",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -338,7 +338,7 @@
     "op": "CustomVal",
     "searchfor": "SERIAL_PORT",
     "value": "1",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
@@ -355,66 +355,66 @@
     "op": "CustomVal",
     "searchfor": "TEMP_SENSOR_BED",
     "value": "1",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "HEATER_0_MINTEMP",
     "value": "0",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "BED_MINTEMP",
     "value": "0",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "BED_MAXTEMP",
     "value": "120",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_Kp",
     "value": "22.89",
-    "comment": "MRiscoC Stock Ender3v2 PID"
+    "comment": "MRiscoC Stock Ender PID"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_Ki",
     "value": "1.87",
-    "comment": "MRiscoC Stock Ender3v2 PID"
+    "comment": "MRiscoC Stock Ender PID"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_Kd",
     "value": " 70.18",
-    "comment": "MRiscoC Stock Ender3v2 PID"
+    "comment": "MRiscoC Stock Ender PID"
   },
   {
     "op": "Enable",
     "searchfor": "PIDTEMPBED",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_bedKp",
     "value": "462.10",
-    "comment": "MRiscoC Stock Ender3v2 PID"
+    "comment": "MRiscoC Stock Ender PID"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_bedKi",
     "value": " 85.47",
-    "comment": "MRiscoC Stock Ender3v2 PID"
+    "comment": "MRiscoC Stock Ender PID"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_bedKd",
     "value": "624.59",
-    "comment": "MRiscoC Stock Ender3v2 PID"
+    "comment": "MRiscoC Stock Ender PID"
   },
   {
     "op": "CustomVal",
@@ -426,54 +426,54 @@
     "op": "CustomVal",
     "searchfor": "EXTRUDE_MAXLENGTH",
     "value": "1000",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Custom",
     "searchfor": "X_DRIVER_TYPE",
     "mask" : ".*",
     "value": "TMC2208_STANDALONE",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Custom",
     "searchfor": "Y_DRIVER_TYPE",
     "mask" : ".*",
     "value": "TMC2208_STANDALONE",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Custom",
     "searchfor": "Z_DRIVER_TYPE",
     "mask" : ".*",
     "value": "TMC2208_STANDALONE",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Custom",
     "searchfor": "E0_DRIVER_TYPE",
     "mask" : ".*",
     "value": "TMC2208_STANDALONE",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
     "searchfor": "ENDSTOP_INTERRUPTS_FEATURE",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Custom",
     "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
     "mask": "{.*}",
     "value":"{ 80, 80, 400, 93 }",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Custom",
     "searchfor": "DEFAULT_MAX_FEEDRATE",
     "mask": "{.*}",
-    "value":"{ 300, 300, 20, 25 }",
-    "comment": "Ender3v2 Configs"
+    "value":"{ 300, 300, 25, 25 }",
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -484,7 +484,7 @@
     "op": "Custom",
     "searchfor": "MAX_FEEDRATE_EDIT_VALUES",
     "mask": "{.*}",
-    "value":"{ 1000, 1000, 20, 200 }",
+    "value":"{ 1000, 1000, 40, 200 }",
     "comment": "MRiscoC allows higher limits"
   },
   {
@@ -492,7 +492,7 @@
     "searchfor": "DEFAULT_MAX_ACCELERATION",
     "mask": "{.*}",
     "value":"{ 500, 500, 100, 1000 }",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -510,53 +510,53 @@
     "op": "CustomVal",
     "searchfor": "DEFAULT_ACCELERATION",
     "value": "500",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_RETRACT_ACCELERATION",
     "value": "800",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_TRAVEL_ACCELERATION",
     "value": "1000",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
     "searchfor": "CLASSIC_JERK",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_XJERK",
     "value": "8.0",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },  
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_YJERK",
     "value": "8.0",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },  
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_ZJERK",
     "value": "0.4",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },  
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_EJERK",
     "value": "5.0",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },  
   {
     "op": "Enable",
     "searchfor": "LIMITED_JERK_EDITING",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Custom",
@@ -595,14 +595,14 @@
     "searchfor": "INVERT_Y_DIR",
     "mask": "true",
     "value":"false",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Custom",
     "searchfor": "INVERT_Z_DIR",
     "mask": "false",
     "value":"true",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -651,7 +651,7 @@
     "op": "CustomVal",
     "searchfor": "Z_MAX_POS",
     "value": "250",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -696,12 +696,12 @@
   {
     "op": "Enable",
     "searchfor": "EEPROM_SETTINGS",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
     "searchfor": "EEPROM_AUTO_INIT",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -769,19 +769,19 @@
   {
     "op": "Enable",
     "searchfor": "SDSUPPORT",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "ENCODER_PULSES_PER_STEP",
     "value": "4",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "ENCODER_STEPS_PER_MENU_ITEM",
     "value": "1",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -791,13 +791,13 @@
     "op": "CustomVal",
     "searchfor": "LCD_FEEDBACK_FREQUENCY_DURATION_MS",
     "value": "2",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "LCD_FEEDBACK_FREQUENCY_HZ",
     "value": "5000",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
@@ -807,7 +807,7 @@
   {
     "op": "Enable",
     "searchfor": "FAN_SOFT_PWM",
-    "comment": "Ender3v2 Configs"
+    "comment": "Ender Configs"
   }
 ],
 "Version.h" : [
