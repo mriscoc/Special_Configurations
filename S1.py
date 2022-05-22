@@ -7,5 +7,5 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender3S1', ['S1'])
-CreateConfigs.Generate('Ender3S1-ManualMesh', ['S1-ManualMesh'])
+CreateConfigs.Generate('Ender3S1-F1', ['S1F1'])
+CreateConfigs.Generate('Ender3S1-F4', ['S1F4'])

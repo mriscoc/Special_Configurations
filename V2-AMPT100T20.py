@@ -8,8 +8,8 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender3V2-422MM-AMPT100', ['422','ManualMesh','AMPT100T20'])
-CreateConfigs.Generate('Ender3V2-422BLT-AMPT100', ['422','BLTouch','AMPT100T20'])
-CreateConfigs.Generate('Ender3V2-427MM-AMPT100', ['427','ManualMesh','AMPT100T20'])
-CreateConfigs.Generate('Ender3V2-427BLT-AMPT100', ['427','BLTouch','AMPT100T20'])
+CreateConfigs.Generate('Ender3V2-422-MM-AMPT100', ['422','ManualMesh','AMPT100T20'])
+CreateConfigs.Generate('Ender3V2-422-BLT-AMPT100', ['422','BLTouch','AMPT100T20'])
+CreateConfigs.Generate('Ender3V2-427-MM-AMPT100', ['427','ManualMesh','AMPT100T20'])
+CreateConfigs.Generate('Ender3V2-427-BLT-AMPT100', ['427','BLTouch','AMPT100T20'])
 

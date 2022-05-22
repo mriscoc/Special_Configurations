@@ -8,12 +8,12 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender3V2-422MM-Volc', ['422','ManualMesh','Volcano'])
-CreateConfigs.Generate('Ender3V2-422BLT-Volc', ['422','BLTouch','Volcano'])
-CreateConfigs.Generate('Ender3V2-427MM-Volc', ['427','ManualMesh','Volcano'])
-CreateConfigs.Generate('Ender3V2-427BLT-Volc', ['427','BLTouch','Volcano'])
-CreateConfigs.Generate('Ender3V2-422BLTUBL-Volc', ['422','BLTouch','Volcano','UBL'])
-CreateConfigs.Generate('Ender3V2-427BLTUBL-Volc', ['427','BLTouch','Volcano','UBL'])
+CreateConfigs.Generate('Ender3V2-422-MM-Volc', ['422','ManualMesh','Volcano'])
+CreateConfigs.Generate('Ender3V2-422-BLT-Volc', ['422','BLTouch','Volcano'])
+CreateConfigs.Generate('Ender3V2-427-MM-Volc', ['427','ManualMesh','Volcano'])
+CreateConfigs.Generate('Ender3V2-427-BLT-Volc', ['427','BLTouch','Volcano'])
+CreateConfigs.Generate('Ender3V2-422-BLTUBL-Volc', ['422','BLTouch','Volcano','UBL'])
+CreateConfigs.Generate('Ender3V2-427-BLTUBL-Volc', ['427','BLTouch','Volcano','UBL'])
 
 
 
