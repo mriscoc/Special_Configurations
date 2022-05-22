@@ -34,14 +34,14 @@
  * Verbose version identifier which should contain a reference to the location
  * from where the binary was downloaded or the source code was compiled.
  */
-#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION "Ender2Pro-ManualMesh based on bugfix-2.0.x"
+#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " Ender2Pro-ManualMesh, based on bugfix-2.0.x"
 
 /**
  * The STRING_DISTRIBUTION_DATE represents when the binary file was built,
  * here we define this default string as the date where the latest release
  * version was tagged.
  */
-//#define STRING_DISTRIBUTION_DATE "2022-05-04"
+//#define STRING_DISTRIBUTION_DATE "2022-05-15"
 
 #define STRING_DISTRIBUTION_DATE __DATE__
 #define STRING_DISTRIBUTION_TIME __TIME__

@@ -260,6 +260,11 @@
     "comment": "MRiscoC Enabled load/unload Filament G-codes"
   },
   {
+    "op": "Enable",
+    "searchfor": "NO_WORKSPACE_OFFSETS",
+    "comment": "MRiscoC Save flash space and simplify movements"
+  },
+  {
     "op": "Custom",
     "searchfor": "CHOPPER_TIMING",
     "mask": "CHOPPER_DEFAULT_12V",
@@ -678,7 +683,7 @@
   {
     "op": "Disable",
     "searchfor": "EXTRAPOLATE_BEYOND_GRID",
-    "comment": "MRiscoC Disabled for better precision at edges"
+    "comment": "MRiscoC Disabled for better accuracy at edges"
   },
   {
     "op": "CustomVal",

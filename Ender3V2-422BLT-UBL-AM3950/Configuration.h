@@ -110,7 +110,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 1  // Ender3v2 Configs
+#define SERIAL_PORT 1  // Ender Configs
 
 /**
  * Serial Port Baud Rate
@@ -158,8 +158,6 @@
  * These settings allow Marlin to tune stepper driver timing and enable advanced options for
  * stepper drivers that support them. You may also override timing options in Configuration_adv.h.
  *
- * A4988 is assumed for unspecified drivers.
- *
  * Use TMC2208/TMC2208_STANDALONE for TMC2225 drivers and TMC2209/TMC2209_STANDALONE for TMC2226 drivers.
  *
  * Options: A4988, A5984, DRV8825, LV8729, L6470, L6474, POWERSTEP01,
@@ -170,9 +168,9 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-#define X_DRIVER_TYPE  TMC2208_STANDALONE  // Ender3v2 Configs
-#define Y_DRIVER_TYPE  TMC2208_STANDALONE  // Ender3v2 Configs
-#define Z_DRIVER_TYPE  TMC2208_STANDALONE  // Ender3v2 Configs
+#define X_DRIVER_TYPE  TMC2208_STANDALONE  // Ender Configs
+#define Y_DRIVER_TYPE  TMC2208_STANDALONE  // Ender Configs
+#define Z_DRIVER_TYPE  TMC2208_STANDALONE  // Ender Configs
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
@@ -184,7 +182,7 @@
 //#define U_DRIVER_TYPE  A4988
 //#define V_DRIVER_TYPE  A4988
 //#define W_DRIVER_TYPE  A4988
-#define E0_DRIVER_TYPE TMC2208_STANDALONE  // Ender3v2 Configs
+#define E0_DRIVER_TYPE TMC2208_STANDALONE  // Ender Configs
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
@@ -551,7 +549,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 1  // Ender3v2 Configs
+#define TEMP_SENSOR_BED 1  // Ender Configs
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 #define TEMP_SENSOR_COOLER 0
@@ -598,7 +596,7 @@
 
 // Below this temperature the heater will be switched off
 // because it probably indicates a broken thermistor wire.
-#define HEATER_0_MINTEMP   5  // Ender3v2 Configs  // 100k Hisens 3950 1% up to 300Â°C
+#define HEATER_0_MINTEMP   5  // Ender Configs  // 100k Hisens 3950 1% up to 300Â°C
 #define HEATER_1_MINTEMP   5
 #define HEATER_2_MINTEMP   5
 #define HEATER_3_MINTEMP   5
@@ -606,7 +604,7 @@
 #define HEATER_5_MINTEMP   5
 #define HEATER_6_MINTEMP   5
 #define HEATER_7_MINTEMP   5
-#define BED_MINTEMP        0  // Ender3v2 Configs
+#define BED_MINTEMP        0  // Ender Configs
 #define CHAMBER_MINTEMP    5
 
 // Above this temperature the heater will be switched off.
@@ -620,7 +618,7 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      120  // Ender3v2 Configs
+#define BED_MAXTEMP      120  // Ender Configs
 #define CHAMBER_MAXTEMP  60
 
 /**
@@ -657,9 +655,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.89  // MRiscoC Stock Ender3v2 PID
-    #define DEFAULT_Ki   1.87  // MRiscoC Stock Ender3v2 PID
-    #define DEFAULT_Kd  70.18  // MRiscoC Stock Ender3v2 PID
+    #define DEFAULT_Kp  22.89  // MRiscoC Stock Ender PID
+    #define DEFAULT_Ki   1.87  // MRiscoC Stock Ender PID
+    #define DEFAULT_Kd  70.18  // MRiscoC Stock Ender PID
   #endif
 #endif
 
@@ -722,7 +720,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-#define PIDTEMPBED  // Ender3v2 Configs
+#define PIDTEMPBED  // Ender Configs
 
 //#define BED_LIMIT_SWITCHING
 
@@ -740,9 +738,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 462.10  // MRiscoC Stock Ender3v2 PID
-  #define DEFAULT_bedKi  85.47  // MRiscoC Stock Ender3v2 PID
-  #define DEFAULT_bedKd 624.59  // MRiscoC Stock Ender3v2 PID
+  #define DEFAULT_bedKp 462.10  // MRiscoC Stock Ender PID
+  #define DEFAULT_bedKi  85.47  // MRiscoC Stock Ender PID
+  #define DEFAULT_bedKd 624.59  // MRiscoC Stock Ender PID
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -819,7 +817,7 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 1000  // Ender3v2 Configs
+#define EXTRUDE_MAXLENGTH 1000  // Ender Configs
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -971,7 +969,7 @@
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
-#define ENDSTOP_INTERRUPTS_FEATURE  // Ender3v2 Configs
+#define ENDSTOP_INTERRUPTS_FEATURE  // Ender Configs
 
 /**
  * Endstop Noise Threshold
@@ -1015,18 +1013,18 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }  // Ender3v2 Configs
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }  // Ender Configs
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 20, 25 }  // Ender3v2 Configs
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 25, 25 }  // Ender Configs
 
 #define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2  // MRiscoC allows higher limits
 #if ENABLED(LIMITED_MAX_FR_EDITING)
-  #define MAX_FEEDRATE_EDIT_VALUES    { 1000, 1000, 20, 200 } // ...or, set your own edit limits  // MRiscoC allows higher limits
+  #define MAX_FEEDRATE_EDIT_VALUES    { 1000, 1000, 40, 200 } // ...or, set your own edit limits  // MRiscoC allows higher limits
 #endif
 
 /**
@@ -1035,7 +1033,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 1000 }  // Ender3v2 Configs
+#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 1000 }  // Ender Configs
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2  // MRiscoC allows higher limits
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1050,9 +1048,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves  // Ender3v2 Configs
-#define DEFAULT_RETRACT_ACCELERATION  800    // E acceleration for retracts  // Ender3v2 Configs
-#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves  // Ender3v2 Configs
+#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves  // Ender Configs
+#define DEFAULT_RETRACT_ACCELERATION  800    // E acceleration for retracts  // Ender Configs
+#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves  // Ender Configs
 
 /**
  * Default Jerk limits (mm/s)
@@ -1062,11 +1060,11 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-#define CLASSIC_JERK  // Ender3v2 Configs
+#define CLASSIC_JERK  // Ender Configs
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 8.0  // Ender3v2 Configs
-  #define DEFAULT_YJERK 8.0  // Ender3v2 Configs
-  #define DEFAULT_ZJERK  0.4  // Ender3v2 Configs
+  #define DEFAULT_XJERK 8.0  // Ender Configs
+  #define DEFAULT_YJERK 8.0  // Ender Configs
+  #define DEFAULT_ZJERK  0.4  // Ender Configs
   //#define DEFAULT_IJERK  0.3
   //#define DEFAULT_JJERK  0.3
   //#define DEFAULT_KJERK  0.3
@@ -1076,13 +1074,13 @@
 
   //#define TRAVEL_EXTRA_XYJERK 0.0     // Additional jerk allowance for all travel moves
 
-  #define LIMITED_JERK_EDITING        // Limit edit via M205 or LCD to DEFAULT_aJERK * 2  // Ender3v2 Configs
+  #define LIMITED_JERK_EDITING        // Limit edit via M205 or LCD to DEFAULT_aJERK * 2  // Ender Configs
   #if ENABLED(LIMITED_JERK_EDITING)
     #define MAX_JERK_EDIT_VALUES { 20, 20, 1, 20 } // ...or, set your own edit limits  // MRiscoC allows higher limits
   #endif
 #endif
 
-#define DEFAULT_EJERK    5.0  // May be used by Linear Advance  // Ender3v2 Configs
+#define DEFAULT_EJERK    5.0  // May be used by Linear Advance  // Ender Configs
 
 /**
  * Junction Deviation Factor
@@ -1439,8 +1437,8 @@
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR false
-#define INVERT_Y_DIR false  // Ender3v2 Configs
-#define INVERT_Z_DIR true  // Ender3v2 Configs
+#define INVERT_Y_DIR false  // Ender Configs
+#define INVERT_Z_DIR true  // Ender Configs
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
@@ -1501,7 +1499,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS 248  // MRiscoC Stock physical limit
 #define Y_MAX_POS 231  // MRiscoC Stock physical limit
-#define Z_MAX_POS 250  // Ender3v2 Configs
+#define Z_MAX_POS 250  // Ender Configs
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -1748,7 +1746,7 @@
 
     // Beyond the probed grid, continue the implied tilt?
     // Default is to maintain the height of the nearest edge.
-    //#define EXTRAPOLATE_BEYOND_GRID  // MRiscoC Disabled for better precision at edges
+    //#define EXTRAPOLATE_BEYOND_GRID  // MRiscoC Disabled for better accuracy at edges
 
     //
     // Experimental Subdivision of the grid by Catmull-Rom method.
@@ -1960,12 +1958,12 @@
  *   M501 - Read settings from EEPROM. (i.e., Throw away unsaved changes)
  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
  */
-#define EEPROM_SETTINGS     // Persistent storage with M500 and M501  // Ender3v2 Configs
+#define EEPROM_SETTINGS     // Persistent storage with M500 and M501  // Ender Configs
 //#define DISABLE_M503        // Saves ~2700 bytes of flash. Disable for release!
 #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save PROGMEM.
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
 #if ENABLED(EEPROM_SETTINGS)
-  #define EEPROM_AUTO_INIT  // Init EEPROM automatically on any errors.  // Ender3v2 Configs
+  #define EEPROM_AUTO_INIT  // Init EEPROM automatically on any errors.  // Ender Configs
   #define EEPROM_INIT_NOW   // Init EEPROM on first boot after a new build.  // MRiscoC Reset EEPROM on first boot
 #endif
 
@@ -2238,7 +2236,7 @@
  * SD Card support is disabled by default. If your controller has an SD slot,
  * you must uncomment the following option or it won't work.
  */
-#define SDSUPPORT  // Ender3v2 Configs
+#define SDSUPPORT  // Ender Configs
 
 /**
  * SD CARD: ENABLE CRC
@@ -2262,13 +2260,13 @@
 // This option overrides the default number of encoder pulses needed to
 // produce one step. Should be increased for high-resolution encoders.
 //
-#define ENCODER_PULSES_PER_STEP 4  // Ender3v2 Configs
+#define ENCODER_PULSES_PER_STEP 4  // Ender Configs
 
 //
 // Use this option to override the number of step signals required to
 // move between next/prev menu items.
 //
-#define ENCODER_STEPS_PER_MENU_ITEM 1  // Ender3v2 Configs
+#define ENCODER_STEPS_PER_MENU_ITEM 1  // Ender Configs
 
 /**
  * Encoder Direction Options
@@ -2326,8 +2324,8 @@
 // Note: Test audio output with the G-Code:
 //  M300 S<frequency Hz> P<duration ms>
 //
-#define LCD_FEEDBACK_FREQUENCY_DURATION_MS 2  // Ender3v2 Configs
-#define LCD_FEEDBACK_FREQUENCY_HZ 5000  // Ender3v2 Configs
+#define LCD_FEEDBACK_FREQUENCY_DURATION_MS 2  // Ender Configs
+#define LCD_FEEDBACK_FREQUENCY_HZ 5000  // Ender Configs
 
 //=============================================================================
 //======================== LCD / Controller Selection =========================
@@ -2977,7 +2975,7 @@
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
 // is too low, you should also increment SOFT_PWM_SCALE.
-#define FAN_SOFT_PWM  // Ender3v2 Configs
+#define FAN_SOFT_PWM  // Ender Configs
 
 // Incrementing this by 1 will double the software PWM frequency,
 // affecting heaters, and the fan if FAN_SOFT_PWM is enabled.

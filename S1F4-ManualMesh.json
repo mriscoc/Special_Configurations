@@ -11,6 +11,11 @@
     "searchfor": "RETRACT_LENGTH",
     "value": "1",
     "comment": "MRiscoC Directdrive"
+  },
+  {
+    "op": "Replace",
+    "searchfor": "Ender3v2",
+    "value": "Ender3S1"
   }
 ],
 "Configuration.h" : [
@@ -18,8 +23,8 @@
     "op": "Custom",
     "searchfor": "MOTHERBOARD",
     "mask" : ".*",
-    "value": "BOARD_CREALITY_V24S1_301",
-    "comment": "Ender 3S1 v301"
+    "value": "BOARD_CREALITY_V24S1_301F4",
+    "comment": "Ender 3S1 v301F4"
   },
   {
     "op": "Custom",

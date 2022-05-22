@@ -49,11 +49,6 @@
     "searchfor": "MESH_MAX_Y",
     "mask" : ".*",
     "value": "175"
-  }, 
-  {
-    "op": "Replace",
-    "searchfor": "Ender3v2",
-    "value": "Ender3S1"
   }
 ],
 "Configuration.h" : [
