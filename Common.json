@@ -144,11 +144,6 @@
   },
   {
     "op": "Enable",
-    "searchfor": "SD_ABORT_ON_ENDSTOP_HIT",
-    "comment": "MRiscoC Allows emergency stop of SD printing by hitting any end-stop"
-  },
-  {
-    "op": "Enable",
     "searchfor": "BINARY_FILE_TRANSFER",
     "comment": "MRiscoC Enabled for easy firmware upgrade"
   },
@@ -187,6 +182,12 @@
     "op": "Enable",
     "searchfor": "ARC_P_CIRCLES",
     "comment": "MRiscoC Enabled"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "MIN_STEPS_PER_SEGMENT",
+    "value": "4",
+    "comment": "MRiscoC Increase little movements accuracy"
   },
   {
     "op": "CustomVal",
@@ -690,6 +691,11 @@
     "searchfor": "MESH_INSET",
     "value": "25",
     "comment": "MRiscoC Center mesh"
+  },
+  {
+    "op": "InsertAfter",
+    "searchfor": "#define LCD_BED_LEVELING",
+    "newline": "\n#define MESH_EDIT_MENU  // MRiscoC Enable menu for edit mesh leveling data"
   },
   {
     "op": "Custom",

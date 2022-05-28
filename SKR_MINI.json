@@ -1,0 +1,140 @@
+{
+"Configuration_adv.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "E0_AUTO_FAN_PIN",
+    "value": "PC7"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_CURRENT",
+    "value": "580"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_CURRENT",
+    "value": "580"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_CURRENT",
+    "value": "580"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "E0_CURRENT",
+    "value": "700"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_STALL_SENSITIVITY",
+    "value": "72"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_STALL_SENSITIVITY",
+    "value": "70"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_STALL_SENSITIVITY",
+    "value": "10"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "IMPROVE_HOMING_RELIABILITY",
+    "comment": "SKR MINIE3V3"
+  },  
+  {
+    "op": "Enable",
+    "searchfor": "USE_CONTROLLER_FAN",
+    "comment": "SKR MINIE3V3"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "CONTROLLER_FAN_PIN",
+    "value": "FAN2_PIN"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "POWER_LOSS_PIN",
+    "value": "-1"
+  }
+],
+"Configuration.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "MOTHERBOARD",
+    "mask" : "[A-Z0-9_]+",
+    "value": "BOARD_BTT_SKR_MINI_E3_V3_0",
+    "comment": "BTT SKR MINI E3 V3"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "SERIAL_PORT",
+    "value": "-1"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "X_DRIVER_TYPE",
+    "mask" : ".*",
+    "value": "TMC2209"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Y_DRIVER_TYPE",
+    "mask" : ".*",
+    "value": "TMC2209"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Z_DRIVER_TYPE",
+    "mask" : ".*",
+    "value": "TMC2209"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "E0_DRIVER_TYPE",
+    "mask" : ".*",
+    "value": "TMC2209"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "INVERT_X_DIR",
+    "mask" : "false",
+    "value": "true"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "INVERT_Y_DIR",
+    "mask" : "false",
+    "value": "true"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "INVERT_Z_DIR",
+    "mask" : "true",
+    "value": "false"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "INVERT_E0_DIR",
+    "mask" : "false",
+    "value": "true"
+  }
+],
+"Version.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "MACHINE_NAME",
+    "mask": ".+",
+    "value": "\"Ender3v2-SKRMINIE3V3\""
+  }
+],
+"Comments" : [
+  {
+    "C1":"Make the following changes to Marlin/Configuration_adv.h:",
+    "C1":"Change //#define CONTROLLER_FAN_PIN -1 to #define CONTROLLER_FAN_PIN FAN1_PIN"
+  }
+]   
+}
