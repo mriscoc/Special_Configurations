@@ -34,7 +34,7 @@
  * Verbose version identifier which should contain a reference to the location
  * from where the binary was downloaded or the source code was compiled.
  */
-#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " Ender3S1-ManualMesh, based on bugfix-2.0.x"
+#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " Ender3S1-F1-MM, based on bugfix-2.0.x"
 
 /**
  * The STRING_DISTRIBUTION_DATE represents when the binary file was built,

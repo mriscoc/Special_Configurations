@@ -11,11 +11,6 @@
     "searchfor": "RETRACT_LENGTH",
     "value": "1",
     "comment": "MRiscoC Directdrive"
-  },
-  {
-    "op": "Replace",
-    "searchfor": "Ender3v2",
-    "value": "Ender3S1"
   }
 ],
 "Configuration.h" : [
@@ -262,11 +257,6 @@
     "searchfor": "BILINEAR_SUBDIVISIONS",
     "value": "5",
     "comment": "Ender3S1 Configs"
-  },
-  {
-    "op": "Replace",
-    "searchfor": "Ender3v2",
-    "value": "Ender3S1"
   }
 ],
 "Version.h" : [

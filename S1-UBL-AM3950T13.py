@@ -9,5 +9,5 @@
 import CreateConfigs
 
 CreateConfigs.Generate('Ender3S1-F1-UBL-AM3950', ['S1F1','UBL','AM3950T13'])
-CreateConfigs.Generate('Ender3S1-F4-UBL-AM3950', ['S1F4','UBL','AM3950T13'])
+#CreateConfigs.Generate('Ender3S1-F4-UBL-AM3950', ['S1F4','UBL','AM3950T13'])
 
