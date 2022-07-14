@@ -4,8 +4,20 @@ project files are in the firmware repository: https://github.com/mriscoc/Ender3V
 
 ### These special configurations and releases are sponsored by donors.
 
+To create a configuration it is necessary to call the `CreateConfigs.py` Python script with the following parameters:
+
+```Python
+CreateConfigs.Generate('CustomConfigName', ['Printer','Board','Features',...])
+```
+To create Ender3V2 Configuration files with a BLTouch and UBL support it is easy to write a little Python script to call the above function:
+
+```Python
+#!/usr/bin/python
+import CreateConfigs
+CreateConfigs.Generate('Ender3V2-422-BLTUBL', ['Ender3V2','422','BLT','UBL'])
+```
 For have a special build you must to provide a config json with only your personal choices, for example: for get a
-special build that have a hotend volcano, bltouch and 4.2.2 board it is necessary only write a Volcano.json with this content:
+special build for a Ender3V2 printer that have a hotend volcano, bltouch and 4.2.2 board it is necessary only write a Volcano.json with this content:
 
 ```json
 {
@@ -36,9 +48,7 @@ special build that have a hotend volcano, bltouch and 4.2.2 board it is necessar
 }
 ```
 
-Then, request to the `CreateConfigs.py` to build a configuration with `CreateConfigs.Generate('', ['422','BLTouch','Volcano'])`; the last "Volcano" will overwrite the necessary values in the configuration file.
-
-~~The above can be done using a GUI by running the `zen-configurator.py` script. The script requires Python (tested with 3.9.5+) to have been installed with TKInter (Tcl/Tk). Simply check the boxes with the configs you want to add (you can verify what the configs add by looking at the json files that match the name of the checkboxes) and click Create Configuration. This will happen in the background and will be present in a config folder in the same directory called "Custom-zenUI." Progress will be shown in standard output which is directed to the text box. If you need to debug the script and no errors show because the window closed, edit the script and comment out the `text.start()` line (line 109).
+Then, request to the `CreateConfigs.py` to build a configuration with `CreateConfigs.Generate('MyCustomConfigName', ['Ender3V2','422','BLT','Volcano'])`; the last "Volcano" will overwrite the necessary values in the configuration file.
 
 The `CreateConfigs.py` script supports five basic operations over the configuration files:
 
