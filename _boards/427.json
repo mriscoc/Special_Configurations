@@ -54,6 +54,12 @@
     "mask": "false",
     "value":"true",
     "comment": "Ender Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "NEOPIXEL_PIN",
+    "mask" : "[^ ]*",
+    "value": "PA13"
   }
 ],
 "Configuration_adv.h" : [
