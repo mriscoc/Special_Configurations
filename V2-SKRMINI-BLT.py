@@ -7,6 +7,5 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender3V2-SKRMINI-MM', ['SKR_MINI','ManualMesh'])
-CreateConfigs.Generate('Ender3V2-SKRMINI-BLT', ['SKR_MINI','BLTouch'])
-CreateConfigs.Generate('Ender3V2-SKRMINI-BLTUBL', ['SKR_MINI','BLTouch','UBL'])
+CreateConfigs.Generate('Ender3V2-SKRME3V3-MM', ['Ender3V2','SKRME3V3','MM'])
+CreateConfigs.Generate('Ender3V2-SKRME3V3-BLTUBL', ['Ender3V2','SKRME3V3','BLT','UBL'])

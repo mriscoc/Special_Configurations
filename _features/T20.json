@@ -1,0 +1,20 @@
+{
+"Configuration_adv.h" : [
+],
+"Configuration.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "TEMP_SENSOR_0",
+    "value": "20",
+    "comment": "PT100 type 20 thermistor"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "HEATER_0_MINTEMP",
+    "value": "5",
+    "comment": "PT100 type 20 thermistor"
+  }
+],
+"Version.h" : [
+]   
+}

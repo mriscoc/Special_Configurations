@@ -1,0 +1,68 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "BAUD_RATE_GCODE"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "EEPROM_INIT_NOW"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "PRINTCOUNTER"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "INDIVIDUAL_AXIS_HOMING_SUBMENU"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "HAS_LOCKSCREEN"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "HAS_ESDIAG"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "SOUND_MENU_ITEM"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "LONG_FILENAME_HOST_SUPPORT"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "LONG_FILENAME_WRITE_SUPPORT"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "SCROLL_LONG_FILENAMES"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "STATUS_MESSAGE_SCROLLING"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "STATUS_MESSAGE_TIMEOUT_SEC"
+  }, 
+  {
+    "op": "Disable",
+    "searchfor": "LCD_SET_PROGRESS_MANUALLY"
+  }, 
+  {
+    "op": "Disable",
+    "searchfor": "BINARY_FILE_TRANSFER"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "ARC_SUPPORT"
+  }
+],
+"Version.h" : [
+]   
+}

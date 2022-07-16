@@ -1,0 +1,26 @@
+{
+"Configuration.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "TEMP_SENSOR_0",
+    "value": "5",
+    "comment": "Volcano thermistor"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "HEATER_0_MINTEMP",
+    "value": "5",
+    "comment": "Volcano thermistor"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "HEATER_0_MAXTEMP",
+    "value": "300",
+    "comment": "Volcano thermistor"
+  }
+],
+"Configuration_adv.h" : [
+],
+"Version.h" : [
+]   
+}

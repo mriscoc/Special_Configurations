@@ -7,4 +7,4 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender2Pro-ManualMesh', ['Ender2Pro','ManualMesh'])
+CreateConfigs.Generate('Ender2Pro-ManualMesh', ['Ender2Pro','423','MM'])

@@ -7,6 +7,6 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender3S1-F1-EZABL-NEO', ['S1F1','EZABL','NEOGRB'])
-CreateConfigs.Generate('Ender3S1-F4-EZABL-NEO', ['S1F4','EZABL','NEOGRB'])
+CreateConfigs.Generate('Ender3S1-F1-EZABLUBL-NEO', ['Ender3S1','301F1','EZABL','UBL','NEOGRB'])
+CreateConfigs.Generate('Ender3S1-F4-EZABL-NEO', ['Ender3S1','301F4','EZABL','NEOGRB'])
 

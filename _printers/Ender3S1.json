@@ -1,0 +1,240 @@
+{
+"Configuration.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "TEMP_SENSOR_BED",
+    "value": "1",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "HEATER_0_MINTEMP",
+    "value": "0",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BED_MINTEMP",
+    "value": "0",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BED_MAXTEMP",
+    "value": "110",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kp",
+    "value": "17.10",
+    "comment": "MRiscoC Stock PID"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Ki",
+    "value": "1.39",
+    "comment": "MRiscoC Stock PID"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kd",
+    "value": " 52.79",
+    "comment": "MRiscoC Stock PID"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKp",
+    "value": "54.86",
+    "comment": "MRiscoC Stock PID"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKi",
+    "value": "10.06",
+    "comment": "MRiscoC Stock PID"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKd",
+    "value": "199.38",
+    "comment": "MRiscoC Stock PID"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
+    "mask": "{.*}",
+    "value":"{ 80, 80, 400, 424.9 }",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_XJERK",
+    "value": "5.0",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_YJERK",
+    "value": "5.0",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_ZJERK",
+    "value": "0.3",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_EJERK",
+    "value": "5.0",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "NOZZLE_TO_PROBE_OFFSET",
+    "mask": "{.*}",
+    "value":"{ -31.8, -40.5, 0 }",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_BED_SIZE",
+    "value": "220",
+    "comment": "MRiscoC Max usable bed size"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_BED_SIZE",
+    "value": "220",
+    "comment": "MRiscoC Max usable bed size"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "X_MIN_POS",
+    "mask": ".+",
+    "value": "-10",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Y_MIN_POS",
+    "mask": ".+",
+    "value": "-8",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "X_MAX_POS",
+    "mask": ".+",
+    "value": "230",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "Y_MAX_POS",
+    "mask": ".+",
+    "value": "220",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_MAX_POS",
+    "value": "270",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "FILAMENT_RUNOUT_DISTANCE_MM",
+    "value": "200",
+    "comment": "MRiscoC Customizable by menu"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "MESH_INSET",
+    "value": "38",
+    "comment": "MRiscoC Center mesh"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "ABL_BILINEAR_SUBDIVISION",
+    "comment": "Original Ender3S1 Configs set this to Enable"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BILINEAR_SUBDIVISIONS",
+    "value": "5",
+    "comment": "Ender3S1 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "NOZZLE_PARK_POINT",
+    "mask": "{.*}",
+    "value":"{ (X_MAX_POS - 2), (Y_MAX_POS - 2), 20 }"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "TRAMMING_POINT_XY",
+    "mask": "{.*}",
+    "value":"{ { 29, 29 }, { 199, 29 }, { 199, 199 }, { 29, 199 } }"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "TRAMMING_SCREW_THREAD",
+    "value": "40"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_LENGTH",
+    "value": "1",
+    "comment": "MRiscoC Directdrive"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_FEEDRATE",
+    "value": "40",
+    "comment": "MRiscoC Bowden"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_RECOVER_FEEDRATE",
+    "value": "40",
+    "comment": "MRiscoC Bowden"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MIN_X",
+    "mask" : ".*",
+    "value": "10"
+  }, 
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MAX_X",
+    "mask" : ".*",
+    "value": "195"
+  }, 
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MIN_Y",
+    "mask" : ".*",
+    "value": "10"
+  }, 
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MAX_Y",
+    "mask" : ".*",
+    "value": "175"
+  }
+],
+"Version.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "MACHINE_NAME",
+    "mask": ".+",
+    "value": "\"Ender 3S1\""
+  }
+]   
+}

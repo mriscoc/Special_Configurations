@@ -4,8 +4,8 @@
 # Configurations generator script for the Professional Firmware
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Marlin_Configurations
-# version: 3.1
-# date: 2022/02/14
+# version: 4.1
+# date: 2022/07/13
 # ------------------------------------------------------------------------------
 
 import sys
@@ -118,20 +118,25 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
     f = open(Source, 'r', encoding="utf8")
     lines = f.read()
 
-    lines = ProcessLines("Common.json", config)
+    lines = ProcessLines("_printers/Common.json", config)
     for val in Mode:
-      JsonFile = val + '.json'
+      JsonFile = '_printers/' + val + '.json'
       if not os.path.isfile(JsonFile) :
-        print('Json file:', JsonFile,'not found')
-        quit()
+        JsonFile = '_boards/' + val + '.json'
+        if not os.path.isfile(JsonFile) :
+          JsonFile = '_features/' + val + '.json'
+          if not os.path.isfile(JsonFile) :
+            print('Json file:', JsonFile,'not found')
+            quit()
+
       lines = ProcessLines(JsonFile, config)
 
     if Machine_Name :
       lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+Machine_Name+'"')
-      lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+Machine_Name+', based on bugfix-2.0.x"')
+      lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+Machine_Name+', based on bugfix-2.1.x"')
     else :
-      lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+'Ender3v2 '+' '.join(Mode)+'"')
-      lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+' '.join(Mode)+', based on bugfix-2.0.x"')
+      lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+' '.join(Mode)+'"')
+      lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+' '.join(Mode)+', based on bugfix-2.1.x"')
     with open(Target, "w", encoding="utf8") as of:
       of.write(lines)
       of.close()
@@ -139,7 +144,7 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
     if verbose: print('-----')
   else :
     print('Source file:', Source,'not found')
-    quit()
+#    quit()
 
 def Generate(Machine_Name, Mode) :
   print('Configurations generator script for the Professional Firmware')
@@ -152,5 +157,6 @@ def Generate(Machine_Name, Mode) :
   CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Configuration.h')
   CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Configuration_adv.h')
   CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Version.h')
+  CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Platformio.ini')
 
 

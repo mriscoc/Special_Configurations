@@ -7,6 +7,6 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender3V2-422-BLTUBL', ['422','BLTouch','UBL'])
-CreateConfigs.Generate('Ender3V2-423-BLTUBL', ['423','BLTouch','UBL'])
-CreateConfigs.Generate('Ender3V2-427-BLTUBL', ['427','BLTouch','UBL'])
+CreateConfigs.Generate('Ender3V2-422-BLTUBL', ['Ender3V2','422','BLT','UBL'])
+CreateConfigs.Generate('Ender3V2-423-BLTUBL', ['Ender3V2','423','BLT','UBL'])
+CreateConfigs.Generate('Ender3V2-427-BLTUBL', ['Ender3V2','427','BLT','UBL'])

@@ -1,0 +1,27 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "AUTO_BED_LEVELING_BILINEAR",
+    "comment": "Disabled for UBL"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "AUTO_BED_LEVELING_UBL",
+    "comment": "MRiscoC UBL"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "G29_RETRY_AND_RECOVER",
+    "comment": "Disabled for UBL"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "OPTIMIZED_MESH_STORAGE"
+  }
+],
+"Version.h" : [
+]   
+}

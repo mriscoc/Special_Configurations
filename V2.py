@@ -7,9 +7,9 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender3V2-422-MM', ['422','ManualMesh'])
-CreateConfigs.Generate('Ender3V2-422-BLT', ['422','BLTouch'])
-CreateConfigs.Generate('Ender3V2-423-MM', ['423','ManualMesh'])
-CreateConfigs.Generate('Ender3V2-423-BLT', ['423','BLTouch'])
-CreateConfigs.Generate('Ender3V2-427-MM', ['427','ManualMesh'])
-CreateConfigs.Generate('Ender3V2-427-BLT', ['427','BLTouch'])
+CreateConfigs.Generate('Ender3V2-422-MM', ['Ender3V2','422','MM'])
+CreateConfigs.Generate('Ender3V2-422-BLT', ['Ender3V2','422','BLT'])
+CreateConfigs.Generate('Ender3V2-423-MM', ['Ender3V2','423','MM'])
+CreateConfigs.Generate('Ender3V2-423-BLT', ['Ender3V2','423','BLT'])
+CreateConfigs.Generate('Ender3V2-427-MM', ['Ender3V2','427','MM'])
+CreateConfigs.Generate('Ender3V2-427-BLT', ['Ender3V2','427','BLT'])

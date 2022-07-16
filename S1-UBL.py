@@ -7,5 +7,5 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender3S1-F1-UBL', ['S1F1','UBL'])
-#CreateConfigs.Generate('Ender3S1-F4-UBL', ['S1F4','UBL'])
+CreateConfigs.Generate('Ender3S1-F1-UBL', ['Ender3S1','301F1','BLT','UBL'])
+CreateConfigs.Generate('Ender3S1-F4-UBL', ['Ender3S1','301F4','BLT','UBL','FreeFlash'])

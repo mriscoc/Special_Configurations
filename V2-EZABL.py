@@ -8,9 +8,9 @@
 # ------------------------------------------------------------------------------
 import CreateConfigs
 
-CreateConfigs.Generate('Ender3V2-422-EZABL', ['422','EZABL'])
-CreateConfigs.Generate('Ender3V2-423-EZABL', ['423','EZABL'])
-CreateConfigs.Generate('Ender3V2-427-EZABL', ['427','EZABL'])
+CreateConfigs.Generate('Ender3V2-422-EZABL', ['Ender3V2','422','EZABL','UBL'])
+CreateConfigs.Generate('Ender3V2-423-EZABL', ['Ender3V2','423','EZABL','UBL'])
+CreateConfigs.Generate('Ender3V2-427-EZABL', ['Ender3V2','427','EZABL','UBL'])
 
 
 
