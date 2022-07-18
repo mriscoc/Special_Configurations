@@ -157,6 +157,6 @@ def Generate(Machine_Name, Mode) :
   CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Configuration.h')
   CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Configuration_adv.h')
   CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Version.h')
-  CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Platformio.ini')
+  CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'platformio.ini')
 
 
