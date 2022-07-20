@@ -157,6 +157,26 @@
     "comment": "MRiscoC Enabled for safety"
   },
   {
+    "op": "CustomVal",
+    "searchfor": "Z_HOMING_HEIGHT",
+    "value": "10",
+    "comment": "MRiscoC Crearance over the bed"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_AFTER_HOMING",
+    "value": "5",
+    "comment": "MRiscoC Crearance over the bed"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "Z_HOMING_HEIGHT"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "Z_AFTER_HOMING"
+  },
+  {
     "op": "Enable",
     "searchfor": "FILAMENT_RUNOUT_SENSOR",
     "comment": "MRiscoC Enabled runout sensor support"

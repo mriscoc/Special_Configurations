@@ -27,6 +27,10 @@
     "searchfor": "LEVELING_NOZZLE_TEMP",
     "value": "175",
     "comment": "Preheat nozzle without oozing"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "Z_AFTER_HOMING"
   }
 ],
 "Configuration_adv.h" : [

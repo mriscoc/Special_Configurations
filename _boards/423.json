@@ -79,7 +79,7 @@
 ],
 "Version.h" : [
 ],   
-"Platformio.ini" : [
+"platformio.ini" : [
   {
     "op": "Replace",
     "searchfor": "default_envs = mega2560",
