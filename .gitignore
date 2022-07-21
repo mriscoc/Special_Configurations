@@ -31,3 +31,7 @@
 *.out
 *.app
 __pycache__
+/_features/BradyLP.json
+/_features/FreeFlash.json
+*.bak
+/_features/BradyLP.json

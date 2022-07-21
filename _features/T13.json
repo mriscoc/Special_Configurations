@@ -11,6 +11,12 @@
     "searchfor": "HEATER_0_MINTEMP",
     "value": "5",
     "comment": "100k Hisens 3950 1% up to 300°C"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "HEATER_0_MAXTEMP",
+    "value": "300",
+    "comment": "100k Hisens 3950 1% up to 300°C"
   }
 ],
 "Configuration_adv.h" : [
