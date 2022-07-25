@@ -371,7 +371,7 @@
     "comment": "Ender Configs"
   },
   {
-    "op": "Disable",
+    "op": "Enable",
     "searchfor": "ADAPTIVE_STEP_SMOOTHING"
   },
   {
