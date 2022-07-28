@@ -1,0 +1,26 @@
+{
+"Configuration.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "TEMP_SENSOR_0",
+    "value": "1",
+    "comment": "Stock thermistor"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "HEATER_0_MINTEMP",
+    "value": "0",
+    "comment": "Stock thermistor"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "HEATER_0_MAXTEMP",
+    "value": "275",
+    "comment": "Stock thermistor"
+  }
+],
+"Configuration_adv.h" : [
+],
+"Version.h" : [
+]   
+}

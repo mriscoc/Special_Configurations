@@ -5,9 +5,8 @@
     "searchfor": "NEOPIXEL_LED"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "NEOPIXEL_TYPE",
-    "mask" : "[^ ]*",
     "value": "NEO_GRB"
   },
   {

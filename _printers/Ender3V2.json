@@ -105,30 +105,26 @@
     "comment": "MRiscoC Max usable bed size"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "X_MIN_POS",
-    "mask": ".+",
     "value": "0",
     "comment": "MRiscoC Stock physical limit"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "Y_MIN_POS",
-    "mask": ".+",
     "value": "0",
     "comment": "MRiscoC Stock physical limit"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "X_MAX_POS",
-    "mask": ".+",
     "value": "248",
     "comment": "MRiscoC Stock physical limit"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "Y_MAX_POS",
-    "mask": ".+",
     "value": "231",
     "comment": "MRiscoC Stock physical limit"
   },
@@ -154,8 +150,7 @@
     "op": "Custom",
     "searchfor": "NOZZLE_PARK_POINT",
     "mask": "{.*}",
-    "value":"{ (X_BED_SIZE + 10), (Y_MAX_POS - 10), 20 }",
-    "comment": "MRiscoC Customizable by menu"
+    "value":"{ (X_BED_SIZE + 10), (Y_MAX_POS - 10), 20 }"
   }
 ],
 "Configuration_adv.h" : [
@@ -193,7 +188,7 @@
   {
     "op": "Custom",
     "searchfor": "MACHINE_NAME",
-    "mask": ".+",
+    "mask": "\".+\"",
     "value": "\"Ender 3V2\""
   }
 ]   

@@ -1,9 +1,8 @@
 {
 "Configuration.h" : [
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "MOTHERBOARD",
-    "mask" : "[A-Z0-9_]+",
     "value": "BOARD_BTT_SKR_MINI_E3_V3_0",
     "comment": "BTT SKR MINI E3 V3"
   },
@@ -13,45 +12,38 @@
     "value": "-1"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "X_DRIVER_TYPE",
-    "mask" : ".*",
     "value": "TMC2209"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "Y_DRIVER_TYPE",
-    "mask" : ".*",
     "value": "TMC2209"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "Z_DRIVER_TYPE",
-    "mask" : ".*",
     "value": "TMC2209"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "E0_DRIVER_TYPE",
-    "mask" : ".*",
     "value": "TMC2209"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "INVERT_X_DIR",
-    "mask" : "false",
     "value": "true"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "INVERT_E0_DIR",
-    "mask" : "false",
     "value": "true"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "NEOPIXEL_PIN",
-    "mask" : "[^ ]*",
     "value": "PA8"
   }
 ],

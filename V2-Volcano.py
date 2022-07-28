@@ -12,6 +12,3 @@ CreateConfigs.Generate('Ender3V2-422-MM-Volc', ['Ender3V2','422','MM','T5'])
 CreateConfigs.Generate('Ender3V2-427-MM-Volc', ['Ender3V2','427','MM','T5'])
 CreateConfigs.Generate('Ender3V2-422-BLTUBL-Volc', ['Ender3V2','422','BLT','UBL','T5'])
 CreateConfigs.Generate('Ender3V2-427-BLTUBL-Volc', ['Ender3V2','427','BLT','UBL','T5'])
-
-
-

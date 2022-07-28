@@ -27,38 +27,32 @@
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_Kp",
-    "value": "17.10",
-    "comment": "MRiscoC Stock PID"
+    "value": "17.10"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_Ki",
-    "value": "1.39",
-    "comment": "MRiscoC Stock PID"
+    "value": "1.39"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_Kd",
-    "value": " 52.79",
-    "comment": "MRiscoC Stock PID"
+    "value": " 52.79"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_bedKp",
-    "value": "54.86",
-    "comment": "MRiscoC Stock PID"
+    "value": "54.86"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_bedKi",
-    "value": "10.06",
-    "comment": "MRiscoC Stock PID"
+    "value": "10.06"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_bedKd",
-    "value": "199.38",
-    "comment": "MRiscoC Stock PID"
+    "value": "199.38"
   },
   {
     "op": "Custom",
@@ -111,30 +105,26 @@
     "comment": "MRiscoC Max usable bed size"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "X_MIN_POS",
-    "mask": ".+",
     "value": "-10",
     "comment": "MRiscoC Stock physical limit"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "Y_MIN_POS",
-    "mask": ".+",
     "value": "-8",
     "comment": "MRiscoC Stock physical limit"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "X_MAX_POS",
-    "mask": ".+",
     "value": "230",
     "comment": "MRiscoC Stock physical limit"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "Y_MAX_POS",
-    "mask": ".+",
     "value": "220",
     "comment": "MRiscoC Stock physical limit"
   },
@@ -233,7 +223,7 @@
   {
     "op": "Custom",
     "searchfor": "MACHINE_NAME",
-    "mask": ".+",
+    "mask": "\".+\"",
     "value": "\"Ender 3S1\""
   }
 ]   

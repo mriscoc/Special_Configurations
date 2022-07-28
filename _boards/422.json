@@ -1,9 +1,8 @@
 {
 "Configuration.h" : [
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "MOTHERBOARD",
-    "mask" : "[A-Z0-9_]+",
     "value": "BOARD_CREALITY_V4",
     "comment": "Creality Board v4.2.2"
   },
@@ -14,51 +13,50 @@
     "comment": "Ender Configs"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "X_DRIVER_TYPE",
-    "mask" : ".*",
     "value": "TMC2208_STANDALONE",
     "comment": "Ender Configs"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "Y_DRIVER_TYPE",
-    "mask" : ".*",
     "value": "TMC2208_STANDALONE",
     "comment": "Ender Configs"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "Z_DRIVER_TYPE",
-    "mask" : ".*",
     "value": "TMC2208_STANDALONE",
     "comment": "Ender Configs"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "E0_DRIVER_TYPE",
-    "mask" : ".*",
     "value": "TMC2208_STANDALONE",
     "comment": "Ender Configs"
   },
   {
-    "op": "Custom",
-    "searchfor": "INVERT_Y_DIR",
-    "mask": "true",
+    "op": "CustomVal",
+    "searchfor": "INVERT_X_DIR",
     "value":"false",
     "comment": "Ender Configs"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
+    "searchfor": "INVERT_Y_DIR",
+    "value":"false",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
     "searchfor": "INVERT_Z_DIR",
-    "mask": "false",
     "value":"true",
     "comment": "Ender Configs"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "NEOPIXEL_PIN",
-    "mask" : "[^ ]*",
     "value": "PA13"
   }
 ],
@@ -70,9 +68,8 @@
     "comment": "Ender3V2 Configs"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "CHOPPER_TIMING",
-    "mask": "CHOPPER_DEFAULT_12V",
     "value": "CHOPPER_DEFAULT_24V",
     "comment": "MRiscoC Correct value for UART mode drivers"
   }

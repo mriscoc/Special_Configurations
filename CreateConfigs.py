@@ -15,6 +15,7 @@ import io
 import json
 
 verbose = True
+error = False
 
 SourceDir = 'Original Configs/'
 
@@ -30,27 +31,30 @@ class Customize:
     return getattr(self, self.op, self.Invalid)()
   
   def InsertAfter(self):
+    global error
     match = re.search(r''+self.searchfor+'(.*)', lines)
     if match :
       if verbose: print('>>>> found ',self.searchfor)
       return lines.replace(match[0], match[0]+'\n'+self.newline)
     else :
       print('>>>> Not found '+self.searchfor)
-      quit()
-      #return lines
+      error = True
+      return lines
 
   def Replace(self) :
     global lines
+    global error
     lines, n = re.subn(self.searchfor, self.value, lines)
     if n :
       if verbose: print('>>>> found',n,self.searchfor)
     else:
       print('>>>> Not found '+self.searchfor)
-      quit()
+      error = True
     return lines
   
   def Custom(self) :
     global lines
+    global error
     self.mask = '('+self.mask+')'
     if self.comment : self.comment = '  // '+self.comment
     lines, n = re.subn(r'(\n *)(//)?( *)(?P<searchfor>#define +'+self.searchfor+r'\b *)'+self.mask+r'( *.*)', r'\1\3\g<searchfor>'+self.value+r'\6'+self.comment, lines)
@@ -58,11 +62,11 @@ class Customize:
       if verbose: print('>>>> found',n,self.searchfor)
     else:
       print('>>>> Not found '+self.searchfor+' mask:'+self.mask)
-      quit()
+      error = True
     return lines
 
   def CustomVal(self) :
-    self.mask='[-,0-9,.]+'
+    self.mask='[-,0-9,.,a-z,A-Z,_]+'
     return self.Custom()
 
   def Enable(self) :
@@ -72,19 +76,21 @@ class Customize:
 
   def Disable(self) :
     global lines
+    global error
     if self.comment : self.comment = '  // '+self.comment
     lines, n = re.subn(r'(\n *)(//)?( *)(?P<searchfor>#define +'+self.searchfor+r'\b *.*)', r'\1//\3\g<searchfor>'+self.comment, lines)
     if n :
       if verbose: print('>>>> found',n,self.searchfor)
     else:
       print('>>>> Not found '+self.searchfor)
-      quit()
+      error = True
     return lines
 
   def Invalid(self) :
+    global error
     print('>>>> Invalid operation:',self.op)
-    quit()
-    #return lines
+    error = True
+    return lines
 
 def ProcessLines(jsonfile, config):
   global lines
@@ -104,59 +110,72 @@ def ProcessLines(jsonfile, config):
       C.comment = l.get('comment')
       if not C.comment : C.comment = ''
       lines = C.Do()
+      if error : break
     j.close()
   return lines
 
 def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :  
   global lines
+  global error
   Source = SourceDir+config
   Target = TargetDir+config
     
   if os.path.isfile(Source) :
+
     print('-Process', Target)
     os.makedirs(TargetDir, exist_ok=True)
     f = open(Source, 'r', encoding="utf8")
     lines = f.read()
 
+    if verbose: print(">>>> using: _printers/Common.json")
     lines = ProcessLines("_printers/Common.json", config)
+
+    PathConfig = ['_printers/','_boards/','_leveling/','_thermistor/','_features/']
     for val in Mode:
-      JsonFile = '_printers/' + val + '.json'
-      if not os.path.isfile(JsonFile) :
-        JsonFile = '_boards/' + val + '.json'
-        if not os.path.isfile(JsonFile) :
-          JsonFile = '_features/' + val + '.json'
-          if not os.path.isfile(JsonFile) :
-            print('Json file:', JsonFile,'not found')
-            quit()
+      for Json in PathConfig:
+        JsonFile = Json + val + '.json'
+        if os.path.isfile(JsonFile) :
+          if verbose: print(">>>> using:", JsonFile)
+          lines = ProcessLines(JsonFile, config)
+          break
+      if error: break
 
-      lines = ProcessLines(JsonFile, config)
+    if not error:
+      if Machine_Name :
+        lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+Machine_Name+'"')
+        lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+Machine_Name+', based on bugfix-2.1.x"')
+      else :
+        lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+' '.join(Mode)+'"')
+        lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+' '.join(Mode)+', based on bugfix-2.1.x"')
 
-    if Machine_Name :
-      lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+Machine_Name+'"')
-      lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+Machine_Name+', based on bugfix-2.1.x"')
-    else :
-      lines = lines.replace('//#define CUSTOM_MACHINE_NAME "3D Printer"','#define CUSTOM_MACHINE_NAME "'+' '.join(Mode)+'"')
-      lines = lines.replace('//#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION','#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " '+' '.join(Mode)+', based on bugfix-2.1.x"')
     with open(Target, "w", encoding="utf8") as of:
       of.write(lines)
       of.close()
-    f.close();
+    f.close()
     if verbose: print('-----')
+
   else :
     print('Source file:', Source,'not found')
-#    quit()
+    error = True
+
+
 
 def Generate(Machine_Name, Mode) :
   print('Configurations generator script for the Professional Firmware')
   print('Author: Miguel A. Risco Castillo (c) 2022\n')
 
+  global error
+
   if Machine_Name:
     TargetDir = Machine_Name+'/'
   else:
     TargetDir = '-'.join(Mode)+'/'
-  CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Configuration.h')
-  CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Configuration_adv.h')
-  CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'Version.h')
-  CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, 'platformio.ini')
+  
+  SourceList = ['Configuration.h','Configuration_adv.h','Version.h','platformio.ini']
+  for SourceFile in SourceList:
+    CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, SourceFile)
+    if error: break
 
-
+  if error:
+    print("An error was found while processing your request")
+  return error

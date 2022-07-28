@@ -423,30 +423,26 @@
     "comment": "MRiscoC Increase number of sorted items"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "SDSORT_GCODE",
-    "mask": "false",
     "value": "true",
     "comment": "MRiscoC Allows disable file sort by M34 g-code"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "SDSORT_USES_RAM",
-    "mask": "false",
     "value": "true",
     "comment": "Ender Configs"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "SDSORT_CACHE_NAMES",
-    "mask": "false",
     "value": "true",
     "comment": "Ender Configs"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "SDSORT_DYNAMIC_RAM",
-    "mask": "false",
     "value": "true",
     "comment": "Ender Configs"
   },
@@ -642,13 +638,13 @@
   {
     "op": "Custom",
     "searchfor": "SOURCE_CODE_URL",
-    "mask": ".+",
+    "mask": "\".*\"",
     "value": "\"github.com/mriscoc/Ender3V2S1\""
   },
   {
     "op": "Custom",
     "searchfor": "WEBSITE_URL",
-    "mask": ".+",
+    "mask": "\".*\"",
     "value": "\"github.com/mriscoc/Ender3V2S1/wiki\""
   }
 ]   

@@ -94,16 +94,14 @@
     "searchfor": "Z_AFTER_HOMING"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "Z_MIN_ENDSTOP_INVERTING",
-    "mask": "[a-z,A-Z]*",
-    "value":"false"
+    "value":"true"
   },
   {
-    "op": "Custom",
+    "op": "CustomVal",
     "searchfor": "Z_MIN_PROBE_ENDSTOP_INVERTING",
-    "mask": "[a-z,A-Z]*",
-    "value":"false"
+    "value":"true"
   }
 ],
 "Configuration_adv.h" : [
