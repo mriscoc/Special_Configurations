@@ -3,6 +3,8 @@
 # Configurations generator script for the Professional Firmware
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Special_Configurations
+# version: 2.1
+# date: 2022/07/28
 # ------------------------------------------------------------------------------
 
 from ast import Global
@@ -32,8 +34,11 @@ def generate_conf():
     global ConfigList
     fill_conf(root)
     root.update_conf()
-    CreateConfigs.Generate(root.ConfigName.get(),ConfigList)
-    messagebox.showinfo(message="Configuration files generated", title="Professional Firmware")
+    error = CreateConfigs.Generate(root.ConfigName.get(),ConfigList)
+    if error:
+        messagebox.showinfo(message="There was an error, check the generated configuration files ", title="Professional Firmware")
+    else:
+        messagebox.showinfo(message="Configuration files generated", title="Professional Firmware")
 
 def auto_name():
     fill_conf(root)

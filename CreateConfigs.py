@@ -4,8 +4,8 @@
 # Configurations generator script for the Professional Firmware
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Marlin_Configurations
-# version: 4.1
-# date: 2022/07/13
+# version: 5.1
+# date: 2022/07/28
 # ------------------------------------------------------------------------------
 
 import sys
@@ -14,7 +14,7 @@ import os
 import io
 import json
 
-verbose = True
+verbose = False
 error = False
 
 SourceDir = 'Original Configs/'
@@ -99,7 +99,7 @@ def ProcessLines(jsonfile, config):
     j = open(jsonfile, 'r')
     data = json.load(j)
     if not data.get(config) :
-      print('>>>>',jsonfile,'section',config,'not in use')
+      if verbose: print('>>>>',jsonfile,'section',config,'not in use')
       return lines
     for l in data[config] :
       C.op = l.get('op')
@@ -112,6 +112,7 @@ def ProcessLines(jsonfile, config):
       lines = C.Do()
       if error : break
     j.close()
+  if error: print(">>>> While processing file:",jsonfile)
   return lines
 
 def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :  
@@ -132,12 +133,15 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
 
     PathConfig = ['_printers/','_boards/','_leveling/','_thermistor/','_features/']
     for val in Mode:
-      for Json in PathConfig:
-        JsonFile = Json + val + '.json'
+      for path in PathConfig:
+        JsonFile = path + val + '.json'
         if os.path.isfile(JsonFile) :
           if verbose: print(">>>> using:", JsonFile)
           lines = ProcessLines(JsonFile, config)
           break
+      if not os.path.isfile(JsonFile):
+        print(">>>>",val+".json","was not found")
+        error = True
       if error: break
 
     if not error:
@@ -178,4 +182,6 @@ def Generate(Machine_Name, Mode) :
 
   if error:
     print("An error was found while processing your request")
+  else:
+    print("Configuration files correctly generated")
   return error
