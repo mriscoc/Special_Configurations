@@ -16,6 +16,15 @@ To create Ender3V2 Configuration files with a BLTouch and UBL support it is easy
 import CreateConfigs
 CreateConfigs.Generate('Ender3V2-422-BLTUBL', ['Ender3V2','422','BLT','UBL'])
 ```
+Now is also possible to use an small Python GUI interface for generate the configuration files:
+
+![image](https://user-images.githubusercontent.com/2745567/181679628-050a5190-2fe3-4246-9311-ec023e2500f9.png)
+
+Select the printer, board, leveling, thermistor, features and press the `set config` button; write a name for the configuration
+or press Auto button for fill the name automatically, that name will be used as a folder for storage the configuration
+files and also as a custom printer name in the firmware, then press the `Generate` button to start the creation of the configuration files.
+
+## Custom configurations
 For have a special build you must to provide a config json with only your personal choices, for example: for get a
 special build for a Ender3V2 printer that have a hotend volcano, bltouch and 4.2.2 board it is necessary only write a Volcano.json with this content:
 
@@ -48,13 +57,14 @@ special build for a Ender3V2 printer that have a hotend volcano, bltouch and 4.2
 }
 ```
 
-Then, request to the `CreateConfigs.py` to build a configuration with `CreateConfigs.Generate('MyCustomConfigName', ['Ender3V2','422','BLT','Volcano'])`; the last "Volcano" will overwrite the necessary values in the configuration file.
+Put the Volcano.json file inside of the `_features` folder, then request to the `CreateConfigs.py` to build a configuration with `CreateConfigs.Generate('MyCustomConfigName', ['Ender3V2','422','BLT','Volcano'])`; the last "Volcano" will overwrite the necessary
+values in the configuration file, you can also use the GUI, your custom .json file will be listed as a custom feature.
 
-The `CreateConfigs.py` script supports five basic operations over the configuration files:
+For write your json file take note that the `CreateConfigs.py` script supports five basic operations over the configuration files:
 
 > **InsertAfter**: allows to insert text after match a given mask.  
 > **Custom**: allows to replace text  after match a given mask.  
-> **CustomVal**: allows to replace numeric values.  
+> **CustomVal**: allows to replace simple (numeric, booleans, etc.) values.  
 > **Enable**: allows to enable a feature.  
 > **Disable**: allows to disable a feature.  
 > **Replace**: allows to replace a mask with other text.
