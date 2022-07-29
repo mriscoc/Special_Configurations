@@ -11,6 +11,7 @@ from ast import Global
 import os
 import tkinter as tk
 from tkinter import END, font,messagebox,ttk
+from turtle import bgcolor
 import CreateConfigs
 
 ConfigList = []
@@ -36,7 +37,7 @@ def generate_conf():
     root.update_conf()
     error = CreateConfigs.Generate(root.ConfigName.get(),ConfigList)
     if error:
-        messagebox.showinfo(message="There was an error, check the generated configuration files ", title="Professional Firmware")
+        messagebox.showinfo(message="There was an error, check the generated log.txt file ", title="Professional Firmware")
     else:
         messagebox.showinfo(message="Configuration files generated", title="Professional Firmware")
 

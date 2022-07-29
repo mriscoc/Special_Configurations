@@ -8,6 +8,7 @@
 # date: 2022/07/28
 # ------------------------------------------------------------------------------
 
+from ast import Try
 import sys
 import re
 import os
@@ -16,8 +17,15 @@ import json
 
 verbose = False
 error = False
+loglines = ""
 
 SourceDir = 'Original Configs/'
+
+def log(*text):
+  global loglines
+  txt = ' '.join(text)
+  loglines += txt + "\n"
+  print(txt)
 
 class Customize:
   op = ''
@@ -34,10 +42,10 @@ class Customize:
     global error
     match = re.search(r''+self.searchfor+'(.*)', lines)
     if match :
-      if verbose: print('>>>> found ',self.searchfor)
+      if verbose: log('>>>> found ',self.searchfor)
       return lines.replace(match[0], match[0]+'\n'+self.newline)
     else :
-      print('>>>> Not found '+self.searchfor)
+      log('>>>> Not found '+self.searchfor)
       error = True
       return lines
 
@@ -46,9 +54,9 @@ class Customize:
     global error
     lines, n = re.subn(self.searchfor, self.value, lines)
     if n :
-      if verbose: print('>>>> found',n,self.searchfor)
+      if verbose: log('>>>> found',n,self.searchfor)
     else:
-      print('>>>> Not found '+self.searchfor)
+      log('>>>> Not found '+self.searchfor)
       error = True
     return lines
   
@@ -59,9 +67,9 @@ class Customize:
     if self.comment : self.comment = '  // '+self.comment
     lines, n = re.subn(r'(\n *)(//)?( *)(?P<searchfor>#define +'+self.searchfor+r'\b *)'+self.mask+r'( *.*)', r'\1\3\g<searchfor>'+self.value+r'\6'+self.comment, lines)
     if n :
-      if verbose: print('>>>> found',n,self.searchfor)
+      if verbose: log('>>>> found',n,self.searchfor)
     else:
-      print('>>>> Not found '+self.searchfor+' mask:'+self.mask)
+      log('>>>> Not found '+self.searchfor+' mask:'+self.mask)
       error = True
     return lines
 
@@ -80,26 +88,27 @@ class Customize:
     if self.comment : self.comment = '  // '+self.comment
     lines, n = re.subn(r'(\n *)(//)?( *)(?P<searchfor>#define +'+self.searchfor+r'\b *.*)', r'\1//\3\g<searchfor>'+self.comment, lines)
     if n :
-      if verbose: print('>>>> found',n,self.searchfor)
+      if verbose: log('>>>> found',n,self.searchfor)
     else:
-      print('>>>> Not found '+self.searchfor)
+      log('>>>> Not found '+self.searchfor)
       error = True
     return lines
 
   def Invalid(self) :
     global error
-    print('>>>> Invalid operation:',self.op)
+    log('>>>> Invalid operation:',self.op)
     error = True
     return lines
 
 def ProcessLines(jsonfile, config):
   global lines
+  global error
   C = Customize()
-  if os.path.isfile(jsonfile) :
+  try:
     j = open(jsonfile, 'r')
     data = json.load(j)
     if not data.get(config) :
-      if verbose: print('>>>>',jsonfile,'section',config,'not in use')
+      if verbose: log('>>>>',jsonfile,'section',config,'not in use')
       return lines
     for l in data[config] :
       C.op = l.get('op')
@@ -111,8 +120,11 @@ def ProcessLines(jsonfile, config):
       if not C.comment : C.comment = ''
       lines = C.Do()
       if error : break
-    j.close()
-  if error: print(">>>> While processing file:",jsonfile)
+  except Exception as e:
+    log(str(e))
+    error = True
+  j.close()
+  if error: log(">>>> While processing file:",jsonfile)
   return lines
 
 def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :  
@@ -123,12 +135,12 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
     
   if os.path.isfile(Source) :
 
-    print('-Process', Target)
+    log('-Process', Target)
     os.makedirs(TargetDir, exist_ok=True)
     f = open(Source, 'r', encoding="utf8")
     lines = f.read()
 
-    if verbose: print(">>>> using: _printers/Common.json")
+    if verbose: log(">>>> using: _printers/Common.json")
     lines = ProcessLines("_printers/Common.json", config)
 
     PathConfig = ['_printers/','_boards/','_leveling/','_thermistor/','_features/']
@@ -136,11 +148,11 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
       for path in PathConfig:
         JsonFile = path + val + '.json'
         if os.path.isfile(JsonFile) :
-          if verbose: print(">>>> using:", JsonFile)
+          if verbose: log(">>>> using:", JsonFile)
           lines = ProcessLines(JsonFile, config)
           break
       if not os.path.isfile(JsonFile):
-        print(">>>>",val+".json","was not found")
+        log(">>>>",val+".json","was not found")
         error = True
       if error: break
 
@@ -156,17 +168,17 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
       of.write(lines)
       of.close()
     f.close()
-    if verbose: print('-----')
+    if verbose: log('-----')
 
   else :
-    print('Source file:', Source,'not found')
+    log('Source file:', Source,'not found')
     error = True
 
 
 
 def Generate(Machine_Name, Mode) :
-  print('Configurations generator script for the Professional Firmware')
-  print('Author: Miguel A. Risco Castillo (c) 2022\n')
+  log('\nConfigurations generator script for the Professional Firmware')
+  log('Author: Miguel A. Risco Castillo (c) 2022\n')
 
   global error
 
@@ -181,7 +193,10 @@ def Generate(Machine_Name, Mode) :
     if error: break
 
   if error:
-    print("An error was found while processing your request")
+    log("\nAn error was found while processing your request")
+    with open(TargetDir+"/log.txt", "w", encoding="utf8") as logf:
+      logf.write(loglines)
+      logf.close()
   else:
-    print("Configuration files correctly generated")
+    log("\nConfiguration files correctly generated")
   return error
