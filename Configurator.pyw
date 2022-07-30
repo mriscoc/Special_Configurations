@@ -30,6 +30,7 @@ def fill_conf(obj):
 def set_conf():
     fill_conf(root)
     root.update_conf()
+    root.copy_clpbrd()
 
 def generate_conf():
     global ConfigList
@@ -209,6 +210,10 @@ class Main(tk.Tk):
         f.close()
       except Exception as e:
         messagebox.showinfo(message=str(e), title="Error")
+
+    def copy_clpbrd(self):
+        self.clipboard_clear()
+        self.clipboard_append(self.Edit_GenFunc.get(1.0, END))
 
 class log_window(tk.Toplevel):
   def __init__(self, parent):
