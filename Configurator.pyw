@@ -3,8 +3,8 @@
 # Configurations generator script for the Professional Firmware
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Special_Configurations
-# version: 2.1
-# date: 2022/07/28
+# version: 3.1
+# date: 2022/07/29
 # ------------------------------------------------------------------------------
 
 from ast import Global
