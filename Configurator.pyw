@@ -37,7 +37,7 @@ def generate_conf():
     root.update_conf()
     error = CreateConfigs.Generate(root.ConfigName.get(),ConfigList)
     if error:
-        messagebox.showinfo(message="There was an error, check the generated log.txt file ", title="Professional Firmware")
+        root.open_log()
     else:
         messagebox.showinfo(message="Configuration files generated", title="Professional Firmware")
 
@@ -199,6 +199,27 @@ class Main(tk.Tk):
           self.ublchkb.configure(state='disabled')
         else:
           self.ublchkb.configure(state='enabled')
+
+    def open_log(self):
+      try:
+        f = open(root.ConfigName.get()+"/log.txt","r")
+        loglines = f.read()
+        d = log_window(self)
+        d.LogText.insert(END, loglines)
+        f.close()
+      except Exception as e:
+        messagebox.showinfo(message=str(e), title="Error")
+
+class log_window(tk.Toplevel):
+  def __init__(self, parent):
+    super().__init__(parent)
+    self.geometry("500x200")
+    self.resizable(False, False)
+    self.title("Error Log")
+    self.LogText = tk.Text(self, height=10, relief='flat')
+    self.LogText.pack()
+    ttk.Button(self, text="OK", command=self.destroy).pack(expand=True)
+    self.grab_set()
 
 
 root = Main()

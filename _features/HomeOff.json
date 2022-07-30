@@ -1,0 +1,12 @@
+{
+"Configuration.h" : [
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "NO_WORKSPACE_OFFSETS"
+  }
+],
+"Version.h" : [
+]   
+}
