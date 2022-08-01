@@ -10,7 +10,7 @@ If you made a donation through [Paypal](https://www.paypal.com/donate/?business=
 I sent you or use any of the other communication media (Facebook, Telegram) providing the name used in Paypal.
 Github also have a [Sponsor platform](https://github.com/sponsors/mriscoc).
 
-## Creating a custom configuration
+## Creating your own custom configuration
 To create a configuration it is necessary to call the `CreateConfigs.py` Python script with the following parameters:
 
 ```Python
