@@ -4,6 +4,7 @@ project files are in the firmware repository: https://github.com/mriscoc/Ender3V
 
 ### These special configurations and releases are sponsored by donors.
 
+There is no fixed amount to sponsor a configuration, but it influences how quickly the configuration is served.
 To create a configuration it is necessary to call the `CreateConfigs.py` Python script with the following parameters:
 
 ```Python
