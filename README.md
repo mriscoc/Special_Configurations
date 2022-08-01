@@ -32,7 +32,7 @@ Select the printer, board, leveling, thermistor (Ender's stock thermistor is T1)
 or press `Auto` button for fill the name automatically, that name will be used as a folder for storage the configuration
 files and also as a custom printer name in the firmware, then press the `Generate` button to start the creation of the configuration files.
 
-## Custom configurations
+### Custom features
 For have a special build you must to provide a config json with only your personal choices, for example: for get a
 special build for a Ender3V2 printer that have a hotend volcano, bltouch and 4.2.2 board it is necessary only write a Volcano.json with this content:
 
