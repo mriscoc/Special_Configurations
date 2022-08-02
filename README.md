@@ -4,6 +4,13 @@ project files are in the firmware repository: https://github.com/mriscoc/Ender3V
 
 ### These special configurations and releases are sponsored by donors.
 
+There is no fixed amount to sponsor a configuration, but it influences how quickly the configuration is served.
+Patrons from [Patreon platform](https://www.patreon.com/mriscoc) can request a configuration sending a message.
+If you made a donation through [Paypal](https://www.paypal.com/donate/?business=85SPAAR6UZEE8&currency_code=USD), please reply the message that
+I sent you or use any of the other communication media (Facebook, Telegram) providing the name used in Paypal.
+Github also have a [Sponsor platform](https://github.com/sponsors/mriscoc).
+
+## Creating your own custom configuration
 To create a configuration it is necessary to call the `CreateConfigs.py` Python script with the following parameters:
 
 ```Python
@@ -25,7 +32,7 @@ Select the printer, board, leveling, thermistor (Ender's stock thermistor is T1)
 or press `Auto` button for fill the name automatically, that name will be used as a folder for storage the configuration
 files and also as a custom printer name in the firmware, then press the `Generate` button to start the creation of the configuration files.
 
-## Custom configurations
+### Custom features
 For have a special build you must to provide a config json with only your personal choices, for example: for get a
 special build for a Ender3V2 printer that have a hotend volcano, bltouch and 4.2.2 board it is necessary only write a Volcano.json with this content:
 
