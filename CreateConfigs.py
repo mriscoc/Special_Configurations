@@ -174,10 +174,14 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
 
 
 def Generate(Machine_Name, Mode) :
-  log('\nConfigurations generator script for the Professional Firmware')
-  log('Author: Miguel A. Risco Castillo (c) 2022\n')
-
   global error
+  error = False
+  global loglines
+  loglines = ""
+  print()
+
+  log('Configurations generator script for the Professional Firmware')
+  log('Author: Miguel A. Risco Castillo (c) 2022\n')
 
   if Machine_Name:
     TargetDir = Machine_Name+'/'
@@ -191,9 +195,11 @@ def Generate(Machine_Name, Mode) :
 
   if error:
     log("\nAn error was found while processing your request")
-    with open(TargetDir+"/log.txt", "w", encoding="utf8") as logf:
-      logf.write(loglines)
-      logf.close()
   else:
     log("\nConfiguration files correctly generated")
+
+  with open(TargetDir+"/log.txt", "w", encoding="utf8") as logf:
+    logf.write(loglines)
+    logf.close()
+
   return error

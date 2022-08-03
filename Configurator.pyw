@@ -206,6 +206,7 @@ class Main(tk.Tk):
         f = open(root.ConfigName.get()+"/log.txt","r")
         loglines = f.read()
         d = log_window(self)
+        d.LogText.delete(1.0, END)
         d.LogText.insert(END, loglines)
         f.close()
       except Exception as e:
