@@ -1,0 +1,25 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "CLASSIC_JERK"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "S_CURVE_ACCELERATION"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "JUNCTION_DEVIATION_MM",
+    "value": "0.1"
+  }  
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "LIN_ADVANCE"
+  }
+],
+"Version.h" : [
+]   
+}
