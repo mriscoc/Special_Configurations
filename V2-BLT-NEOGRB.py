@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 # ------------------------------------------------------------------------------
 # Configurations generator script for the Professional Firmware
