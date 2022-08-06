@@ -32,11 +32,10 @@ Select the printer, board, leveling, thermistor (Ender's stock thermistor is T1)
 or press `Auto` button for fill the name automatically, that name will be used as a folder for storage the configuration
 files and also as a custom printer name in the firmware, then press the `Generate` button to start the creation of the configuration files.
 
-## Compiling your firmware flavor
+### Compiling your firmware flavor
 From the created custom configuration folder, move Configuration.h and Configuration_adv.h files to the Marlin folder inside of your project folder downloaded from the repository https://github.com/mriscoc/Ender3V2S1; move the platform.io file to the root of your project folder.
 
 Follow any guide about Marlin compile to get your firmware binary: Install [VSCode](https://code.visualstudio.com/), then inside of VSCode install the extensions: [PlatformIO](https://platformio.org/install/ide?install=vscode) and [Auto Build Marlin](https://marlinfw.org/docs/basics/auto_build_marlin.html). Open your project folder in VSCode and compile by using Auto Build Marlin.
-
 
 ### Custom features
 For have a special build you must to provide a config json with only your personal choices, for example: for get a
