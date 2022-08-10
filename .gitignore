@@ -35,3 +35,4 @@ __pycache__
 /_features/FreeFlash.json
 *.bak
 /_features/BradyLP.json
+log.txt

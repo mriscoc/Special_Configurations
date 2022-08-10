@@ -86,11 +86,11 @@
     "comment": "MRiscoC Homing Z at center of bed"
   },
   {
-    "op": "Disable",
+    "op": "Enable",
     "searchfor": "Z_HOMING_HEIGHT"
   },
   {
-    "op": "Disable",
+    "op": "Enable",
     "searchfor": "Z_AFTER_HOMING"
   },
   {
