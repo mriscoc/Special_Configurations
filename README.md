@@ -23,14 +23,19 @@ To create Ender3V2 Configuration files with a BLTouch and UBL support it is easy
 import CreateConfigs
 CreateConfigs.Generate('Ender3V2-422-BLTUBL', ['Ender3V2','422','BLT','UBL'])
 ```
-Now is also possible to use an small Python GUI interface for generate the configuration files, after download the repository execute the
-Python file `Configurator.pyw`:
+It is now also possible to use an small Python GUI interface for generate the configuration files,
+after downloading the repository execute the Python file `Configurator.pyw`:
 
 ![image](https://user-images.githubusercontent.com/2745567/181679628-050a5190-2fe3-4246-9311-ec023e2500f9.png)
 
 Select the printer, board, leveling, thermistor (Ender's stock thermistor is T1), features and press the `set config` button; write a name for the configuration
 or press `Auto` button for fill the name automatically, that name will be used as a folder for storage the configuration
 files and also as a custom printer name in the firmware, then press the `Generate` button to start the creation of the configuration files.
+
+### Compiling your firmware flavor
+From the created custom configuration folder, move Configuration.h and Configuration_adv.h files to the Marlin folder inside of your project folder downloaded from the repository https://github.com/mriscoc/Ender3V2S1; move the platform.io file to the root of your project folder.
+
+Follow any guide about Marlin compile to get your firmware binary: Install [VSCode](https://code.visualstudio.com/), then inside of VSCode install the extensions: [PlatformIO](https://platformio.org/install/ide?install=vscode) and [Auto Build Marlin](https://marlinfw.org/docs/basics/auto_build_marlin.html). Open your project folder in VSCode and compile by using Auto Build Marlin.
 
 ### Custom features
 For have a special build you must to provide a config json with only your personal choices, for example: for get a
