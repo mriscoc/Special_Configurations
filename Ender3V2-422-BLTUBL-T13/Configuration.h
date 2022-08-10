@@ -3103,6 +3103,7 @@
 #define HAS_LOCKSCREEN 1
 #define MESH_EDIT_MENU
 #define USE_STOCK_DWIN_SET
+//#define HAS_SD_EXTENDER 1  // Enable it to support SD card extender cables
 
 //#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
 //#define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)

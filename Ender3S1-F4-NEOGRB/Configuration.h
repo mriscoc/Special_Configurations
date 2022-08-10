@@ -1747,9 +1747,9 @@
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
 
-  #define FIL_RUNOUT_STATE     HIGH        // Pin state indicating that filament is NOT present.  // Board v301 Configs
-  //#define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.  // Board v301 Configs
-  #define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.  // Board v301 Configs
+  #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present.  // Board v301 Configs
+  #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.  // Board v301 Configs
+  //#define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.  // Board v301 Configs
   //#define WATCH_ALL_RUNOUT_SENSORS      // Execute runout script on any triggering sensor, not only for the active extruder.
                                           // This is automatically enabled for MIXING_EXTRUDERs.
 
@@ -3103,6 +3103,7 @@
 #define HAS_LOCKSCREEN 1
 #define MESH_EDIT_MENU
 #define USE_STOCK_DWIN_SET
+//#define HAS_SD_EXTENDER 1  // Enable it to support SD card extender cables
 
 //#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
 //#define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)

@@ -182,6 +182,11 @@
     "comment": "MRiscoC Enabled runout sensor support"
   },
   {
+    "op": "CustomVal",
+    "searchfor": "FIL_RUNOUT_ENABLED_DEFAULT",
+    "value": "true"
+  },
+  {
     "op": "Enable",
     "searchfor": "PREHEAT_BEFORE_LEVELING",
     "comment": "MRiscoC Heatting to compensate thermal expansions"
@@ -310,12 +315,17 @@
   {
     "op": "InsertAfter",
     "searchfor": "#define DWIN_LCD_PROUI",
-    "newline": "#define ProUIex 1\n#define HAS_GCODE_PREVIEW 1\n#define HAS_TOOLBAR 1\n#define HAS_PIDPLOT 1\n#define HAS_ESDIAG 1\n#define HAS_CGCODE 1\n#define HAS_LOCKSCREEN 1\n#define MESH_EDIT_MENU\n#define USE_STOCK_DWIN_SET\n"
+    "newline": "#define ProUIex 1\n#define HAS_GCODE_PREVIEW 1\n#define HAS_TOOLBAR 1\n#define HAS_PIDPLOT 1\n#define HAS_ESDIAG 1\n#define HAS_CGCODE 1\n#define HAS_LOCKSCREEN 1\n#define MESH_EDIT_MENU\n#define USE_STOCK_DWIN_SET\n#define HAS_SD_EXTENDER 1\n"
   },
   {
     "op": "InsertAfter",
     "searchfor": "#define DWIN_LCD_PROUI",
     "newline": "// Professional firmware features:"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "HAS_SD_EXTENDER",
+    "comment": "Enable it to support SD card extender cables"
   },
   {
     "op": "Enable",
