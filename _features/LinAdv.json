@@ -18,7 +18,12 @@
   {
     "op": "Enable",
     "searchfor": "LIN_ADVANCE"
-  }
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "LIN_ADVANCE_K",
+    "value": "0.0"
+  }   
 ],
 "Version.h" : [
 ]   

@@ -1,0 +1,40 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "PIDTEMP"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "MPCTEMP"
+  },
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "MPC_BLOCK_HEAT_CAPACITY",
+    "value": "{ 14.40 }"
+  },  
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "MPC_SENSOR_RESPONSIVENESS",
+    "value": "{ 0.2187 }"
+  },  
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "MPC_AMBIENT_XFER_COEFF",
+    "value": "{ 0.1257 }"
+  },  
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "MPC_AMBIENT_XFER_COEFF_FAN255",
+    "value": "{ 0.1315 }"
+  }  
+],
+"Configuration_adv.h" : [
+],
+"Version.h" : [
+]   
+}
