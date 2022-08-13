@@ -2,7 +2,7 @@
 
 # ------------------------------------------------------------------------------
 # Configurations generator script for the Professional Firmware
-# Standard Volcano All Metal with thermistor #05 upto 300°C
+# Standard Volcano All Metal with thermistor #05 upto 300 Celcius
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Marlin_Configurations
 # ------------------------------------------------------------------------------
