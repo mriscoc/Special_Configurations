@@ -23,7 +23,7 @@ To create Ender3V2 Configuration files with a BLTouch and UBL support it is easy
 import CreateConfigs
 CreateConfigs.Generate('Ender3V2-422-BLTUBL', ['Ender3V2','422','BLT','UBL'])
 ```
-It is now also possible to use an small Python GUI interface for generate the configuration files,
+It is now also possible to use an small Python GUI interface (Professional firmware configurator) for generate the configuration files,
 after downloading the repository execute the Python file `Configurator.pyw`:
 
 ![image](https://user-images.githubusercontent.com/2745567/181679628-050a5190-2fe3-4246-9311-ec023e2500f9.png)
