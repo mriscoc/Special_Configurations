@@ -44,7 +44,7 @@ def generate_conf():
 
 def auto_name():
     fill_conf(root)
-    Name = '-'.join(ConfigList).replace("-UBL","UBL").replace("-301F","-F")
+    Name = '-'.join(ConfigList).replace("-301F","-F").replace("F1-BLT","F1").replace("F4-BLT","F4").replace("BLT-UBL","BLTUBL").replace("LinAdv","LA")
     root.ConfigName.delete(-1,END)
     root.ConfigName.insert(-1,Name)
     root.update_conf()
