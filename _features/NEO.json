@@ -24,6 +24,21 @@
     "op": "Enable",
     "searchfor": "LED_CONTROL_MENU",
     "comment" : "For use with NeoPixel"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "CASE_LIGHT_MENU",
+    "comment" : "For use with NeoPixel"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "CASE_LIGHT_ENABLE",
+    "comment" : "For use with NeoPixel"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "CASE_LIGHT_USE_NEOPIXEL",
+    "comment" : "For use with NeoPixel"
   }
 ],
 "Version.h" : [
