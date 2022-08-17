@@ -1,4 +1,4 @@
-# Marlin_Configurations
+# Special Configurations
 In this repository there are the configuration files for several Marlin firmware features for the Ender3 V2/S1 printer, the main
 project files are in the firmware repository: https://github.com/mriscoc/Ender3V2S1
 
