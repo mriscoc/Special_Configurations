@@ -26,7 +26,7 @@ CreateConfigs.Generate('Ender3V2-422-BLTUBL', ['Ender3V2','422','BLT','UBL'])
 It is now also possible to use an small Python GUI interface (Professional Firmware Configurator) for generate the configuration files,
 after downloading the repository execute the Python file `Configurator.pyw`:
 
-![image](https://user-images.githubusercontent.com/2745567/181679628-050a5190-2fe3-4246-9311-ec023e2500f9.png)
+![image](https://github.com/mriscoc/Special_Configurations/raw/main/images/Configurator.png)
 
 Select the printer, board, leveling, thermistor (Ender's stock thermistor is T1), features and press the `set config` button; write a name for the configuration
 or press `Auto` button for fill the name automatically, that name will be used as a folder for storage the configuration
