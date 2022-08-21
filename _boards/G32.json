@@ -1,0 +1,86 @@
+{
+"Configuration.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "MOTHERBOARD",
+    "value": "BOARD_VOXELAB_AQUILA",
+    "comment": "Voxelab Aquila"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "SERIAL_PORT",
+    "value": "1",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_DRIVER_TYPE",
+    "value": "TMC2208_STANDALONE",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_DRIVER_TYPE",
+    "value": "TMC2208_STANDALONE",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_DRIVER_TYPE",
+    "value": "TMC2208_STANDALONE",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "E0_DRIVER_TYPE",
+    "value": "TMC2208_STANDALONE",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_X_DIR",
+    "value":"false",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Y_DIR",
+    "value":"false",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Z_DIR",
+    "value":"true",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "NEOPIXEL_PIN",
+    "value": "PB2"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "E0_AUTO_FAN_PIN",
+    "value": "-1",
+    "comment": "Ender3V2 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "CHOPPER_TIMING",
+    "value": "CHOPPER_DEFAULT_24V",
+    "comment": "MRiscoC Correct value for UART mode drivers"
+  }
+],
+"Version.h" : [
+],   
+"platformio.ini" : [
+  {
+    "op": "Replace",
+    "searchfor": "default_envs = mega2560",
+    "value": "default_envs = STM32F103RC_creality"
+  }
+]  
+}

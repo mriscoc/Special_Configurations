@@ -107,6 +107,12 @@
     "op": "CustomVal",
     "searchfor": "POWER_LOSS_PIN",
     "value": "-1"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "CHOPPER_TIMING",
+    "value": "CHOPPER_DEFAULT_24V",
+    "comment": "MRiscoC Correct value for UART mode drivers"
   }
 ],
 "Version.h" : [
