@@ -10,8 +10,7 @@
 from ast import Global
 import os
 import tkinter as tk
-from tkinter import END, font,messagebox,ttk
-from turtle import bgcolor
+from tkinter import END,font,messagebox,ttk
 import CreateConfigs
 
 ConfigList = []
@@ -44,7 +43,14 @@ def generate_conf():
 
 def auto_name():
     fill_conf(root)
-    Name = '-'.join(ConfigList).replace("-301F","-F").replace("F1-BLT","F1").replace("F4-BLT","F4").replace("BLT-UBL","BLTUBL").replace("LinAdv","LA")
+    Name = '-'.join(ConfigList)
+    #filter S1 printer name
+    Name = Name.replace("-301F","-F").replace("F1-BLT","F1").replace("F4-BLT","F4")
+    #filter UBL
+    if "F1-UBL" not in Name and "F4-UBL" not in Name:
+      Name = Name.replace("-UBL","UBL")
+    #rename LinaAdv
+    Name = Name.replace("LinAdv","LA")
     root.ConfigName.delete(-1,END)
     root.ConfigName.insert(-1,Name)
     root.update_conf()

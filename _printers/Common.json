@@ -49,6 +49,14 @@
     "comment": "Ender Configs"
   },
   {
+    "op": "Disable",
+    "searchfor": "THERMAL_PROTECTION_CHAMBER"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "THERMAL_PROTECTION_COOLER"
+  },
+  {
     "op": "Enable",
     "searchfor": "ENDSTOP_INTERRUPTS_FEATURE",
     "comment": "Ender Configs"
@@ -530,6 +538,11 @@
   },
   {
     "op": "Enable",
+    "searchfor": "ADVANCED_OK",
+    "comment": "MRiscoC better management of buffer by host"
+  },
+  {
+    "op": "Enable",
     "searchfor": "FWRETRACT",
     "comment": "MRiscoC Enabled support for firmware based retract"
   },
@@ -638,7 +651,7 @@
     "op": "Custom",
     "searchfor": "SHORT_BUILD_VERSION",
     "mask" : "\".*\"",
-    "value": "\"2.1.0.1 MRiscoC\""
+    "value": "\"2.1.3 MRiscoC\""
   },
   {
     "op": "InsertAfter",

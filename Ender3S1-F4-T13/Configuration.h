@@ -38,7 +38,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010100
+#define CONFIGURATION_H_VERSION 02010200
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -145,6 +145,8 @@
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
 //#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
 
+// @section stepper drivers
+
 /**
  * Stepper Drivers
  *
@@ -244,6 +246,8 @@
   //#define SINGLENOZZLE_STANDBY_FAN
 #endif
 
+// @section multi-material
+
 /**
  * Multi-Material Unit
  * Set to one of these predefined models:
@@ -256,6 +260,7 @@
  *
  * Requires NOZZLE_PARK_FEATURE to park print head in case MMU unit fails.
  * See additional options in Configuration_adv.h.
+ * :["PRUSA_MMU1", "PRUSA_MMU2", "PRUSA_MMU2S", "EXTENDABLE_EMU_MMU2", "EXTENDABLE_EMU_MMU2S"]
  */
 //#define MMU_MODEL PRUSA_MMU2
 
@@ -534,7 +539,7 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
-#define TEMP_SENSOR_0 13  // 100k Hisens 3950 1% up to 300°C
+#define TEMP_SENSOR_0 13  // 100k Hisens 3950 1% up to 300 Celcius
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -599,7 +604,7 @@
 
 // Below this temperature the heater will be switched off
 // because it probably indicates a broken thermistor wire.
-#define HEATER_0_MINTEMP   5  // Ender Configs  // 100k Hisens 3950 1% up to 300°C
+#define HEATER_0_MINTEMP   5  // Ender Configs  // 100k Hisens 3950 1% up to 300 Celcius
 #define HEATER_1_MINTEMP   5
 #define HEATER_2_MINTEMP   5
 #define HEATER_3_MINTEMP   5
@@ -613,7 +618,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 300  // 100k Hisens 3950 1% up to 300°C
+#define HEATER_0_MAXTEMP 300  // 100k Hisens 3950 1% up to 300 Celcius
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -846,8 +851,8 @@
 
 #define THERMAL_PROTECTION_HOTENDS // Enable thermal protection for all extruders
 #define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
-#define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber
-#define THERMAL_PROTECTION_COOLER  // Enable thermal protection for the laser cooling
+//#define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber
+//#define THERMAL_PROTECTION_COOLER  // Enable thermal protection for the laser cooling
 
 //===========================================================================
 //============================= Mechanical Settings =========================
@@ -1633,7 +1638,7 @@
 #define DISABLE_E false             // Disable the extruder when not stepping
 #define DISABLE_INACTIVE_EXTRUDER   // Keep only the active extruder enabled
 
-// @section machine
+// @section motion
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR false  // Ender Configs
@@ -2133,9 +2138,8 @@
   #define XY_DIAG_BD 282.8427124746
   #define XY_SIDE_AD 200
 
-  // Or, set the default skew factors directly here
-  // to override the above measurements:
-  #define XY_SKEW_FACTOR 0.0
+  // Or, set the XY skew factor directly:
+  //#define XY_SKEW_FACTOR 0.0
 
   //#define SKEW_CORRECTION_FOR_Z
   #if ENABLED(SKEW_CORRECTION_FOR_Z)
@@ -2144,8 +2148,10 @@
     #define YZ_DIAG_AC 282.8427124746
     #define YZ_DIAG_BD 282.8427124746
     #define YZ_SIDE_AD 200
-    #define XZ_SKEW_FACTOR 0.0
-    #define YZ_SKEW_FACTOR 0.0
+
+    // Or, set the Z skew factors directly:
+    //#define XZ_SKEW_FACTOR 0.0
+    //#define YZ_SKEW_FACTOR 0.0
   #endif
 
   // Enable this option for M852 to set skew at runtime
@@ -2203,7 +2209,7 @@
 // @section temperature
 
 //
-// Preheat Constants - Up to 6 are supported without changes
+// Preheat Constants - Up to 10 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND 195
@@ -2366,7 +2372,7 @@
  */
 #define PRINTCOUNTER  // MRiscoC Enable Print Statistics
 #if ENABLED(PRINTCOUNTER)
-  #define PRINTCOUNTER_SAVE_INTERVAL 60 // (minutes) EEPROM save interval during print
+  #define PRINTCOUNTER_SAVE_INTERVAL 60 // (minutes) EEPROM save interval during print. A value of 0 will save stats at end of print.
 #endif
 
 // @section security
@@ -3171,10 +3177,11 @@
 //
 //#define TOUCH_SCREEN
 #if ENABLED(TOUCH_SCREEN)
-  #define BUTTON_DELAY_EDIT  50 // (ms) Button repeat delay for edit screens
-  #define BUTTON_DELAY_MENU 250 // (ms) Button repeat delay for menus
+  #define BUTTON_DELAY_EDIT      50 // (ms) Button repeat delay for edit screens
+  #define BUTTON_DELAY_MENU     250 // (ms) Button repeat delay for menus
 
-  //#define TOUCH_IDLE_SLEEP 300 // (s) Turn off the TFT backlight if set (5mn)
+  //#define DISABLE_ENCODER         // Disable the click encoder, if any
+  //#define TOUCH_IDLE_SLEEP_MINS 5 // (minutes) Display Sleep after a period of inactivity. Set with M255 S.
 
   #define TOUCH_SCREEN_CALIBRATION
 
