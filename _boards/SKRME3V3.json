@@ -13,6 +13,17 @@
   },
   {
     "op": "CustomVal",
+    "searchfor": "BAUDRATE",
+    "value": "115200",
+    "comment": "115K for SKR MINI"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "BAUD_RATE_GCODE",
+    "comment": "Disabled for SKR MINI"
+  },
+  {
+    "op": "CustomVal",
     "searchfor": "X_DRIVER_TYPE",
     "value": "TMC2209"
   },
