@@ -94,7 +94,7 @@
   {
     "op": "CustomVal",
     "searchfor": "Z_MIN_ENDSTOP_INVERTING",
-    "value":"true",
+    "value":"false",
     "comment": "Board v301 Configs"
   },
   {
