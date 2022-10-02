@@ -109,6 +109,7 @@ def ProcessLines(jsonfile, config):
       return lines
     for l in data[config] :
       C.op = l.get('op')
+      if not C.op : continue
       C.searchfor = l.get('searchfor')
       C.newline = l.get('newline')
       C.mask = l.get('mask')

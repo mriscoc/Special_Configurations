@@ -117,7 +117,7 @@
  */
 #define BAUDRATE 115200  // MRiscoC increase serial performace  // 115K for SKR MINI
 
-//#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate  // MRiscoC Enables change the baudrate  // Disabled for SKR MINI
+#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate  // MRiscoC Enables change the baudrate
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.

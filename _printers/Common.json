@@ -400,13 +400,13 @@
   {
     "op": "CustomVal",
     "searchfor": "ENCODER_10X_STEPS_PER_SEC",
-    "value": "80",
+    "value": "60",
     "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "ENCODER_100X_STEPS_PER_SEC",
-    "value": "130",
+    "value": "90",
     "comment": "Ender Configs"
   },
   {
@@ -423,6 +423,11 @@
     "op": "Enable",
     "searchfor": "LCD_SET_PROGRESS_MANUALLY",
     "comment": "MRiscoC Allow display feedback of host printing through GCode M73"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "SD_PROCEDURE_DEPTH",
+    "comment": "MRiscoC save program memory"
   },
   {
     "op": "Enable",
@@ -528,8 +533,15 @@
   },
   {
     "op": "CustomVal",
+    "searchfor": "BUFSIZE",
+    "value": "16",
+    "comment": "MRiscoC Increase buffer for Octoprint"
+  },
+  {
+    "op": "CustomVal",
     "searchfor": "TX_BUFFER_SIZE",
-    "value": "32"
+    "value": "64",
+    "comment": "MRiscoC Increase buffer for Octoprint"
   },
   {
     "op": "Enable",
