@@ -56,6 +56,19 @@
   },
   {
     "op": "CustomVal",
+    "searchfor": "FIL_RUNOUT_STATE",
+    "value":"LOW"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "FIL_RUNOUT_PULLUP"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "FIL_RUNOUT_PULLDOWN"
+  },
+  {
+    "op": "CustomVal",
     "searchfor": "NEOPIXEL_PIN",
     "value": "PA13"
   }

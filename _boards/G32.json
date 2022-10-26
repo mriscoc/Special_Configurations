@@ -10,49 +10,62 @@
     "op": "CustomVal",
     "searchfor": "SERIAL_PORT",
     "value": "1",
-    "comment": "Ender Configs"
+    "comment": "Aquila Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "X_DRIVER_TYPE",
     "value": "TMC2208_STANDALONE",
-    "comment": "Ender Configs"
+    "comment": "Aquila Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "Y_DRIVER_TYPE",
     "value": "TMC2208_STANDALONE",
-    "comment": "Ender Configs"
+    "comment": "Aquila Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "Z_DRIVER_TYPE",
     "value": "TMC2208_STANDALONE",
-    "comment": "Ender Configs"
+    "comment": "Aquila Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "E0_DRIVER_TYPE",
     "value": "TMC2208_STANDALONE",
-    "comment": "Ender Configs"
+    "comment": "Aquila Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "INVERT_X_DIR",
     "value":"false",
-    "comment": "Ender Configs"
+    "comment": "Aquila Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "INVERT_Y_DIR",
     "value":"false",
-    "comment": "Ender Configs"
+    "comment": "Aquila Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "INVERT_Z_DIR",
     "value":"true",
-    "comment": "Ender Configs"
+    "comment": "Aquila Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "FIL_RUNOUT_STATE",
+    "value":"LOW"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "FIL_RUNOUT_PULLUP"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "FIL_RUNOUT_PULLDOWN"
   },
   {
     "op": "CustomVal",
@@ -65,13 +78,12 @@
     "op": "CustomVal",
     "searchfor": "E0_AUTO_FAN_PIN",
     "value": "-1",
-    "comment": "Ender3V2 Configs"
+    "comment": "Aquila Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "CHOPPER_TIMING",
-    "value": "CHOPPER_DEFAULT_24V",
-    "comment": "MRiscoC Correct value for UART mode drivers"
+    "value": "CHOPPER_DEFAULT_24V"
   }
 ],
 "Version.h" : [
@@ -80,7 +92,7 @@
   {
     "op": "Replace",
     "searchfor": "default_envs = mega2560",
-    "value": "default_envs = STM32F103RC_creality"
+    "value": "default_envs = GD32F103RC_voxelab_maple"
   }
 ]  
 }

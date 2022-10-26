@@ -323,7 +323,7 @@
   {
     "op": "InsertAfter",
     "searchfor": "#define DWIN_LCD_PROUI",
-    "newline": "#define ProUIex 1\n#define HAS_GCODE_PREVIEW 1\n#define HAS_TOOLBAR 1\n#define HAS_PIDPLOT 1\n#define HAS_ESDIAG 1\n#define HAS_CGCODE 1\n#define HAS_LOCKSCREEN 1\n#define MESH_EDIT_MENU\n#define USE_STOCK_DWIN_SET\n#define HAS_SD_EXTENDER 1\n"
+    "newline": "#define ProUIex 1\n#define HAS_GCODE_PREVIEW 1\n#define HAS_TOOLBAR 1\n#define HAS_PIDPLOT 1\n#define HAS_ESDIAG 1\n#define HAS_CGCODE 1\n#define HAS_LOCKSCREEN 1\n#define MESH_EDIT_MENU\n#define USE_STOCK_DWIN_SET\n#define HAS_SD_EXTENDER 1\n#define SHOW_REAL_POS 1\n"
   },
   {
     "op": "InsertAfter",

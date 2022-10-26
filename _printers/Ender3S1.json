@@ -21,7 +21,7 @@
   {
     "op": "CustomVal",
     "searchfor": "BED_MAXTEMP",
-    "value": "110",
+    "value": "120",
     "comment": "Ender3S1 Configs"
   },
   {
