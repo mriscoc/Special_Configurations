@@ -50,11 +50,6 @@
   },
   {
     "op": "Enable",
-    "searchfor": "PROBING_HEATERS_OFF",
-    "comment": "MRiscoC Probe stability"
-  },
-  {
-    "op": "Enable",
     "searchfor": "Z_MIN_PROBE_REPEATABILITY_TEST",
     "comment": "MRiscoC Enable M48 repeatability test"
   },

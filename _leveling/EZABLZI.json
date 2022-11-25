@@ -16,11 +16,6 @@
   },
   {
     "op": "Enable",
-    "searchfor": "PROBING_HEATERS_OFF",
-    "comment": "MRiscoC Enabled for EZABL version"
-  },
-  {
-    "op": "Enable",
     "searchfor": "MULTIPLE_PROBING",
     "comment": "MRiscoC Enabled"
   },

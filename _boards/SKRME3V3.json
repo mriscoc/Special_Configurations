@@ -132,7 +132,12 @@
     "searchfor": "CHOPPER_TIMING",
     "value": "CHOPPER_DEFAULT_24V",
     "comment": "MRiscoC Correct value for UART mode drivers"
-  }
+  },
+  {
+    "op": "Disable",
+    "searchfor": "ADAPTIVE_STEP_SMOOTHING",
+    "comment": "Workaround to fix interrrupt handling in SKR MINIE3V3"
+  }  
 ],
 "Version.h" : [
 ],   

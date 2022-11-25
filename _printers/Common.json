@@ -250,12 +250,12 @@
   {
     "op": "CustomVal",
     "searchfor": "PREHEAT_2_TEMP_HOTEND",
-    "value": "230"
+    "value": "240"
   },
   {
     "op": "CustomVal",
     "searchfor": "PREHEAT_2_TEMP_BED",
-    "value": " 80"
+    "value": " 90"
   },
   {
     "op": "CustomVal",
@@ -265,7 +265,7 @@
   {
     "op": "InsertAfter",
     "searchfor": "#define PREHEAT_2_FAN_SPEED",
-    "newline": "\n#define PREHEAT_3_LABEL       \"CUSTOM\"\n#define PREHEAT_3_TEMP_HOTEND 240\n#define PREHEAT_3_TEMP_BED     60\n#define PREHEAT_3_FAN_SPEED   128"
+    "newline": "\n#define PREHEAT_3_LABEL       \"PETG\"\n#define PREHEAT_3_TEMP_HOTEND 230\n#define PREHEAT_3_TEMP_BED     80\n#define PREHEAT_3_FAN_SPEED   128\n\n#define PREHEAT_4_LABEL       \"CUSTOM\"\n#define PREHEAT_4_TEMP_HOTEND 190\n#define PREHEAT_4_TEMP_BED     50\n#define PREHEAT_4_FAN_SPEED   128"
   },
   {
     "op": "Enable",
