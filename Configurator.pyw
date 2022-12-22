@@ -50,7 +50,7 @@ def auto_name():
     if "F1-UBL" not in Name and "F4-UBL" not in Name:
       Name = Name.replace("-UBL","UBL")
     #rename LinaAdv
-    Name = Name.replace("LinAdv","LA")
+    #Name = Name.replace("LinAdv","LA")
     root.ConfigName.delete(-1,END)
     root.ConfigName.insert(-1,Name)
     root.update_conf()

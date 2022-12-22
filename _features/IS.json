@@ -1,0 +1,30 @@
+{
+"Configuration.h" : [
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "INPUT_SHAPING_X"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "INPUT_SHAPING_Y"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "SHAPING_MENU"
+  },
+  {
+    "-op": "CustomVal",
+    "searchfor": "SHAPING_FREQ_X",
+    "value": "0.0"
+  },
+  {
+    "-op": "CustomVal",
+    "searchfor": "SHAPING_FREQ_Y",
+    "value": "0.0"
+  }
+],
+"Version.h" : [
+]   
+}

@@ -400,13 +400,13 @@
   {
     "op": "CustomVal",
     "searchfor": "ENCODER_10X_STEPS_PER_SEC",
-    "value": "60",
+    "value": "80",
     "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",
     "searchfor": "ENCODER_100X_STEPS_PER_SEC",
-    "value": "90",
+    "value": "130",
     "comment": "Ender Configs"
   },
   {
@@ -421,7 +421,17 @@
   },
   {
     "op": "Enable",
-    "searchfor": "LCD_SET_PROGRESS_MANUALLY",
+    "searchfor": "SET_PROGRESS_MANUALLY",
+    "comment": "MRiscoC Allow display feedback of host printing through GCode M73"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "SET_PROGRESS_PERCENT",
+    "comment": "MRiscoC Allow display feedback of host printing through GCode M73"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "SET_REMAINING_TIME",
     "comment": "MRiscoC Allow display feedback of host printing through GCode M73"
   },
   {
