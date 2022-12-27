@@ -11,19 +11,7 @@ I sent you or use any of the other communication media (Facebook, Telegram) prov
 Github also have a [Sponsor platform](https://github.com/sponsors/mriscoc).
 
 ## Creating your own custom configuration
-To create a configuration it is necessary to call the `CreateConfigs.py` Python script with the following parameters:
-
-```Python
-CreateConfigs.Generate('CustomConfigName', ['Printer','Board','Features',...])
-```
-To create Ender3V2 Configuration files with a BLTouch and UBL support it is easy to write a little Python script to call the above function:
-
-```Python
-#!/usr/bin/python
-import CreateConfigs
-CreateConfigs.Generate('Ender3V2-422-BLTUBL', ['Ender3V2','422','BLT','UBL'])
-```
-It is now also possible to use an small Python GUI interface (Professional Firmware Configurator) for generate the configuration files,
+It is now possible to use an small Python GUI interface (Professional Firmware Configurator) for generate the configuration files,
 after downloading the repository execute the Python file `Configurator.pyw`:
 
 ![image](https://github.com/mriscoc/Special_Configurations/raw/main/images/Configurator.png)
@@ -38,7 +26,20 @@ From the created custom configuration folder, move Configuration.h and Configura
 Follow any guide about Marlin compile to get your firmware binary: Install [VSCode](https://code.visualstudio.com/), then inside of VSCode install the extensions: [PlatformIO](https://platformio.org/install/ide?install=vscode) and [Auto Build Marlin](https://marlinfw.org/docs/basics/auto_build_marlin.html). Open your project folder in VSCode and compile by using Auto Build Marlin.
 
 ### Custom features
-For have a special build you must to provide a config json with only your personal choices, for example: for get a
+Advanced user can create a custom configuration calling directly the `CreateConfigs.py` Python script with the following parameters:
+
+```Python
+CreateConfigs.Generate('CustomConfigName', ['Printer','Board','Features',...])
+```
+To create Ender3V2 Configuration files with a BLTouch and UBL support it is easy to write a little Python script to call the above function:
+
+```Python
+#!/usr/bin/python
+import CreateConfigs
+CreateConfigs.Generate('Ender3V2-422-BLTUBL', ['Ender3V2','422','BLT','UBL'])
+```
+
+For have a special build you can provide a config json with only your personal choices, for example: for get a
 special build for a Ender3V2 printer that have a hotend volcano, bltouch and 4.2.2 board it is necessary only write a Volcano.json with this content:
 
 ```json
