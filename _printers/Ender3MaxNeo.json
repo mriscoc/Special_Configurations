@@ -42,23 +42,23 @@
     {
       "op": "CustomVal",
       "searchfor": "DEFAULT_bedKp",
-      "value": "198.96"
+      "value": "391.14"
     },
     {
       "op": "CustomVal",
       "searchfor": "DEFAULT_bedKi",
-      "value": " 38.80"
+      "value": "76.39"
     },
     {
       "op": "CustomVal",
       "searchfor": "DEFAULT_bedKd",
-      "value": "680.25"
+      "value": "1335.09"
     },
     {
       "op": "Custom",
       "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
       "mask": "{.*}",
-      "value": "{ 80.08, 80.17, 400, 101.3 }",
+      "value": "{ 80.08, 80.17, 400, 98.75 }",
       "comment": "Ender Configs"
     },
     {
@@ -89,7 +89,7 @@
       "op": "Custom",
       "searchfor": "NOZZLE_TO_PROBE_OFFSET",
       "mask": "{.*}",
-      "value": "{ -57, -20, -1.75 }",
+      "value": "{ -40, -12, -1.80 }",
       "comment": "MRiscoC BLTouch offset for support: https://www.thingiverse.com/thing:4605354 (z-offset = -1.80 mm)"
     },
     {
@@ -119,7 +119,7 @@
     {
       "op": "CustomVal",
       "searchfor": "X_MAX_POS",
-      "value": "300",
+      "value": "305",
       "comment": "MRiscoC Stock physical limit"
     },
     {
@@ -143,14 +143,14 @@
     {
       "op": "CustomVal",
       "searchfor": "MESH_INSET",
-      "value": "25",
+      "value": "10",
       "comment": "MRiscoC Center mesh"
     },
     {
       "op": "Custom",
       "searchfor": "NOZZLE_PARK_POINT",
       "mask": "{.*}",
-      "value": "{ (X_BED_SIZE + 10), (Y_MAX_POS - 10), 20 }"
+      "value": "{ -15, (Y_MAX_POS), 20 }"
     }
   ],
   "Configuration_adv.h": [
@@ -158,7 +158,7 @@
       "op": "Custom",
       "searchfor": "TRAMMING_POINT_XY",
       "mask": "{.*}",
-      "value": "{ { 60, 60 }, { 240, 60 }, { 240, 240 }, { 60, 240 } }"
+      "value": "{ { 35, 35 }, { 265, 35 }, { 265, 265 }, { 35, 265 } }"
     },
     {
       "op": "CustomVal",
