@@ -58,7 +58,7 @@
       "op": "Custom",
       "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
       "mask": "{.*}",
-      "value": "{ 80.08, 80.17, 400, 98.75 }",
+      "value": "{ 80, 80, 400, 96 }",
       "comment": "Ender Configs"
     },
     {
@@ -143,7 +143,7 @@
     {
       "op": "CustomVal",
       "searchfor": "MESH_INSET",
-      "value": "10",
+      "value": "40",
       "comment": "MRiscoC Center mesh"
     },
     {
@@ -158,7 +158,7 @@
       "op": "Custom",
       "searchfor": "TRAMMING_POINT_XY",
       "mask": "{.*}",
-      "value": "{ { 35, 35 }, { 265, 35 }, { 265, 265 }, { 35, 265 } }"
+      "value": "{ { 40, 40 }, { 260, 40 }, { 260, 260 }, { 40, 260 } }"
     },
     {
       "op": "CustomVal",
@@ -168,19 +168,19 @@
     {
       "op": "CustomVal",
       "searchfor": "RETRACT_LENGTH",
-      "value": "3",
+      "value": "5",
       "comment": "MRiscoC Bowden"
     },
     {
       "op": "CustomVal",
       "searchfor": "RETRACT_FEEDRATE",
-      "value": "45",
+      "value": "40",
       "comment": "MRiscoC Bowden"
     },
     {
       "op": "CustomVal",
       "searchfor": "RETRACT_RECOVER_FEEDRATE",
-      "value": "8",
+      "value": "40",
       "comment": "MRiscoC Bowden"
     }
   ],
