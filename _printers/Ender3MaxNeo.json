@@ -1,0 +1,195 @@
+{
+  "Configuration.h": [
+    {
+      "op": "CustomVal",
+      "searchfor": "TEMP_SENSOR_BED",
+      "value": "1",
+      "comment": "Ender Configs"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "HEATER_0_MINTEMP",
+      "value": "0",
+      "comment": "Ender Configs"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "BED_MINTEMP",
+      "value": "0",
+      "comment": "Ender Configs"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "BED_MAXTEMP",
+      "value": "120",
+      "comment": "Ender3V2 Configs"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "DEFAULT_Kp",
+      "value": "25.80"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "DEFAULT_Ki",
+      "value": "2.50"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "DEFAULT_Kd",
+      "value": " 66.64"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "DEFAULT_bedKp",
+      "value": "391.14"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "DEFAULT_bedKi",
+      "value": "76.39"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "DEFAULT_bedKd",
+      "value": "1335.09"
+    },
+    {
+      "op": "Custom",
+      "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
+      "mask": "{.*}",
+      "value": "{ 80, 80, 400, 96 }",
+      "comment": "Ender Configs"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "DEFAULT_XJERK",
+      "value": "8.0",
+      "comment": "Ender Configs"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "DEFAULT_YJERK",
+      "value": "8.0",
+      "comment": "Ender Configs"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "DEFAULT_ZJERK",
+      "value": "0.4",
+      "comment": "Ender Configs"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "DEFAULT_EJERK",
+      "value": "5.0",
+      "comment": "Ender Configs"
+    },
+    {
+      "op": "Custom",
+      "searchfor": "NOZZLE_TO_PROBE_OFFSET",
+      "mask": "{.*}",
+      "value": "{ -40, -12, -1.80 }",
+      "comment": "MRiscoC BLTouch offset for support: https://www.thingiverse.com/thing:4605354 (z-offset = -1.80 mm)"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "X_BED_SIZE",
+      "value": "300",
+      "comment": "MRiscoC Max usable bed size"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "Y_BED_SIZE",
+      "value": "300",
+      "comment": "MRiscoC Max usable bed size"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "X_MIN_POS",
+      "value": "-24",
+      "comment": "MRiscoC Stock physical limit"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "Y_MIN_POS",
+      "value": "-4",
+      "comment": "MRiscoC Stock physical limit"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "X_MAX_POS",
+      "value": "305",
+      "comment": "MRiscoC Stock physical limit"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "Y_MAX_POS",
+      "value": "300",
+      "comment": "MRiscoC Stock physical limit"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "Z_MAX_POS",
+      "value": "320",
+      "comment": "Ender Configs"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "FILAMENT_RUNOUT_DISTANCE_MM",
+      "value": "25",
+      "comment": "MRiscoC Customizable by menu"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "MESH_INSET",
+      "value": "40",
+      "comment": "MRiscoC Center mesh"
+    },
+    {
+      "op": "Custom",
+      "searchfor": "NOZZLE_PARK_POINT",
+      "mask": "{.*}",
+      "value": "{ -15, (Y_MAX_POS), 20 }"
+    }
+  ],
+  "Configuration_adv.h": [
+    {
+      "op": "Custom",
+      "searchfor": "TRAMMING_POINT_XY",
+      "mask": "{.*}",
+      "value": "{ { 40, 40 }, { 260, 40 }, { 260, 260 }, { 40, 260 } }"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "TRAMMING_SCREW_THREAD",
+      "value": "40"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "RETRACT_LENGTH",
+      "value": "5",
+      "comment": "MRiscoC Bowden"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "RETRACT_FEEDRATE",
+      "value": "40",
+      "comment": "MRiscoC Bowden"
+    },
+    {
+      "op": "CustomVal",
+      "searchfor": "RETRACT_RECOVER_FEEDRATE",
+      "value": "40",
+      "comment": "MRiscoC Bowden"
+    }
+  ],
+  "Version.h": [
+    {
+      "op": "Custom",
+      "searchfor": "MACHINE_NAME",
+      "mask": "\".+\"",
+      "value": "\"Ender 3 Max Neo\""
+    }
+  ]
+}
