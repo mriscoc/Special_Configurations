@@ -79,6 +79,17 @@
     "op": "Enable",
     "searchfor": "Z_SAFE_HOMING",
     "comment": "MRiscoC Homing Z at center of bed"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "BED_TRAMMING_USE_PROBE",
+    "comment": "Use a probe if it is available"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BED_TRAMMING_PROBE_TOLERANCE",
+    "value":"0.05",
+    "comment": "ProUI bed tramming wizard tolerance"
   }
 ],
 "Configuration_adv.h" : [

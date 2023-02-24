@@ -104,6 +104,11 @@
     "comment": "Board v301 Configs"
   },
   {
+    "op": "InsertAfter",
+    "searchfor": "#define DWIN_LCD_PROUI",
+    "newline": "#define HAS_DACAI 1"
+  },
+  {
     "op": "CustomVal",
     "searchfor": "NEOPIXEL_PIN",
     "value": "PA13"

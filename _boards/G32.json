@@ -75,6 +75,10 @@
 ],
 "Configuration_adv.h" : [
   {
+    "op": "Disable",
+    "searchfor": "BINARY_FILE_TRANSFER"
+  },
+  {
     "op": "CustomVal",
     "searchfor": "E0_AUTO_FAN_PIN",
     "value": "-1",
