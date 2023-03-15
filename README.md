@@ -4,7 +4,7 @@ project files are in the firmware repository: https://github.com/mriscoc/Ender3V
 
 ### These special configurations and releases are sponsored by donors.
 
-There is no fixed amount to sponsor a configuration, but it influences how quickly the configuration is served. Please check the suscription levels on [Patreon](https://www.patreon.com/mriscoc) there is a level to reques custom compile. Patrons from [Patreon platform](https://www.patreon.com/mriscoc) can request a configuration sending a message. If you made a equivalent donation through [Paypal](https://www.paypal.com/donate/?business=85SPAAR6UZEE8&currency_code=USD), please reply the message that I sent you or use any of the other communication media (Facebook, Telegram) providing the name used in Paypal.
+There is no fixed amount to sponsor a configuration, but it influences how quickly the configuration is served. Please check the suscription levels on [Patreon](https://www.patreon.com/mriscoc), there is a level to request custom compile. Patrons from [Patreon platform](https://www.patreon.com/mriscoc) can request a configuration sending a message. If you made a equivalent donation through [Paypal](https://www.paypal.com/donate/?business=85SPAAR6UZEE8&currency_code=USD), please reply the message that I sent you or use any of the other communication media (Facebook, Telegram) providing the name used in Paypal.
 Github also have a [Sponsor platform](https://github.com/sponsors/mriscoc).
 
 ## Creating your own custom configuration
