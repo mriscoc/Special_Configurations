@@ -3265,13 +3265,14 @@
 //
 //#define DWIN_CREALITY_LCD           // Creality UI
 #define DWIN_LCD_PROUI              // Pro UI by MRiscoC
-#define HAS_DACAI 1
 #define USE_STOCK_DWIN_SET
 
 // Professional firmware features:
 #define ProUIex 1
 #if ProUIex
-  #define HAS_GCODE_PREVIEW 1
+  #if NONE(TJC_DISPLAY, SYNWIT_DISPLAY)
+    #define HAS_GCODE_PREVIEW 1
+  #endif
   #define HAS_TOOLBAR 1
 #endif
 #define HAS_PLOT 1

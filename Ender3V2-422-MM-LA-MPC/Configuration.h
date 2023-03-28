@@ -3270,7 +3270,9 @@
 // Professional firmware features:
 #define ProUIex 1
 #if ProUIex
-  #define HAS_GCODE_PREVIEW 1
+  #if NONE(TJC_DISPLAY, SYNWIT_DISPLAY)
+    #define HAS_GCODE_PREVIEW 1
+  #endif
   #define HAS_TOOLBAR 1
 #endif
 #define HAS_PLOT 1
