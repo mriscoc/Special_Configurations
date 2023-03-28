@@ -1,0 +1,15 @@
+{
+"Configuration.h" : [
+  {
+    "op": "InsertAfter",
+    "searchfor": "#define DWIN_LCD_PROUI",
+    "newline": "#define DWIN_DISPLAY    // ProUI assumes DWIN as default if not display was defined"
+  }
+],
+"Configuration_adv.h" : [
+],
+"Version.h" : [
+],   
+"platformio.ini" : [
+]   
+}

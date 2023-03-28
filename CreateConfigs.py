@@ -4,8 +4,8 @@
 # Configurations generator script for the Professional Firmware
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Marlin_Configurations
-# version: 5.1
-# date: 2022/07/28
+# version: 6.1
+# date: 2022/03/22
 # ------------------------------------------------------------------------------
 
 import re
@@ -141,7 +141,7 @@ def CustomizeFile(Machine_Name, SourceDir, TargetDir, Mode, config) :
     if verbose: log(">>>> using: _printers/Common.json")
     lines = ProcessLines("_printers/Common.json", config)
 
-    PathConfig = ['_printers/','_boards/','_leveling/','_thermistor/','_features/']
+    PathConfig = ['_printers/','_boards/','_displays/','_leveling/','_thermistor/','_features/']
     for val in Mode:
       for path in PathConfig:
         JsonFile = path + val + '.json'

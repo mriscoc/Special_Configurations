@@ -1,0 +1,15 @@
+{
+"Configuration.h" : [
+  {
+    "op": "InsertAfter",
+    "searchfor": "#define DWIN_LCD_PROUI",
+    "newline": "#define DACAI_DISPLAY"
+  }
+],
+"Configuration_adv.h" : [
+],
+"Version.h" : [
+],   
+"platformio.ini" : [
+]   
+}

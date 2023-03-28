@@ -3,8 +3,8 @@
 # Configurations generator script for the Professional Firmware
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Special_Configurations
-# version: 3.1
-# date: 2022/07/29
+# version: 4.1
+# date: 2023/03/22
 # ------------------------------------------------------------------------------
 
 from ast import Global
@@ -22,14 +22,15 @@ def fill_conf(obj):
   ConfigList.append(obj.board.get())
   ConfigList.append(obj.leveling.get())
   if obj.ubl.get(): ConfigList.append("UBL")
-  if not obj.thermistor.get() =="T1": ConfigList.append(obj.thermistor.get())
+  if not obj.display.get() == "DWIN": ConfigList.append(obj.display.get())
+  if not obj.thermistor.get() == "T1": ConfigList.append(obj.thermistor.get())
   for checkbox in obj.featurelist:
     if checkbox.instate(['selected']): ConfigList.append(checkbox.cget("text"))
 
 def set_conf():
     fill_conf(root)
     root.update_conf()
-    root.copy_clpbrd()
+##    root.copy_clpbrd()
 
 def generate_conf():
     global ConfigList
@@ -40,6 +41,11 @@ def generate_conf():
         root.open_log()
     else:
         messagebox.showinfo(message="Configuration files generated", title="Professional Firmware")
+
+def copy_clpbrd() :
+    root.clipboard_clear()
+    root.clipboard_append(root.Edit_GenFunc.get(1.0, END))
+    messagebox.showinfo(message="Configuration generator was copied", title="Clipboard")
 
 def auto_name():
     fill_conf(root)
@@ -59,7 +65,7 @@ class Main(tk.Tk):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.config(width=500, height=200)
+        self.config(width=800, height=400)
         self.resizable(False, False)
         self.title("Professional Firmware Configurator")
 
@@ -70,16 +76,16 @@ class Main(tk.Tk):
         self.topframe = ttk.Frame(self)
         self.topframe.grid(row=0,column=0, padx=10, pady=5, sticky="nw")
         self.leftframe = ttk.Frame(self)
-        self.leftframe.grid(row=1,column=0, padx=10, pady=5, sticky="nw")
+        self.leftframe.grid(row=1,column=0, padx=10, pady=(5,0), sticky="nw")
         self.bottomframe = ttk.Frame(self, border=10)
-        self.bottomframe.grid(row=2,column=0, columnspan=2)
+        self.bottomframe.grid(row=2,column=0, columnspan=2, pady=0)
 
         # top frame--------------------------------------------------------------------------
 
         self.l1 = ttk.Label(self.topframe, text="Configuration Name:")
         self.l1.grid(row=0, column=0)
 
-        self.ConfigName = ttk.Entry(self.topframe, width=50)
+        self.ConfigName = ttk.Entry(self.topframe, width=60)
         self.ConfigName.insert(-1, "MyConfiguration")
         self.ConfigName.grid(row=0, column=1, padx=5)
 
@@ -88,10 +94,10 @@ class Main(tk.Tk):
 
         # left frame-------------------------------------------------------------------------
 
-        self.l2 = ttk.Label(self.leftframe, text="Printer:", width=14)
+        self.l2 = ttk.Label(self.leftframe, text="Printer:", width=16)
         self.l2.grid(row=1, column=0, sticky="w")
 
-        # Create the printerlist
+        # Create the printerlist ------------------------------------------------------------
         self.printer = tk.StringVar(self,'Ender3V2')
         self.printerlist = []
         for file in os.listdir("_printers"):
@@ -104,6 +110,8 @@ class Main(tk.Tk):
         for self.radiobutton in self.printerlist:
             self.radiobutton.grid(row=self.nrow, column=0, sticky="w")
             self.nrow += 1
+
+        #===================================================================================#
 
         self.l3 = ttk.Label(self.leftframe, text="Board:", width=14)
         self.l3.grid(row=1, column=1, sticky="w")
@@ -122,8 +130,29 @@ class Main(tk.Tk):
             self.radiobutton.grid(row=self.nrow, column=1, sticky="w")
             self.nrow += 1
 
-        self.l4 = ttk.Label(self.leftframe, text="Leveling:", width=14)
+        #===================================================================================#
+
+        self.l4 = ttk.Label(self.leftframe, text="Display:", width=12)
         self.l4.grid(row=1, column=2, sticky="w")
+
+        # Create the displaylist
+        self.display = tk.StringVar(self,'DWIN')
+        self.displaylist = []
+        for file in os.listdir("_displays"):
+            if file.endswith(".json"):
+                self.value = file.replace(".json", "")
+                self.displaylist.append(ttk.Radiobutton(self.leftframe, text=self.value, variable=self.display, value=self.value))
+
+        # Add the radiobuttons to the window
+        self.nrow = 2
+        for self.radiobutton in self.displaylist:
+            self.radiobutton.grid(row=self.nrow, column=2, sticky="w")
+            self.nrow += 1
+
+        #===================================================================================#
+
+        self.l5 = ttk.Label(self.leftframe, text="Leveling:", width=14)
+        self.l5.grid(row=1, column=3, sticky="w")
 
         # Create levelinglist
         self.leveling = tk.StringVar(self,'BLT')
@@ -136,16 +165,18 @@ class Main(tk.Tk):
         # Add the radiobuttons to the window
         self.nrow = 2
         for self.radiobutton in self.levelinglist:
-            self.radiobutton.grid(row=self.nrow, column=2, sticky="w")
+            self.radiobutton.grid(row=self.nrow, column=3, sticky="w")
             self.nrow += 1
 
         # Add UBL checkbox
         self.ubl = tk.BooleanVar(self,True)
         self.ublchkb = ttk.Checkbutton(self.leftframe, text="UBL", variable=self.ubl)
-        self.ublchkb.grid(row=self.nrow, column=2, sticky="w")
+        self.ublchkb.grid(row=self.nrow, column=3, sticky="w")
 
-        self.l5 = ttk.Label(self.leftframe, text="Thermistor:", width=14)
-        self.l5.grid(row=1, column=3, sticky="w")
+        #===================================================================================#
+
+        self.l6 = ttk.Label(self.leftframe, text="Thermistor:", width=12)
+        self.l6.grid(row=1, column=4, sticky="w")
 
         # Create thermistorlist
         self.thermistor = tk.StringVar(self,'T1')
@@ -158,13 +189,15 @@ class Main(tk.Tk):
         # Add the radiobuttons to the window
         self.nrow = 2
         for self.radiobutton in self.thermistorlist:
-            self.radiobutton.grid(row=self.nrow, column=3, sticky="w")
+            self.radiobutton.grid(row=self.nrow, column=4, sticky="w")
             self.nrow += 1
 
-        self.l6 = ttk.Label(self.leftframe, text="Features:", width=14)
-        self.l6.grid(row=1, column=4, sticky="w")
+        #===================================================================================#
 
-        # Create the featurelist of Checkbutton
+        self.l7 = ttk.Label(self.leftframe, text="Features:", width=12)
+        self.l7.grid(row=1, column=5, sticky="w")
+
+        # Create the featurelist
         self.featurelist = []
         for file in os.listdir("_features"):
             if file.endswith(".json"):
@@ -173,23 +206,26 @@ class Main(tk.Tk):
         # Add the checkboxes to the window
         self.nrow = 2
         for self.checkbox in self.featurelist:
-            self.checkbox.grid(row=self.nrow, column=4, sticky="w")
+            self.checkbox.grid(row=self.nrow, column=5, sticky="w")
             self.nrow += 1
             self.checkbox.state(['!alternate'])
 
-        self.img_boton = tk.PhotoImage(file="images/cog.png")
-        self.boton2 = ttk.Button(self.leftframe, text="Set config", image=self.img_boton, compound=tk.LEFT, command=set_conf)
-        self.boton2.grid(row = 10, column=1, columnspan=2, pady=20)
-
-        self.boton3 = ttk.Button(self.leftframe, text="Generate", image=self.img_boton, compound=tk.LEFT, command=generate_conf)
-        self.boton3.grid(row = 10, column=2, columnspan=2)
-
         # bottom frame-------------------------------------------------------------------------
 
-        self.Edit_GenFunc = tk.Text(self.bottomframe, width=65, height=2, relief='flat', bg="black", fg="yellow")
+        self.img_boton = tk.PhotoImage(file="images/cog.png")
+        self.boton2 = ttk.Button(self.bottomframe, text="Set config", image=self.img_boton, compound=tk.LEFT, command=set_conf)
+        self.boton2.grid(row = 0, column=0, pady=(0,10))
+
+        self.boton3 = ttk.Button(self.bottomframe, text="Generate", image=self.img_boton, compound=tk.LEFT, command=generate_conf)
+        self.boton3.grid(row = 0, column=1, pady=(0,10))
+
+        self.boton4 = ttk.Button(self.bottomframe, text="Copy to Clipboard", image=self.img_boton, compound=tk.LEFT, command=copy_clpbrd)
+        self.boton4.grid(row = 0, column=2, pady=(0,10))
+
+        self.Edit_GenFunc = tk.Text(self.bottomframe, width=73, height=2, relief='flat', bg="black", fg="yellow")
         fill_conf(self)
         self.update_conf()
-        self.Edit_GenFunc.grid(row=0, column=0, columnspan=2, sticky="w")
+        self.Edit_GenFunc.grid(row=1, column=0, columnspan=3, sticky="w")
 
         # ------------------------------------------------------------------------------------
 
@@ -217,10 +253,6 @@ class Main(tk.Tk):
         f.close()
       except Exception as e:
         messagebox.showinfo(message=str(e), title="Error")
-
-    def copy_clpbrd(self):
-        self.clipboard_clear()
-        self.clipboard_append(self.Edit_GenFunc.get(1.0, END))
 
 class log_window(tk.Toplevel):
   def __init__(self, parent):
