@@ -117,7 +117,7 @@
  */
 #define BAUDRATE 250000  // MRiscoC increase serial performace
 
-#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate  // MRiscoC Enables change the baudrate
+//#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate  // MRiscoC Enables change the baudrate
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -139,7 +139,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-//#define CUSTOM_MACHINE_NAME "3D Printer"
+#define CUSTOM_MACHINE_NAME "Ender3S1-F4-LA"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -2637,7 +2637,7 @@
 // Add individual axis homing items (Home X, Home Y, and Home Z) to the LCD menu.
 //
 //#define INDIVIDUAL_AXIS_HOMING_MENU
-#define INDIVIDUAL_AXIS_HOMING_SUBMENU
+//#define INDIVIDUAL_AXIS_HOMING_SUBMENU
 
 //
 // SPEAKER/BUZZER
@@ -3275,19 +3275,20 @@
   #endif
   #define HAS_TOOLBAR 1
 #endif
-#define HAS_PLOT 1
+//#define HAS_PLOT 1
 #define HAS_ESDIAG 1
 #define HAS_CGCODE 1
-#define HAS_LOCKSCREEN 1
+//#define HAS_LOCKSCREEN 1
 //#define HAS_SD_EXTENDER 1  // Enable to support SD card extender cables
 #define MESH_EDIT_MENU
 #define SHOW_REAL_POS
 //#define ACTIVATE_MESH_ITEM  // Allows temporary enabling of mesh leveling
 #define RUNOUT_TUNE_ITEM
-#define PLR_TUNE_ITEM
+//#define PLR_TUNE_ITEM
 //#define JD_TUNE_ITEM  // Enable only if Juntion Deviation is enabled
 //#define ADVK_TUNE_ITEM  // Enable only if Linear Advance is enabled
 //#define MEDIASORT_MENU_ITEM  // Allows enable/disable file list sorting
+//#define CCLOUD_PRINT_SUPPORT  // Allows enable/disable Creative Cloud Print Support
 
 //#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
 //#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
