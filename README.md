@@ -4,11 +4,10 @@ project files are in the firmware repository: https://github.com/mriscoc/Ender3V
 
 ### These special configurations and releases are sponsored by donors.
 
-There is no fixed amount to sponsor a configuration, but it influences how quickly the configuration is served. Please check the suscription levels on [Patreon](https://www.patreon.com/mriscoc), there is a level to request custom compile. Patrons from [Patreon platform](https://www.patreon.com/mriscoc) can request a configuration sending a message. If you made a equivalent donation through [Paypal](https://www.paypal.com/donate/?business=85SPAAR6UZEE8&currency_code=USD), please reply the message that I sent you or use any of the other communication media (Facebook, Telegram) providing the name used in Paypal.
-Github also have a [Sponsor platform](https://github.com/sponsors/mriscoc).
+There is no fixed amount to sponsor a configuration, but it influences how quickly the configuration is served. Please check the suscription levels on [Patreon](https://www.patreon.com/mriscoc), there is a level to request custom compile. Patrons from [Patreon platform](https://www.patreon.com/mriscoc) can request a configuration sending a message. If you made a equivalent donation through [Paypal](https://www.paypal.com/donate/?business=85SPAAR6UZEE8&currency_code=USD), please reply the message that I sent you or use any of the other communication media (Facebook, Telegram) providing the name used in Paypal. I'm happy and grateful for the contributions but please don't confuse that with paid work. I do what is possible in my little free time, be aware that a donation does not give you the right more than my thanks, a specialized job like coding and compiling a custom firmware could be a work quoted in 3 digits. Github also have a [Sponsor platform](https://github.com/sponsors/mriscoc).
 
 ## Creating your own custom configuration
-It is now possible to use an small Python GUI interface (Professional Firmware Configurator) for generate the configuration files,
+It is now possible to use an small Python GUI interface (Professional Firmware **Configurator**) for generate the configuration files,
 after downloading the repository execute the Python file `Configurator.pyw`:
 
 ![image](https://github.com/mriscoc/Special_Configurations/raw/main/images/Configurator.png)
@@ -73,7 +72,7 @@ special build for a Ender3V2 printer that have a hotend volcano, bltouch and 4.2
 Put the Volcano.json file inside of the `_features` folder, then request to the `CreateConfigs.py` to build a configuration with `CreateConfigs.Generate('MyCustomConfigName', ['Ender3V2','422','BLT','Volcano'])`; the last "Volcano" will overwrite the necessary
 values in the configuration file, you can also use the GUI, your custom .json file will be listed as a custom feature.
 
-For write your json file take note that the `CreateConfigs.py` script supports five basic operations over the configuration files:
+For write your json file take note that the `CreateConfigs.py` script supports these basic operations over the configuration files:
 
 > **InsertAfter**: allows to insert text after match a given mask.  
 > **Custom**: allows to replace text  after match a given mask.  
