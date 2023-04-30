@@ -87,7 +87,7 @@
   },
   {
     "op": "Disable",
-    "searchfor": "Z_HOMING_HEIGHT"
+    "searchfor": "Z_CLEARANCE_FOR_HOMING"
   },
   {
     "op": "Disable",

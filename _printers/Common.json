@@ -37,6 +37,16 @@
     "comment": "Ender Configs"
   },
   {
+    "op": "Enable",
+    "searchfor": "PID_AUTOTUNE_MENU",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "PID_EDIT_MENU",
+    "comment": "Ender Configs"
+  },
+  {
     "op": "CustomVal",
     "searchfor": "EXTRUDE_MINTEMP",
     "value": "180",
@@ -166,7 +176,7 @@
   },
   {
     "op": "CustomVal",
-    "searchfor": "Z_HOMING_HEIGHT",
+    "searchfor": "Z_CLEARANCE_FOR_HOMING",
     "value": "10",
     "comment": "MRiscoC Crearance over the bed"
   },
@@ -178,7 +188,7 @@
   },
   {
     "op": "Disable",
-    "searchfor": "Z_HOMING_HEIGHT"
+    "searchfor": "Z_CLEARANCE_FOR_HOMING"
   },
   {
     "op": "Disable",
@@ -333,7 +343,7 @@
   {
     "op": "InsertAfter",
     "searchfor": "#define DWIN_LCD_PROUI",
-    "newline": "#define USE_STOCK_DWIN_SET\n\n// Professional firmware features:\n#define ProUIex 1\n#if ProUIex\n  #if NONE(TJC_DISPLAY, SYNWIT_DISPLAY)\n    #define HAS_GCODE_PREVIEW 1\n  #endif\n  #define HAS_TOOLBAR 1\n#endif\n#define HAS_PLOT 1\n#define HAS_ESDIAG 1\n#define HAS_CGCODE 1\n#define HAS_LOCKSCREEN 1\n#define HAS_SD_EXTENDER 1\n#define MESH_EDIT_MENU\n#define SHOW_REAL_POS\n#define ACTIVATE_MESH_ITEM\n#define RUNOUT_TUNE_ITEM\n#define PLR_TUNE_ITEM\n#define JD_TUNE_ITEM\n#define ADVK_TUNE_ITEM\n#define MEDIASORT_MENU_ITEM\n#define CCLOUD_PRINT_SUPPORT\n"
+    "newline": "#define USE_STOCK_DWIN_SET\n\n// Professional firmware features:\n#define ProUIex 1\n  #define HAS_GCODE_PREVIEW 1\n  #define HAS_TOOLBAR 1\n#endif\n#define HAS_PLOT 1\n#define HAS_ESDIAG 1\n#define HAS_CGCODE 1\n#define HAS_LOCKSCREEN 1\n#define HAS_SD_EXTENDER 1\n#define MESH_EDIT_MENU\n#define SHOW_REAL_POS\n#define ACTIVATE_MESH_ITEM\n#define RUNOUT_TUNE_ITEM\n#define PLR_TUNE_ITEM\n#define JD_TUNE_ITEM\n#define ADVK_TUNE_ITEM\n#define MEDIASORT_MENU_ITEM\n#define CCLOUD_PRINT_SUPPORT\n#define ZHOME_BEFORE_LEVELING\n#define SMOOTH_ENCODER_MENUITEMS\n"
   },
   {
     "op": "Disable",
@@ -363,7 +373,12 @@
   {
     "op": "Disable",
     "searchfor": "CCLOUD_PRINT_SUPPORT",
-    "comment": "Allows enable/disable Creative Cloud Print Support"
+    "comment": "Allows enable/disable Creality Cloud Print Support"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "SMOOTH_ENCODER_MENUITEMS",
+    "comment": "Menu items value faster/smooth change rate"
   },
   {
     "op": "Enable",
@@ -654,7 +669,7 @@
   },
   {
     "op": "Enable",
-    "searchfor": "SQUARE_WAVE_STEPPING",
+    "searchfor": "EDGE_STEPPING",
     "comment": "Ender Configs"
   },
   {

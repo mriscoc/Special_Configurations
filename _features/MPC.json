@@ -9,6 +9,18 @@
     "searchfor": "MPCTEMP"
   },
   {
+    "op": "Enable",
+    "searchfor": "MPC_AUTOTUNE"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "MPC_EDIT_MENU"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "MPC_AUTOTUNE_MENU"
+  },
+  {
     "op": "Custom",
     "mask": "{.*}",
     "searchfor": "MPC_BLOCK_HEAT_CAPACITY",

@@ -82,7 +82,7 @@
   },
   {
     "op": "Enable",
-    "searchfor": "Z_HOMING_HEIGHT"
+    "searchfor": "Z_CLEARANCE_FOR_HOMING"
   },
   {
     "op": "Enable",
@@ -90,13 +90,13 @@
   },
   {
     "op": "CustomVal",
-    "searchfor": "Z_MIN_ENDSTOP_INVERTING",
-    "value":"true"
+    "searchfor": "Z_MIN_ENDSTOP_HIT_STATE",
+    "value":"LOW"
   },
   {
     "op": "CustomVal",
-    "searchfor": "Z_MIN_PROBE_ENDSTOP_INVERTING",
-    "value":"true"
+    "searchfor": "Z_MIN_PROBE_ENDSTOP_HIT_STATE",
+    "value":"LOW"
   },
   {
     "op": "Enable",

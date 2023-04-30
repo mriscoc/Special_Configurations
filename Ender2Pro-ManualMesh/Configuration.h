@@ -66,26 +66,6 @@
 #define STRING_CONFIG_H_AUTHOR "Miguel A. Risco-Castillo (MRiscoC)" // Who made the changes.
 #define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
-/**
- * *** VENDORS PLEASE READ ***
- *
- * Marlin allows you to add a custom boot image for Graphical LCDs.
- * With this option Marlin will first show your custom screen followed
- * by the standard Marlin logo with version number and web URL.
- *
- * We encourage you to take advantage of this new feature and we also
- * respectfully request that you retain the unmodified Marlin boot screen.
- */
-
-// Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
-#define SHOW_BOOTSCREEN
-
-// Show the bitmap in Marlin/_Bootscreen.h on startup.
-//#define SHOW_CUSTOM_BOOTSCREEN
-
-// Show the bitmap in Marlin/_Statusscreen.h on the status screen.
-//#define CUSTOM_STATUS_SCREEN_IMAGE
-
 // @section machine
 
 // Choose the name from boards.h that matches your setup
@@ -695,6 +675,7 @@
  * @section mpctemp
  */
 #if ENABLED(MPCTEMP)
+  //#define MPC_AUTOTUNE                              // Include a method to do MPC auto-tuning (~5664-5882 bytes of flash)
   //#define MPC_EDIT_MENU                             // Add MPC editing to the "Advanced Settings" menu. (~1300 bytes of flash)
   //#define MPC_AUTOTUNE_MENU                         // Add MPC auto-tuning to the "Advanced Settings" menu. (~350 bytes of flash)
 
@@ -823,8 +804,8 @@
   #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
-  //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)
-  //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
+  #define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)  // Ender Configs
+  #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)  // Ender Configs
 #endif
 
 // @section safety
@@ -1168,26 +1149,29 @@
   //#define ENDSTOPPULLDOWN_ZMIN_PROBE
 #endif
 
-// Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define K_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define U_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define V_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define W_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define I_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define J_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define K_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define U_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define V_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define W_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
+/**
+ * Endstop "Hit" State
+ * Set to the state (HIGH or LOW) that applies to each endstop.
+ */
+#define X_MIN_ENDSTOP_HIT_STATE HIGH
+#define X_MAX_ENDSTOP_HIT_STATE HIGH
+#define Y_MIN_ENDSTOP_HIT_STATE HIGH
+#define Y_MAX_ENDSTOP_HIT_STATE HIGH
+#define Z_MIN_ENDSTOP_HIT_STATE HIGH
+#define Z_MAX_ENDSTOP_HIT_STATE HIGH
+#define I_MIN_ENDSTOP_HIT_STATE HIGH
+#define I_MAX_ENDSTOP_HIT_STATE HIGH
+#define J_MIN_ENDSTOP_HIT_STATE HIGH
+#define J_MAX_ENDSTOP_HIT_STATE HIGH
+#define K_MIN_ENDSTOP_HIT_STATE HIGH
+#define K_MAX_ENDSTOP_HIT_STATE HIGH
+#define U_MIN_ENDSTOP_HIT_STATE HIGH
+#define U_MAX_ENDSTOP_HIT_STATE HIGH
+#define V_MIN_ENDSTOP_HIT_STATE HIGH
+#define V_MAX_ENDSTOP_HIT_STATE HIGH
+#define W_MIN_ENDSTOP_HIT_STATE HIGH
+#define W_MAX_ENDSTOP_HIT_STATE HIGH
+#define Z_MIN_PROBE_ENDSTOP_HIT_STATE HIGH
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
@@ -1349,19 +1333,17 @@
 /**
  * Z_MIN_PROBE_PIN
  *
- * Define this pin if the probe is not connected to Z_MIN_PIN.
- * If not defined the default pin for the selected MOTHERBOARD
- * will be used. Most of the time the default is what you want.
+ * Override this pin only if the probe cannot be connected to
+ * the default Z_MIN_PROBE_PIN for the selected MOTHERBOARD.
  *
  *  - The simplest option is to use a free endstop connector.
  *  - Use 5V for powered (usually inductive) sensors.
  *
- *  - RAMPS 1.3/1.4 boards may use the 5V, GND, and Aux4->D32 pin:
- *    - For simple switches connect...
- *      - normally-closed switches to GND and D32.
- *      - normally-open switches to 5V and D32.
+ *  - For simple switches...
+ *    - Normally-closed (NC) also connect to GND.
+ *    - Normally-open (NO) also connect to 5V.
  */
-//#define Z_MIN_PROBE_PIN 32 // Pin 32 is the RAMPS default
+//#define Z_MIN_PROBE_PIN -1
 
 /**
  * Probe Type
@@ -1392,8 +1374,13 @@
 /**
  * Z Servo Probe, such as an endstop switch on a rotating arm.
  */
-//#define Z_PROBE_SERVO_NR 0       // Defaults to SERVO 0 connector.
-//#define Z_SERVO_ANGLES { 70, 0 } // Z Servo Deploy and Stow angles
+//#define Z_PROBE_SERVO_NR 0
+#ifdef Z_PROBE_SERVO_NR
+  //#define Z_SERVO_ANGLES { 70, 0 }      // Z Servo Deploy and Stow angles
+  //#define Z_SERVO_MEASURE_ANGLE 45      // Use if the servo must move to a "free" position for measuring after deploy
+  //#define Z_SERVO_INTERMEDIATE_STOW     // Stow the probe between points
+  //#define Z_SERVO_DEACTIVATE_AFTER_STOW // Deactivate the servo when probe is stowed
+#endif
 
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
@@ -1419,7 +1406,7 @@
  * on the right, enable and set TOUCH_MI_DEPLOY_XPOS to the deploy position.
  *
  * Also requires: BABYSTEPPING, BABYSTEP_ZPROBE_OFFSET, Z_SAFE_HOMING,
- *                and a minimum Z_HOMING_HEIGHT of 10.
+ *                and a minimum Z_CLEARANCE_FOR_HOMING of 10.
  */
 //#define TOUCH_MI_PROBE
 #if ENABLED(TOUCH_MI_PROBE)
@@ -1551,6 +1538,12 @@
  *     O-- FRONT --+
  */
 #define NOZZLE_TO_PROBE_OFFSET { 0, 0, 0 }  // Manual mesh use the nozzle as probe
+
+// Enable and set to use a specific tool for probing. Disable to allow any tool.
+#define PROBING_TOOL 0
+#ifdef PROBING_TOOL
+  //#define PROBE_TOOLCHANGE_NO_MOVE  // Suppress motion on probe tool-change
+#endif
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1701,8 +1694,8 @@
 
 // @section extruder
 
-//#define DISABLE_E                 // Disable the extruder when not stepping
-#define DISABLE_INACTIVE_EXTRUDER   // Keep only the active extruder enabled
+//#define DISABLE_E               // Disable the extruder when not stepping
+#define DISABLE_OTHER_EXTRUDERS   // Keep only the active extruder enabled
 
 // @section motion
 
@@ -1741,10 +1734,10 @@
  */
 //#define Z_IDLE_HEIGHT Z_HOME_POS
 
-//#define Z_HOMING_HEIGHT  10      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...  // MRiscoC Crearance over the bed
-                                  // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
+//#define Z_CLEARANCE_FOR_HOMING  10 // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...  // MRiscoC Crearance over the bed
+                                    // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
-#define Z_AFTER_HOMING  5      // (mm) Height to move to after homing Z  // MRiscoC Crearance over the bed
+#define Z_AFTER_HOMING         5 // (mm) Height to move to after homing Z  // MRiscoC Crearance over the bed
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
@@ -1897,6 +1890,47 @@
     // as the filament moves. (Be sure to set FILAMENT_RUNOUT_DISTANCE_MM
     // large enough to avoid false positives.)
     //#define FILAMENT_MOTION_SENSOR
+
+    #if ENABLED(FILAMENT_MOTION_SENSOR)
+      //#define FILAMENT_SWITCH_AND_MOTION
+      #if ENABLED(FILAMENT_SWITCH_AND_MOTION)
+        #define NUM_MOTION_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_MOTION#_PIN for each.
+        //#define FIL_MOTION1_PIN    -1
+
+        // Override individually if the motion sensors vary
+        //#define FIL_MOTION1_STATE LOW
+        //#define FIL_MOTION1_PULLUP
+        //#define FIL_MOTION1_PULLDOWN
+
+        //#define FIL_MOTION2_STATE LOW
+        //#define FIL_MOTION2_PULLUP
+        //#define FIL_MOTION2_PULLDOWN
+
+        //#define FIL_MOTION3_STATE LOW
+        //#define FIL_MOTION3_PULLUP
+        //#define FIL_MOTION3_PULLDOWN
+
+        //#define FIL_MOTION4_STATE LOW
+        //#define FIL_MOTION4_PULLUP
+        //#define FIL_MOTION4_PULLDOWN
+
+        //#define FIL_MOTION5_STATE LOW
+        //#define FIL_MOTION5_PULLUP
+        //#define FIL_MOTION5_PULLDOWN
+
+        //#define FIL_MOTION6_STATE LOW
+        //#define FIL_MOTION6_PULLUP
+        //#define FIL_MOTION6_PULLDOWN
+
+        //#define FIL_MOTION7_STATE LOW
+        //#define FIL_MOTION7_PULLUP
+        //#define FIL_MOTION7_PULLDOWN
+
+        //#define FIL_MOTION8_STATE LOW
+        //#define FIL_MOTION8_PULLUP
+        //#define FIL_MOTION8_PULLDOWN
+      #endif
+    #endif
   #endif
 #endif
 
@@ -2058,6 +2092,9 @@
 
   //#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
 
+  //#define UBL_TILT_ON_MESH_POINTS         // Use nearest mesh points with G29 J for better Z reference
+  //#define UBL_TILT_ON_MESH_POINTS_3POINT  // Use nearest mesh points with G29 J0 (3-point)
+
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
   #define UBL_SAVE_ACTIVE_ON_M500   // Save the currently active mesh in the current slot on M500
 
@@ -2116,8 +2153,8 @@
 
 #if ENABLED(LCD_BED_TRAMMING)
   #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
-  #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at leveling points
-  #define BED_TRAMMING_Z_HOP       5.0        // (mm) Z height of nozzle between leveling points
+  #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at tramming points
+  #define BED_TRAMMING_Z_HOP       5.0        // (mm) Z height of nozzle between tramming points
   //#define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
   //#define BED_TRAMMING_USE_PROBE
   #if ENABLED(BED_TRAMMING_USE_PROBE)
@@ -2181,6 +2218,7 @@
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
   #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
+  //#define Z_SAFE_HOMING_POINT_ABSOLUTE  // Ignore home offsets (M206) for Z homing position
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
@@ -2385,23 +2423,31 @@
 //#define NOZZLE_CLEAN_FEATURE
 
 #if ENABLED(NOZZLE_CLEAN_FEATURE)
-  // Default number of pattern repetitions
-  #define NOZZLE_CLEAN_STROKES  12
+  #define NOZZLE_CLEAN_PATTERN_LINE     // Provide 'G12 P0' - a simple linear cleaning pattern
+  #define NOZZLE_CLEAN_PATTERN_ZIGZAG   // Provide 'G12 P1' - a zigzag cleaning pattern
+  #define NOZZLE_CLEAN_PATTERN_CIRCLE   // Provide 'G12 P2' - a circular cleaning pattern
 
-  // Default number of triangles
-  #define NOZZLE_CLEAN_TRIANGLES  3
+  // Default pattern to use when 'P' is not provided to G12. One of the enabled options above.
+  #define NOZZLE_CLEAN_DEFAULT_PATTERN 0
+
+  #if ENABLED(NOZZLE_CLEAN_PATTERN_LINE)
+    #define NOZZLE_CLEAN_STROKES   12   // Default number of pattern repetitions
+  #endif
+
+  #if ENABLED(NOZZLE_CLEAN_PATTERN_ZIGZAG)
+    #define NOZZLE_CLEAN_TRIANGLES  3   // Default number of triangles
+  #endif
 
   // Specify positions for each tool as { { X, Y, Z }, { X, Y, Z } }
   // Dual hotend system may use { {  -20, (Y_BED_SIZE / 2), (Z_MIN_POS + 1) },  {  420, (Y_BED_SIZE / 2), (Z_MIN_POS + 1) }}
   #define NOZZLE_CLEAN_START_POINT { {  30, 30, (Z_MIN_POS + 1) } }
   #define NOZZLE_CLEAN_END_POINT   { { 100, 60, (Z_MIN_POS + 1) } }
 
-  // Circular pattern radius
-  #define NOZZLE_CLEAN_CIRCLE_RADIUS 6.5
-  // Circular pattern circle fragments number
-  #define NOZZLE_CLEAN_CIRCLE_FN 10
-  // Middle point of circle
-  #define NOZZLE_CLEAN_CIRCLE_MIDDLE NOZZLE_CLEAN_START_POINT
+  #if ENABLED(NOZZLE_CLEAN_PATTERN_CIRCLE)
+    #define NOZZLE_CLEAN_CIRCLE_RADIUS 6.5                      // (mm) Circular pattern radius
+    #define NOZZLE_CLEAN_CIRCLE_FN 10                           // Circular pattern circle number of segments
+    #define NOZZLE_CLEAN_CIRCLE_MIDDLE NOZZLE_CLEAN_START_POINT // Middle point of circle
+  #endif
 
   // Move the nozzle to the initial position after cleaning
   #define NOZZLE_CLEAN_GOBACK
@@ -2495,7 +2541,7 @@
   #define PASSWORD_ON_STARTUP
   #define PASSWORD_UNLOCK_GCODE             // Unlock with the M511 P<password> command. Disable to prevent brute-force attack.
   #define PASSWORD_CHANGE_GCODE             // Change the password with M512 P<old> S<new>.
-  //#define PASSWORD_ON_SD_PRINT_MENU       // This does not prevent gcodes from running
+  //#define PASSWORD_ON_SD_PRINT_MENU       // This does not prevent G-codes from running
   //#define PASSWORD_AFTER_SD_PRINT_END
   //#define PASSWORD_AFTER_SD_PRINT_ABORT
   //#include "Configuration_Secure.h"       // External file with PASSWORD_DEFAULT_VALUE
@@ -2656,6 +2702,18 @@
 //
 #define LCD_FEEDBACK_FREQUENCY_DURATION_MS 2  // Ender Configs
 #define LCD_FEEDBACK_FREQUENCY_HZ 5000  // Ender Configs
+
+//
+// Tone queue size, used to keep beeps from blocking execution.
+// Default is 4, or override here. Costs 4 bytes of SRAM per entry.
+//
+//#define TONE_QUEUE_LENGTH 4
+
+//
+// A sequence of tones to play at startup, in pairs of tone (Hz), duration (ms).
+// Silence in-between tones.
+//
+//#define STARTUP_TUNE { 698, 300, 0, 50, 523, 50, 0, 25, 494, 50, 0, 25, 523, 100, 0, 50, 554, 300, 0, 100, 523, 300 }
 
 //=============================================================================
 //======================== LCD / Controller Selection =========================
@@ -3055,7 +3113,7 @@
  *  - Product: https://www.aliexpress.com/item/1005002008179262.html
  *
  * RELOADED (T5UID1)
- *  - Download https://github.com/Desuuuu/DGUS-reloaded/releases
+ *  - Download https://github.com/Neo2003/DGUS-reloaded/releases
  *  - Copy the downloaded DWIN_SET folder to the SD card.
  *
  * IA_CREALITY (T5UID1)
@@ -3067,12 +3125,15 @@
  *  - Download files as specified for your type of display.
  *  - Plug the microSD card into the back of the display.
  *  - Boot the display and wait for the update to complete.
+ *
+ * :[ 'ORIGIN', 'FYSETC', 'HYPRECY', 'MKS', 'RELOADED', 'IA_CREALITY' ]
  */
 //#define DGUS_LCD_UI ORIGIN
 #if DGUS_UI_IS(MKS)
   #define USE_MKS_GREEN_UI
 #elif DGUS_UI_IS(IA_CREALITY)
-  //#define LCD_SCREEN_ROTATE 90 // Portrait Mode or 800x480 displays
+  //#define LCD_SCREEN_ROTATE 90          // Portrait Mode or 800x480 displays
+  //#define IA_CREALITY_BOOT_DELAY 1500   // (ms)
 #endif
 
 //
@@ -3087,14 +3148,22 @@
 //#define TOUCH_UI_FTDI_EVE
 
 //
-// Touch-screen LCD for Anycubic printers
+// Touch-screen LCD for Anycubic Chiron
+//
+//#define ANYCUBIC_LCD_CHIRON
+
+//
+// Touch-screen LCD for Anycubic i3 Mega
 //
 //#define ANYCUBIC_LCD_I3MEGA
-//#define ANYCUBIC_LCD_CHIRON
-#if EITHER(ANYCUBIC_LCD_I3MEGA, ANYCUBIC_LCD_CHIRON)
-  //#define ANYCUBIC_LCD_DEBUG
+#if ENABLED(ANYCUBIC_LCD_I3MEGA)
   //#define ANYCUBIC_LCD_GCODE_EXT  // Add ".gcode" to menu entries for DGUS clone compatibility
 #endif
+
+//
+// Touch-screen LCD for Anycubic Vyper
+//
+//#define ANYCUBIC_LCD_VYPER
 
 //
 // 320x240 Nextion 2.8" serial TFT Resistive Touch Screen NX3224T028
@@ -3233,17 +3302,17 @@
   /**
    * TFT Font for Color_UI. Choose one of the following:
    *
-   * NOTOSANS  - Default font with antialiasing. Supports Latin Extended and non-Latin characters.
-   * UNIFONT   - Lightweight font, no antialiasing. Supports Latin Extended and non-Latin characters.
-   * HELVETICA - Lightweight font, no antialiasing. Supports Basic Latin (0x0020-0x007F) and Latin-1 Supplement (0x0080-0x00FF) characters only.
+   * NOTOSANS  - Default font with anti-aliasing. Supports Latin Extended and non-Latin characters.
+   * UNIFONT   - Lightweight font, no anti-aliasing. Supports Latin Extended and non-Latin characters.
+   * HELVETICA - Lightweight font, no anti-aliasing. Supports Basic Latin (0x0020-0x007F) and Latin-1 Supplement (0x0080-0x00FF) characters only.
    */
   #define TFT_FONT  NOTOSANS
 
-  //#define TFT_SHARED_SPI   // SPI is shared between TFT display and other devices. Disable async data transfer
+  //#define TFT_SHARED_IO   // I/O is shared between TFT display and other devices. Disable async data transfer.
 #endif
 
 #if ENABLED(TFT_LVGL_UI)
-  //#define MKS_WIFI_MODULE  // MKS WiFi module
+  //#define MKS_WIFI_MODULE // MKS WiFi module
 #endif
 
 /**
@@ -3269,10 +3338,7 @@
 
 // Professional firmware features:
 #define ProUIex 1
-#if ProUIex
-  #if NONE(TJC_DISPLAY, SYNWIT_DISPLAY)
-    #define HAS_GCODE_PREVIEW 1
-  #endif
+  #define HAS_GCODE_PREVIEW 1
   #define HAS_TOOLBAR 1
 #endif
 #define HAS_PLOT 1
@@ -3288,6 +3354,9 @@
 //#define JD_TUNE_ITEM  // Enable only if Juntion Deviation is enabled
 //#define ADVK_TUNE_ITEM  // Enable only if Linear Advance is enabled
 //#define MEDIASORT_MENU_ITEM  // Allows enable/disable file list sorting
+//#define CCLOUD_PRINT_SUPPORT  // Allows enable/disable Creality Cloud Print Support
+#define ZHOME_BEFORE_LEVELING
+//#define SMOOTH_ENCODER_MENUITEMS  // Menu items value faster/smooth change rate
 
 //#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
 //#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
