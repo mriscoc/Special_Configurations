@@ -17,6 +17,8 @@ after downloading the repository execute the Python file `Configurator.pyw`:
 
 ![image](https://github.com/mriscoc/Special_Configurations/raw/main/images/Configurator.png)
 
+> On Windows, `.pyw` files should be opened by pythonw.exe by default.
+
 Select the printer, board, leveling, thermistor (Ender's stock thermistor is T1), features and press the `set config` button; write a name for the configuration
 or press `Auto` button for fill the name automatically, that name will be used as a folder for storage the configuration
 files and also as a custom printer name in the firmware, then press the `Generate` button to start the creation of the configuration files. You can open the `.json`
