@@ -6,11 +6,18 @@ project files are in the firmware repository: https://github.com/mriscoc/Ender3V
 
 There is no fixed amount to sponsor a configuration, but it influences how quickly the configuration is served. Please check the suscription levels on [Patreon](https://www.patreon.com/mriscoc), there is a level to request custom compile. Patrons from [Patreon platform](https://www.patreon.com/mriscoc) can request a configuration sending a message. If you made a equivalent donation through [Paypal](https://www.paypal.com/donate/?business=85SPAAR6UZEE8&currency_code=USD), please reply the message that I sent you or use any of the other communication media (Facebook, Telegram) providing the name used in Paypal. I'm happy and grateful for the contributions but please don't confuse that with paid work. I do what is possible in my little free time, be aware that a donation does not give you the right more than my thanks, a specialized job like coding and compiling a custom firmware could be a work quoted in 3 digits. Github also have a [Sponsor platform](https://github.com/sponsors/mriscoc).
 
+## Contributions
+Thank you for your support, I receive donations through [Patreon](https://www.patreon.com/mriscoc) and [Paypal](https://www.paypal.com/paypalme/mriscoc)   
+
+[<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif">](https://www.paypal.com/donate?business=85SPAAR6UZEE8&currency_code=USD)
+
 ## Creating your own custom configuration
 It is now possible to use an small Python GUI interface (Professional Firmware **Configurator**) for generate the configuration files,
 after downloading the repository execute the Python file `Configurator.pyw`:
 
 ![image](https://github.com/mriscoc/Special_Configurations/raw/main/images/Configurator.png)
+
+> On Windows, `.pyw` files should be opened by pythonw.exe by default.
 
 Select the printer, board, leveling, thermistor (Ender's stock thermistor is T1), features and press the `set config` button; write a name for the configuration
 or press `Auto` button for fill the name automatically, that name will be used as a folder for storage the configuration
@@ -100,11 +107,6 @@ For disable Multiple probing you can write in the "Configuration.h" section of t
   }
 ```
 The comment line is optional. Masks are in regex format, use the provided json as examples.
-
-## Donations
-Thank you for your support, I receive donations through [Patreon](https://www.patreon.com/mriscoc) and [Paypal](https://www.paypal.com/paypalme/mriscoc)   
-
-[<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif">](https://www.paypal.com/donate?business=85SPAAR6UZEE8&currency_code=USD)
 
 # Disclaimer
 THIS FIRMWARE AND ALL OTHER FILES IN THE DOWNLOAD ARE PROVIDED FREE OF CHARGE WITH NO WARRANTY OR GUARANTEE. SUPPORT IS NOT INCLUDED JUST BECAUSE YOU DOWNLOADED THE FIRMWARE. WE ARE NOT LIABLE FOR ANY DAMAGE TO YOUR PRINTER, PERSON, OR ANY OTHER PROPERTY DUE TO USE OF THIS FIRMWARE. IF YOU DO NOT AGREE TO THESE TERMS THEN DO NOT USE THE FIRMWARE.
