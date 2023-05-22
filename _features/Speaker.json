@@ -1,0 +1,14 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "SPEAKER"
+  }
+],
+"Configuration_adv.h" : [
+],
+"Version.h" : [
+],   
+"platformio.ini" : [
+]   
+}

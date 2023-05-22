@@ -56,13 +56,6 @@
   },
   {
     "op": "Custom",
-    "searchfor": "DEFAULT_MAX_FEEDRATE",
-    "mask": "{.*}",
-    "value":"{ 300, 300, 20, 45 }",
-    "comment": "Ender Configs"
-  },
-  {
-    "op": "Custom",
     "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
     "mask": "{.*}",
     "value":"{ 80, 80, 400, 424.9 }",

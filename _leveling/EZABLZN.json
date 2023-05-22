@@ -15,16 +15,6 @@
     "comment": "MRiscoC EZABL from TH3DStudio"
   },
   {
-    "op": "Enable",
-    "searchfor": "MULTIPLE_PROBING",
-    "comment": "MRiscoC Enabled"
-  },
-  {
-    "op": "Enable",
-    "searchfor": "EXTRA_PROBING",
-    "comment": "MRiscoC Enabled"
-  },
-  {
     "op": "CustomVal",
     "searchfor": "Z_CLEARANCE_DEPLOY_PROBE",
     "value": "3",

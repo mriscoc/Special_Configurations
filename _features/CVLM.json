@@ -1,0 +1,17 @@
+{
+"Configuration.h" : [
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "LASER_FEATURE"
+  },
+  {
+    "op": "InsertAfter",
+    "searchfor": "#if EITHER\\(SPINDLE_FEATURE, LASER_FEATURE\\)",
+    "newline": "\n  #define CV_LASER_MODULE\n  #if ENABLED(CV_LASER_MODULE)\n    #define LASER_FDM_ADDR         1950\n    #define LASER_Z_AXIS_HIGH_ADDR 1952\n    #define LASER_Z_AXIS_HIGH_MAX   170\n  #endif\n"
+  } 
+],
+"Version.h" : [
+]   
+}
