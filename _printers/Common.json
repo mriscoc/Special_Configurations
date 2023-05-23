@@ -74,7 +74,7 @@
   {
     "op": "InsertAfter",
     "searchfor": "#define DEFAULT_AXIS_STEPS_PER_UNIT",
-    "newline": "\n#define LIMITED_MAX_STEPS_EDITING\n#if ENABLED(LIMITED_MAX_STEPS_EDITING)\n  #define MAX_STEPS_EDIT_VALUES       { 200, 200, 2000, 200 }\n#endif"
+    "newline": "\n#define LIMITED_MAX_STEPS_EDITING\n#if ENABLED(LIMITED_MAX_STEPS_EDITING)\n  #define MAX_STEPS_EDIT_VALUES       { 200, 200, 2000, 2000 }\n#endif"
   },
   {
     "op": "Custom",
