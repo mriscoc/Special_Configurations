@@ -3,8 +3,8 @@
 # Configurations generator script for the Professional Firmware
 # Author: Miguel A. Risco Castillo
 # URL: https://github.com/mriscoc/Special_Configurations
-# version: 4.1
-# date: 2023/03/22
+# version: 4.2
+# date: 2023/05/23
 # ------------------------------------------------------------------------------
 
 from ast import Global
@@ -113,7 +113,7 @@ class Main(tk.Tk):
 
         #===================================================================================#
 
-        self.l3 = ttk.Label(self.leftframe, text="Board:", width=14)
+        self.l3 = ttk.Label(self.leftframe, text="Board:", width=15)
         self.l3.grid(row=1, column=1, sticky="w")
 
         # Create the boardlist
@@ -132,27 +132,8 @@ class Main(tk.Tk):
 
         #===================================================================================#
 
-        self.l4 = ttk.Label(self.leftframe, text="Display:", width=12)
+        self.l4 = ttk.Label(self.leftframe, text="Leveling:", width=14)
         self.l4.grid(row=1, column=2, sticky="w")
-
-        # Create the displaylist
-        self.display = tk.StringVar(self,'DWIN')
-        self.displaylist = []
-        for file in os.listdir("_displays"):
-            if file.endswith(".json"):
-                self.value = file.replace(".json", "")
-                self.displaylist.append(ttk.Radiobutton(self.leftframe, text=self.value, variable=self.display, value=self.value))
-
-        # Add the radiobuttons to the window
-        self.nrow = 2
-        for self.radiobutton in self.displaylist:
-            self.radiobutton.grid(row=self.nrow, column=2, sticky="w")
-            self.nrow += 1
-
-        #===================================================================================#
-
-        self.l5 = ttk.Label(self.leftframe, text="Leveling:", width=14)
-        self.l5.grid(row=1, column=3, sticky="w")
 
         # Create levelinglist
         self.leveling = tk.StringVar(self,'BLT')
@@ -165,13 +146,32 @@ class Main(tk.Tk):
         # Add the radiobuttons to the window
         self.nrow = 2
         for self.radiobutton in self.levelinglist:
-            self.radiobutton.grid(row=self.nrow, column=3, sticky="w")
+            self.radiobutton.grid(row=self.nrow, column=2, sticky="w")
             self.nrow += 1
 
         # Add UBL checkbox
         self.ubl = tk.BooleanVar(self,True)
         self.ublchkb = ttk.Checkbutton(self.leftframe, text="UBL", variable=self.ubl)
-        self.ublchkb.grid(row=self.nrow, column=3, sticky="w")
+        self.ublchkb.grid(row=self.nrow, column=2, sticky="w")
+
+        #===================================================================================#
+
+        self.l5 = ttk.Label(self.leftframe, text="Display:", width=12)
+        self.l5.grid(row=1, column=3, sticky="w")
+
+        # Create the displaylist
+        self.display = tk.StringVar(self,'DWIN')
+        self.displaylist = []
+        for file in os.listdir("_displays"):
+            if file.endswith(".json"):
+                self.value = file.replace(".json", "")
+                self.displaylist.append(ttk.Radiobutton(self.leftframe, text=self.value, variable=self.display, value=self.value))
+
+        # Add the radiobuttons to the window
+        self.nrow = 2
+        for self.radiobutton in self.displaylist:
+            self.radiobutton.grid(row=self.nrow, column=3, sticky="w")
+            self.nrow += 1
 
         #===================================================================================#
 
