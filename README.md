@@ -29,7 +29,7 @@ files in _printers, _boards, _features, etc. folders to know how each option in 
 From the created custom configuration folder, move Configuration.h and Configuration_adv.h files to the Marlin folder inside of your project folder downloaded from the repository https://github.com/mriscoc/Ender3V2S1; move the platform.io file to the root of your project folder.
 Keep your path short, the compiling tools don't like large paths.
 
-Follow any guide about Marlin compile to get your firmware binary: Install [VSCode](https://code.visualstudio.com/), then inside of VSCode install the extensions: [PlatformIO](https://platformio.org/install/ide?install=vscode) and [Auto Build Marlin](https://marlinfw.org/docs/basics/auto_build_marlin.html). Open your project folder in VSCode and compile by using Auto Build Marlin.
+Follow any guide about Marlin compile to get your firmware binary: Install [VSCode](https://code.visualstudio.com/), then inside of VSCode install the extensions: [PlatformIO](https://platformio.org/install/ide?install=vscode) and [Auto Build Marlin](https://marlinfw.org/docs/basics/auto_build_marlin.html). Open your project folder in VSCode and compile by using Auto Build Marlin. Remember: RE -> RET6 with 512 kB flash, RC-> RCT6 with 256 kB flash, do not use xfer and maple is a deprecated framework for some incompatible STM clones.
 
 ### Custom features
 Advanced user can create a custom configuration calling directly the `CreateConfigs.py` Python script with the following parameters:
