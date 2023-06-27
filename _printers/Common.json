@@ -235,6 +235,11 @@
     "comment": "ProUI has a bed tramming menu"
   },
   {
+    "op": "Disable",
+    "searchfor": "BED_TRAMMING_INSET_LFRB",
+    "comment": "ProUI use mesh insets for bed tramming"
+  },
+  {
     "op": "CustomVal",
     "searchfor": "BED_TRAMMING_Z_HOP",
     "value":"5.0"
@@ -439,7 +444,7 @@
   {
     "op": "CustomVal",
     "searchfor": "HOTEND_IDLE_MIN_TRIGGER",
-    "value": "150",
+    "value": "(EXTRUDE_MINTEMP - 10)",
     "comment": "MRiscoC set idle trigger lower than default EXTRUDE_MINTEMP"
   },
   {
@@ -487,22 +492,27 @@
   {
     "op": "Enable",
     "searchfor": "STATUS_MESSAGE_SCROLLING",
-    "comment": "MRiscoC Allow scrolling of large status messages"
+    "comment": "MRiscoC, Allows scrolling of large status messages"
   },
   {
     "op": "Enable",
     "searchfor": "SET_PROGRESS_MANUALLY",
-    "comment": "MRiscoC Allow display feedback of host printing through GCode M73"
+    "comment": "MRiscoC, Allows display feedback of host printing through GCode M73"
   },
   {
     "op": "Enable",
     "searchfor": "SET_PROGRESS_PERCENT",
-    "comment": "MRiscoC Allow display feedback of host printing through GCode M73"
+    "comment": "MRiscoC, Allows display feedback of host printing through GCode M73"
   },
   {
     "op": "Enable",
     "searchfor": "SET_REMAINING_TIME",
-    "comment": "MRiscoC Allow display feedback of host printing through GCode M73"
+    "comment": "MRiscoC, Allows display feedback of host printing through GCode M73"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "SHOW_REMAINING_TIME",
+    "comment": "MRiscoC, Allows display remaining printing time"
   },
   {
     "op": "Disable",
