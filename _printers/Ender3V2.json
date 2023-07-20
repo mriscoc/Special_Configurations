@@ -22,7 +22,7 @@
     "op": "CustomVal",
     "searchfor": "BED_MAXTEMP",
     "value": "120",
-    "comment": "Ender3V2 Configs"
+    "comment": "Ender Configs"
   },
   {
     "op": "CustomVal",

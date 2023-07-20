@@ -235,11 +235,6 @@
     "comment": "ProUI has a bed tramming menu"
   },
   {
-    "op": "Disable",
-    "searchfor": "BED_TRAMMING_INSET_LFRB",
-    "comment": "ProUI use mesh insets for bed tramming"
-  },
-  {
     "op": "CustomVal",
     "searchfor": "BED_TRAMMING_Z_HOP",
     "value":"5.0"
@@ -746,6 +741,11 @@
     "op": "Enable",
     "searchfor": "STATUS_MESSAGE_TIMEOUT_SEC",
     "comment": "MRiscoC Enable Status Message Timeout"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "LCD_BACKLIGHT_TIMEOUT_MINS",
+    "value": "5"
   }    
 ],
 "Version.h" : [
