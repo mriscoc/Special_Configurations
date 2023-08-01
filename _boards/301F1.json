@@ -121,6 +121,10 @@
     "searchfor": "CHOPPER_TIMING",
     "value": "CHOPPER_DEFAULT_24V",
     "comment": "MRiscoC Correct value for UART mode drivers"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "BINARY_FILE_TRANSFER"
   }
 ],
 "Version.h" : [

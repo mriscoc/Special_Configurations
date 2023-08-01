@@ -9,7 +9,7 @@
     "op": "Custom",
     "searchfor": "STRING_CONFIG_H_AUTHOR",
     "mask" : "\".*\"",
-    "value": "\"Miguel A. Risco-Castillo (MRiscoC)\""
+    "value": "\"Miguel Risco-Castillo (MRiscoC)\""
   },
   {
     "op": "Enable",
@@ -689,6 +689,11 @@
   {
     "op": "Enable",
     "searchfor": "NO_WORKSPACE_OFFSETS",
+    "comment": "MRiscoC Save flash space and simplify movements"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "NO_HOME_OFFSETS",
     "comment": "MRiscoC Save flash space and simplify movements"
   },
   {

@@ -1854,7 +1854,7 @@
   //#define CONFIGURATION_EMBEDDING
 
   // Add an optimized binary file transfer mode, initiated with 'M28 B1'
-  #define BINARY_FILE_TRANSFER  // MRiscoC Enabled for easy firmware upgrade
+  //#define BINARY_FILE_TRANSFER  // MRiscoC Enabled for easy firmware upgrade
 
   #if ENABLED(BINARY_FILE_TRANSFER)
     // Include extra facilities (e.g., 'M20 F') supporting firmware upload via BINARY_FILE_TRANSFER
@@ -3839,13 +3839,16 @@
 //#define REPETIER_GCODE_M360     // Add commands originally from Repetier FW
 
 /**
- * Enable this option for a leaner build of Marlin that removes all
- * workspace offsets, simplifying coordinate transformations, leveling, etc.
- *
- *  - M206 and M428 are disabled.
- *  - G92 will revert to its behavior from Marlin 1.0.
+ * Enable this option for a leaner build of Marlin that removes
+ * workspace offsets to slightly optimize performance.
+ * G92 will revert to its behavior from Marlin 1.0.
  */
 #define NO_WORKSPACE_OFFSETS  // MRiscoC Save flash space and simplify movements
+
+/**
+ * Disable M206 and M428 if you don't need home offsets.
+ */
+#define NO_HOME_OFFSETS  // MRiscoC Save flash space and simplify movements
 
 /**
  * CNC G-code options
