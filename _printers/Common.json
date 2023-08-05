@@ -575,7 +575,7 @@
     "comment": "MRiscoC Enabled for easy firmware upgrade"
   },
   {
-    "op": "Disable",
+    "op": "Enable",
     "searchfor": "CUSTOM_FIRMWARE_UPLOAD",
     "comment": "MRiscoC Enabled for easy firmware upgrade"
   },
