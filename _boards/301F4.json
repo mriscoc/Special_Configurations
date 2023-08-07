@@ -122,6 +122,11 @@
   },
   {
     "op": "CustomVal",
+    "searchfor": "SDSORT_LIMIT",
+    "value": "40"
+  },
+  {
+    "op": "CustomVal",
     "searchfor": "CHOPPER_TIMING",
     "value": "CHOPPER_DEFAULT_24V",
     "comment": "MRiscoC Correct value for UART mode drivers"
