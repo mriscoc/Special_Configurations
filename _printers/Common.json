@@ -215,6 +215,11 @@
   },
   {
     "op": "Enable",
+    "searchfor": "FILAMENT_MOTION_SENSOR",
+    "comment": "MRiscoC Enabled runout sensor support"
+  },
+  {
+    "op": "Enable",
     "searchfor": "PREHEAT_BEFORE_LEVELING",
     "comment": "MRiscoC Heatting to compensate thermal expansions"
   },

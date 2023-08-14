@@ -12,17 +12,23 @@ import re
 import os
 import json
 
+os.system('color')
+
 verbose = False
 error = False
 loglines = ""
 
 SourceDir = 'Original Configs/'
 
+REDTEXT = '\033[41m'
+GREENTEXT = '\033[32m'
+NORMTEXT = '\033[0m'
+
 def log(*text):
   global loglines
   txt = ' '.join(text)
   loglines += txt + "\n"
-  print(txt)
+  print(txt + NORMTEXT)
 
 class Customize:
   op = ''
@@ -195,8 +201,10 @@ def Generate(Machine_Name, Mode) :
     if error: break
 
   if error:
+    print(REDTEXT, end="")
     log("\nAn error was found while processing your request")
   else:
+    print(GREENTEXT, end="")
     log("\nConfiguration files correctly generated")
 
   with open(TargetDir+"/log.txt", "w", encoding="utf8") as logf:
