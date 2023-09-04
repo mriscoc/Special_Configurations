@@ -352,12 +352,17 @@
   {
     "op": "InsertAfter",
     "searchfor": "#define DWIN_LCD_PROUI",
-    "newline": "#define USE_STOCK_DWIN_SET\n\n// Professional firmware features:\n#define PROUI_EX 1\n#if PROUI_EX\n  #define HAS_GCODE_PREVIEW 1\n  #define HAS_TOOLBAR 1\n  #if ENABLED(FILAMENT_RUNOUT_SENSOR)\n    #define HAS_PROUI_RUNOUT_SENSOR 1\n  #endif\n#endif\n#define HAS_CUSTOM_COLORS 1\n#define HAS_PLOT 1\n#define HAS_ESDIAG 1\n#define HAS_CGCODE 1\n#define HAS_LOCKSCREEN 1\n#define HAS_SD_EXTENDER 1\n#define MESH_EDIT_MENU\n#define SHOW_REAL_POS\n#define ACTIVATE_MESH_ITEM\n#define RUNOUT_TUNE_ITEM\n#define PLR_TUNE_ITEM\n#define JD_TUNE_ITEM\n#define ADVK_TUNE_ITEM\n#define MEDIASORT_MENU_ITEM\n#define CCLOUD_PRINT_SUPPORT\n#define ZHOME_BEFORE_LEVELING\n#define SMOOTH_ENCODER_MENUITEMS\n#define SHOW_SPEED_IND // Show the axes speed in mm/s intermittently with the speed percentage\n#define NO_BLINK_IND\n"
+    "newline": "#define USE_STOCK_DWIN_SET\n\n// Professional firmware features:\n#define PROUI_EX 1\n#if PROUI_EX\n  #define HAS_GCODE_PREVIEW 1\n  #define HAS_TOOLBAR 1\n  #if ENABLED(FILAMENT_RUNOUT_SENSOR)\n    #define HAS_PROUI_RUNOUT_SENSOR 1\n  #endif\n  #define DEF_PROBEZFIX 0\n#endif\n#define HAS_CUSTOM_COLORS 1\n#define HAS_PLOT 1\n#define HAS_ESDIAG 1\n#define HAS_CGCODE 1\n#define HAS_LOCKSCREEN 1\n#define HAS_SD_EXTENDER 1\n#define MESH_EDIT_MENU\n#define PREVIEW_MENU_ITEM\n#define SHOW_REAL_POS\n#define ACTIVATE_MESH_ITEM\n#define RUNOUT_TUNE_ITEM\n#define PLR_TUNE_ITEM\n#define JD_TUNE_ITEM\n#define ADVK_TUNE_ITEM\n#define MEDIASORT_MENU_ITEM\n#define CCLOUD_PRINT_SUPPORT\n#define ZHOME_BEFORE_LEVELING\n#define SMOOTH_ENCODER_MENUITEMS\n#define SHOW_SPEED_IND // Show the axes speed in mm/s intermittently with the speed percentage\n#define NO_BLINK_IND\n"
   },
   {
     "op": "Disable",
     "searchfor": "HAS_SD_EXTENDER",
     "comment": "Enable to support SD card extender cables"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "PREVIEW_MENU_ITEM",
+    "comment": "Allows enable/disable Thumbnail preview via menu and C250"
   },
   {
     "op": "Disable",
@@ -743,8 +748,9 @@
     "searchfor": "MESH_MAX_Y"
   },
   {
-    "op": "Enable",
+    "op": "CustomVal",
     "searchfor": "STATUS_MESSAGE_TIMEOUT_SEC",
+    "value": "90",
     "comment": "MRiscoC Enable Status Message Timeout"
   },
   {

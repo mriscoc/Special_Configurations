@@ -95,7 +95,7 @@
   {
     "op": "CustomVal",
     "searchfor": "BLTOUCH_HS_EXTRA_CLEARANCE",
-    "value": "5"
+    "value": "0"
   },
   {
     "op": "Enable",

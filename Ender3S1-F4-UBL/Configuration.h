@@ -98,7 +98,7 @@
  */
 #define BAUDRATE 250000  // MRiscoC increase serial performace
 
-//#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate  // MRiscoC Enables change the baudrate
+#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate  // MRiscoC Enables change the baudrate
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -2534,7 +2534,7 @@
  *
  * View the current statistics with M78.
  */
-#define PRINTCOUNTER  // MRiscoC Enable Print Statistics
+//#define PRINTCOUNTER  // MRiscoC Enable Print Statistics
 #if ENABLED(PRINTCOUNTER)
   #define PRINTCOUNTER_SAVE_INTERVAL 60 // (minutes) EEPROM save interval during print. A value of 0 will save stats at end of print.
 #endif
@@ -3387,14 +3387,16 @@
   #if ENABLED(FILAMENT_RUNOUT_SENSOR)
     #define HAS_PROUI_RUNOUT_SENSOR 1
   #endif
+  #define DEF_PROBEZFIX 0
 #endif
-//#define HAS_CUSTOM_COLORS 1
+#define HAS_CUSTOM_COLORS 1
 #define HAS_PLOT 1
 #define HAS_ESDIAG 1
 #define HAS_CGCODE 1
-#define HAS_LOCKSCREEN 1
+//#define HAS_LOCKSCREEN 1
 //#define HAS_SD_EXTENDER 1  // Enable to support SD card extender cables
 #define MESH_EDIT_MENU
+//#define PREVIEW_MENU_ITEM  // Allows enable/disable Thumbnail preview via menu and C250
 #define SHOW_REAL_POS
 //#define ACTIVATE_MESH_ITEM  // Allows temporary enabling of mesh leveling
 #define RUNOUT_TUNE_ITEM
