@@ -109,12 +109,12 @@ For disable Multiple probing you can write in the "Configuration.h" section of t
 ```
 The comment line is optional. Masks are in regex format, use the provided json as examples.
 
-# Debugging errors with the Configurator
+## Debugging errors with the Configurator
 If the configurator doesn't open load it into the IDLE Python editor and run from there, the possible error will be written in the IDLE Shell.
 
-![idle1](https://github.com/mriscoc/Special_Configurations/raw/main/images/idle_1.png)
-![idle2](https://github.com/mriscoc/Special_Configurations/raw/main/images/idle_2.png)
-![idle3](https://github.com/mriscoc/Special_Configurations/raw/main/images/idle_3.png)
+![idle1](https://github.com/mriscoc/Special_Configurations/raw/main/images/idle_1.png)  
+![idle2](https://github.com/mriscoc/Special_Configurations/raw/main/images/idle_2.png)  
+![idle3](https://github.com/mriscoc/Special_Configurations/raw/main/images/idle_3.png)  
 
 # Disclaimer
 THIS FIRMWARE AND ALL OTHER FILES IN THE DOWNLOAD ARE PROVIDED FREE OF CHARGE WITH NO WARRANTY OR GUARANTEE. SUPPORT IS NOT INCLUDED JUST BECAUSE YOU DOWNLOADED THE FIRMWARE. WE ARE NOT LIABLE FOR ANY DAMAGE TO YOUR PRINTER, PERSON, OR ANY OTHER PROPERTY DUE TO USE OF THIS FIRMWARE. IF YOU DO NOT AGREE TO THESE TERMS THEN DO NOT USE THE FIRMWARE.
