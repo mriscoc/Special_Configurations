@@ -109,8 +109,8 @@ For disable Multiple probing you can write in the "Configuration.h" section of t
 ```
 The comment line is optional. Masks are in regex format, use the provided json as examples.
 
-## Debugging errors with the Configurator
-If the configurator doesn't open load it into the IDLE Python editor and run from there, the possible error will be written in the IDLE Shell.
+## Debugging Configurator errors with IDLE
+If the Configurator doesn't open load it into the IDLE Python editor and run from there, the possible error will be displayed in the IDLE Shell.
 
 ![idle1](https://github.com/mriscoc/Special_Configurations/raw/main/images/idle_1.jpg)  
 ![idle2](https://github.com/mriscoc/Special_Configurations/raw/main/images/idle_2.jpg)  
