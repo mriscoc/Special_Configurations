@@ -40,7 +40,17 @@
   {
     "op": "CustomVal",
     "searchfor": "INVERT_X_DIR",
-    "value": "true"
+    "value":"true"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Y_DIR",
+    "value":"true"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Z_DIR",
+    "value":"false"
   },
   {
     "op": "CustomVal",

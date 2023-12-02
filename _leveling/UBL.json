@@ -9,6 +9,11 @@
     "op": "Enable",
     "searchfor": "AUTO_BED_LEVELING_UBL",
     "comment": "MRiscoC UBL"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "UBL_SAVE_ACTIVE_ON_M500",
+    "comment": "Disabled for AML compatibility"
   }
 ],
 "Configuration_adv.h" : [

@@ -29,6 +29,11 @@
     "comment": "Preheat nozzle without oozing"
   },
   {
+    "op": "Disable",
+    "searchfor": "HAS_TRAMMING_WIZARD",
+    "comment": "Manual mesh not have a probe"
+  },
+  {
     "op": "Enable",
     "searchfor": "Z_AFTER_HOMING"
   }

@@ -38,24 +38,6 @@
   },
   {
     "op": "CustomVal",
-    "searchfor": "INVERT_X_DIR",
-    "value":"false",
-    "comment": "Ender Configs"
-  },
-  {
-    "op": "CustomVal",
-    "searchfor": "INVERT_Y_DIR",
-    "value":"false",
-    "comment": "Ender Configs"
-  },
-  {
-    "op": "CustomVal",
-    "searchfor": "INVERT_Z_DIR",
-    "value":"true",
-    "comment": "Ender Configs"
-  },
-  {
-    "op": "CustomVal",
     "searchfor": "FIL_RUNOUT_STATE",
     "value":"LOW"
   },

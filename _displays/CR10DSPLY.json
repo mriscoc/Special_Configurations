@@ -1,0 +1,53 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "BED_TRAMMING_INSET_LFRB"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "LCD_BED_LEVELING"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "DWIN_LCD_PROUI"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "CR10_STOCKDISPLAY"
+  },
+  {
+    "op": "InsertAfter",
+    "searchfor": "#define CR10_STOCKDISPLAY",
+    "newline": "#if ENABLED(CR10_STOCKDISPLAY)\n  #define RET6_12864_LCD  // Specific to the SoC (can either be RET / VET)\n#endif"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "LCD_BACKLIGHT_TIMEOUT_MINS"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "LCD_INFO_MENU"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BOOTSCREEN_TIMEOUT",
+    "value": "1000",
+    "comment": "Simulator"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "SHOW_CUSTOM_BOOTSCREEN"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "CUSTOM_STATUS_SCREEN_IMAGE"
+  }
+],
+"Version.h" : [
+],   
+"platformio.ini" : [
+]   
+}

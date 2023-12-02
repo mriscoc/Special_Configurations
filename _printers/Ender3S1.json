@@ -2,6 +2,21 @@
 "Configuration.h" : [
   {
     "op": "CustomVal",
+    "searchfor": "INVERT_X_DIR",
+    "value":"false"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Y_DIR",
+    "value":"false"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Z_DIR",
+    "value":"true"
+  },
+  {
+    "op": "CustomVal",
     "searchfor": "TEMP_SENSOR_BED",
     "value": "1",
     "comment": "Ender Configs"
