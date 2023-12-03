@@ -5,7 +5,7 @@ project files are in the firmware repository: https://github.com/mriscoc/Ender3V
 #### These special configurations and releases are sponsored by donors.
 
 ## How to request a custom build
-There is no fixed amount to sponsor a configuration, but it influences how quickly the configuration is served. Please check the suscription levels on [Patreon](https://www.patreon.com/mriscoc), there is a level to request custom compile. Patrons from [Patreon platform](https://www.patreon.com/mriscoc) can request a configuration sending a message. If you made a equivalent donation through [Paypal](https://www.paypal.com/donate/?business=85SPAAR6UZEE8&currency_code=USD), please reply the message that I sent you or use any of the other communication media (Facebook, Telegram) providing the name used in Paypal. I'm happy and grateful for the contributions but please don't confuse that with paid work. I do what is possible in my little free time, be aware that a donation does not give you the right more than my thanks, a specialized job like coding and compiling a custom firmware could be a work quoted in 3 digits. Github also have a [Sponsor platform](https://github.com/sponsors/mriscoc).
+Please check the suscription levels on [Patreon](https://www.patreon.com/mriscoc), there are levels that allow to request custom compile. Patrons from [Patreon platform](https://www.patreon.com/mriscoc) can request a configuration sending a message. If you made a equivalent donation through [Paypal](https://www.paypal.com/donate/?business=85SPAAR6UZEE8&currency_code=USD), please reply the message that I sent you or use any of the other communication media (Facebook, Telegram) providing the name used in Paypal. I'm happy and grateful for the contributions but please don't confuse that with paid work. I do what is possible in my little free time, be aware that a donation does not give you the right more than my thanks, a specialized job like coding and compiling a custom firmware could be a work quoted in 3 digits. Github also have a [Sponsor platform](https://github.com/sponsors/mriscoc).
 
 ## Contributions
 Thank you for your support, I receive donations through [Patreon](https://www.patreon.com/mriscoc) and [Paypal](https://www.paypal.com/paypalme/mriscoc)   
@@ -110,7 +110,7 @@ For disable Multiple probing you can write in the "Configuration.h" section of t
 The comment line is optional. Masks are in regex format, use the provided json as examples.
 
 ## Debugging Configurator errors with IDLE
-If the Configurator doesn't open load it into the IDLE Python editor and run from there, the possible error will be displayed in the IDLE Shell.
+If the Configurator doesn't open, load it into the IDLE Python editor and run from there, the possible error will be displayed in the IDLE Shell.
 
 ![idle1](https://github.com/mriscoc/Special_Configurations/raw/main/images/idle_1.jpg)  
 ![idle2](https://github.com/mriscoc/Special_Configurations/raw/main/images/idle_2.jpg)  
