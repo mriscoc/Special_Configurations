@@ -1,0 +1,82 @@
+{
+"Configuration.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "MOTHERBOARD",
+    "value": "BOARD_CREALITY_CR4NTXXC10",
+    "comment": "E3 Free-runs CR4NTF4"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "SERIAL_PORT",
+    "value": "1",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_DRIVER_TYPE",
+    "value": "TMC2209",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_DRIVER_TYPE",
+    "value": "TMC2209",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_DRIVER_TYPE",
+    "value": "TMC2209",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "E0_DRIVER_TYPE",
+    "value": "TMC2209",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ENDSTOP_INTERRUPTS_FEATURE"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "FIL_RUNOUT_STATE",
+    "value":"HIGH",
+    "comment": "Board v301 Configs"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "FIL_RUNOUT_PULLUP",
+    "comment": "Board v301 Configs"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "FIL_RUNOUT_PULLDOWN",
+    "comment": "Board v301 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "NEOPIXEL_PIN",
+    "value": "PA13"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "CHOPPER_TIMING",
+    "value": "CHOPPER_DEFAULT_24V",
+    "comment": "MRiscoC Correct value for UART mode drivers"
+  }
+],
+"Version.h" : [
+],   
+"platformio.ini" : [
+  {
+    "op": "Replace",
+    "searchfor": "default_envs = mega2560",
+    "value": "default_envs = STM32F401RE_freeruns"
+  }
+]   
+}

@@ -2,6 +2,11 @@
 "Configuration.h" : [
   {
     "op": "Disable",
+    "searchfor": "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
+    "comment": "Manual mesh not have a probe"
+  },
+  {
+    "op": "Disable",
     "searchfor": "USE_PROBE_FOR_Z_HOMING",
     "comment": "Manual mesh not have a probe"
   },
