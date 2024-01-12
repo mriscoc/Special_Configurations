@@ -3,6 +3,16 @@
   {
     "op": "Enable",
     "searchfor": "SPEAKER"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "LCD_FEEDBACK_FREQUENCY_DURATION_MS",
+    "value": "50"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "LCD_FEEDBACK_FREQUENCY_HZ",
+    "value": "800"
   }
 ],
 "Configuration_adv.h" : [
