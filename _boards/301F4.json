@@ -99,6 +99,11 @@
     "comment": "Board v301 Configs"
   },
   {
+    "op": "CustomVal",
+    "searchfor": "SD_SPI_SPEED",
+    "value": "SPI_HALF_SPEED"
+  },
+  {
     "op": "Disable",
     "searchfor": "BINARY_FILE_TRANSFER"
   },
