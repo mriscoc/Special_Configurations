@@ -25,6 +25,47 @@ or press `Auto` button for fill the name automatically, that name will be used a
 files and also as a custom printer name in the firmware, then press the `Generate` button to start the creation of the configuration files. You can open the `.json`
 files in _printers, _boards, _features, etc. folders to know how each option in the Configurator works.
 
+| Board  |https://github.com/mriscoc/Ender3V2S1/wiki|
+| -------- | ------- |
+| 301F1 | Ender 3 S1 STM32F103 SoC mainboard |
+| 301F4 | Ender 3 S1 STM32F401 SoC mainboard |
+|422 | Creality Board v4.2.2 |
+|423 | Creality Board v4.2.3 |
+|427 | Creality Board v4.2.7 |
+|G32 | Voxelab Aquila |
+|SKRME3V3 | BTT SKR Mini E3 V3 |
+
+| Leveling  ||
+| -------- | ------- |
+| AutoLev | AutoLev from Substancia3D |
+| BLT | BLTouch |
+| EZABLZI | EZABL from TH3DStudio, endstop low |
+| EZABLZN | EZABL from TH3DStudio, endstop high |
+| MM | Manual Mesh without probe |
+| UBL | Unified Bed Leveling |
+
+| Display  |https://github.com/mriscoc/Ender3V2S1/wiki/How-to-update-the-display|
+| -------- | ------- |
+||Identify the display that happpened to be included in your printer. 
+
+| Thermistor  ||
+| -------- | ------- |
+| T1 | Ender's stock thermistor |
+| T11 | Generic NTC 100K 3950 up to 300 Celcius |
+| T13 | 100k Hisens 3950 1% up to 300 Celcius |
+| T20 | PT100 type 20 thermistor |
+| T5 | Volcano thermistor |
+
+| Features  ||
+| -------- | ------- |
+| CVLM | Enable the Laser Feature |
+| HomeOffs | Disable NO_WORKSPACE_OFFSETS https://github.com/mriscoc/Ender3V2S1/wiki/How-to-set-the-home-offsets|
+| IS | Input Shaping|
+| LA | Linear Advance |
+| MPC | Model Predictive Temperature Control |
+| NP | NeoPixel |
+| Speake | Enable the speaker |
+
 ### Compiling your firmware flavor
 From the created custom configuration folder, move Configuration.h and Configuration_adv.h files to the Marlin folder inside of your project folder downloaded from the repository https://github.com/mriscoc/Ender3V2S1; move the platform.io file to the root of your project folder.
 Keep your path short, the compiling tools don't like large paths.
