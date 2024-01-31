@@ -25,6 +25,26 @@ or press `Auto` button for fill the name automatically, that name will be used a
 files and also as a custom printer name in the firmware, then press the `Generate` button to start the creation of the configuration files. You can open the `.json`
 files in _printers, _boards, _features, etc. folders to know how each option in the Configurator works.
 
+### Binary name nomenclature
+
+422 - Creality board version 4.2.2
+427 - Creality board version 4.2.7
+F1 - Creality board V2.4.S1.301 with STM32F103 SoC
+F4 - Creality board V2.4.S1.301 with STM32F401 SoC
+SKRME3V3 - BIGTREETECH board SKR Mini E3 V3
+
+MM - Firmware for Manual Mesh, use it if you don't have a probe.
+BLT - BL/3D/CR Touch probe support.
+UBL - [Unified Bed Leveling](https://marlinfw.org/docs/features/unified_bed_leveling.html)
+
+T13 - [Marlin #13 temperature sensor](https://github.com/mriscoc/Special_Configurations/releases/tag/T13) (like Sprite Pro Extruder)
+
+CR10DSPLY - Former monochrome LCD display
+
+IS - [Input Shaping](https://github.com/mriscoc/Ender3V2S1/wiki/Input-Shaping-(IS))
+LA - [Linear Advance](https://github.com/mriscoc/Ender3V2S1/wiki/Linear-Advance-(LA))
+MPC - [Model Predictive Temperature Control](https://github.com/mriscoc/Special_Configurations/releases/tag/MPC)
+
 ### Compiling your firmware flavor
 From the created custom configuration folder, move Configuration.h and Configuration_adv.h files to the Marlin folder inside of your project folder downloaded from the repository https://github.com/mriscoc/Ender3V2S1; move the platform.io file to the root of your project folder.
 Keep your path short, the compiling tools don't like large paths.
