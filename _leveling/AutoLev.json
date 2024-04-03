@@ -10,6 +10,12 @@
     "searchfor": "USE_PROBE_FOR_Z_HOMING"
   },
   {
+    "op": "Custom",
+    "searchfor": "NOZZLE_TO_PROBE_OFFSET",
+    "mask": "{.*}",
+    "value":"{ 0, 0, 0 }"
+  },
+  {
     "op": "Enable",
     "searchfor": "FIX_MOUNTED_PROBE",
     "comment": "MRiscoC AutoLev from Substancia3D"

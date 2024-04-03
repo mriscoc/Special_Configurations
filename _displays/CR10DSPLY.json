@@ -24,6 +24,10 @@
 ],
 "Configuration_adv.h" : [
   {
+    "op": "Enable",
+    "searchfor": "PROBE_OFFSET_WIZARD"
+  },
+  {
     "op": "Disable",
     "searchfor": "LCD_BACKLIGHT_TIMEOUT_MINS"
   },

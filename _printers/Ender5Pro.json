@@ -1,0 +1,256 @@
+{
+"Configuration.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_X_DIR",
+    "value":"false"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Y_DIR",
+    "value":"false"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Z_DIR",
+    "value":"false"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "TEMP_SENSOR_BED",
+    "value": "1",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "HEATER_0_MINTEMP",
+    "value": "5",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BED_MINTEMP",
+    "value": "5",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BED_MAXTEMP",
+    "value": "125",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kp",
+    "value": "21.73"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Ki",
+    "value": "1.54"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kd",
+    "value": " 76.55"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKp",
+    "value": "10.00"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKi",
+    "value": "0.023"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKd",
+    "value": "305.4"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "MPC_BLOCK_HEAT_CAPACITY",
+    "mask": "{.*}",
+    "value": "{ 16.7f }"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "MPC_SENSOR_RESPONSIVENESS",
+    "mask": "{.*}",
+    "value": "{ 0.22f }"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "MPC_AMBIENT_XFER_COEFF",
+    "mask": "{.*}",
+    "value": "{ 0.068f }"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "MPC_AMBIENT_XFER_COEFF_FAN255",
+    "mask": "{.*}",
+    "value": "{ 0.097f }"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
+    "mask": "{.*}",
+    "value":"{ 80, 80, 800, 93 }",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_XJERK",
+    "value": "8.0",
+    "comment": "Ender Configs"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_YJERK",
+    "value": "8.0",
+    "comment": "Ender Configs"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_ZJERK",
+    "value": "0.4",
+    "comment": "Ender Configs"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_EJERK",
+    "value": "5.0",
+    "comment": "Ender Configs"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_MIN_PROBE_PIN",
+    "value": "PB1",
+    "comment": "Ender5Pro"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "NOZZLE_TO_PROBE_OFFSET",
+    "mask": "{.*}",
+    "value":"{ -40, -13, 0 }"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_HOME_DIR",
+    "value": "1"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_HOME_DIR",
+    "value": "1"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_BED_SIZE",
+    "value": "220"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_BED_SIZE",
+    "value": "220"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_MIN_POS",
+    "value": "0"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_MIN_POS",
+    "value": "0"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_MAX_POS",
+    "value": "X_BED_SIZE"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_MAX_POS",
+    "value": "Y_BED_SIZE"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_MAX_POS",
+    "value": "300"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "FILAMENT_RUNOUT_DISTANCE_MM",
+    "value": "25",
+    "comment": "MRiscoC Customizable by menu"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "MESH_INSET",
+    "value": "25",
+    "comment": "MRiscoC Center mesh"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "NOZZLE_PARK_POINT",
+    "mask": "{.*}",
+    "value":"{ (X_BED_SIZE), (Y_MAX_POS - 10), 20 }"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "THERMAL_PROTECTION_BED_PERIOD",
+    "value": "20"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "WATCH_BED_TEMP_PERIOD",
+    "value": "60"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "TRAMMING_POINT_XY",
+    "mask": "{.*}",
+    "value":"{ { 29, 29 }, { 199, 29 }, { 199, 199 }, { 29, 199 } }"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "TRAMMING_SCREW_THREAD",
+    "value": "40"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "DISABLE_IDLE_Z"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_LENGTH",
+    "value": "5",
+    "comment": "MRiscoC Bowden"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_FEEDRATE",
+    "value": "40",
+    "comment": "MRiscoC Bowden"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_RECOVER_FEEDRATE",
+    "value": "40",
+    "comment": "MRiscoC Bowden"
+  }
+],
+"Version.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "MACHINE_NAME",
+    "mask": "\".+\"",
+    "value": "\"Ender5Pro\""
+  }
+]   
+}

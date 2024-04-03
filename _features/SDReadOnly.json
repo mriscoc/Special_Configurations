@@ -1,0 +1,29 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "PLR_TUNE_ITEM",
+    "comment": "  // Enable only if Power loss recovery is enabled"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "SDCARD_READONLY"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "LONG_FILENAME_WRITE_SUPPORT"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "BINARY_FILE_TRANSFER"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "POWER_LOSS_RECOVERY"
+  }
+],
+"Version.h" : [
+]   
+}

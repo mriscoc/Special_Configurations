@@ -1,0 +1,17 @@
+{
+"Configuration.h" : [
+],
+"Configuration_adv.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "SD_PROCEDURE_DEPTH",
+    "value": "1"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "GCODE_REPEAT_MARKERS"
+  }
+],
+"Version.h" : [
+]   
+}

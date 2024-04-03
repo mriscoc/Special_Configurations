@@ -24,25 +24,25 @@
     "op": "Custom",
     "mask": "{.*}",
     "searchfor": "MPC_BLOCK_HEAT_CAPACITY",
-    "value": "{ 14.40 }"
+    "value": "{ 14.40f }"
   },  
   {
     "op": "Custom",
     "mask": "{.*}",
     "searchfor": "MPC_SENSOR_RESPONSIVENESS",
-    "value": "{ 0.2187 }"
+    "value": "{ 0.2187f }"
   },  
   {
     "op": "Custom",
     "mask": "{.*}",
     "searchfor": "MPC_AMBIENT_XFER_COEFF",
-    "value": "{ 0.1257 }"
+    "value": "{ 0.1257f }"
   },  
   {
     "op": "Custom",
     "mask": "{.*}",
     "searchfor": "MPC_AMBIENT_XFER_COEFF_FAN255",
-    "value": "{ 0.1315 }"
+    "value": "{ 0.1315f }"
   }  
 ],
 "Configuration_adv.h" : [
