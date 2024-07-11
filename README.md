@@ -48,7 +48,7 @@ T20 - [Marlin #20 temperature sensor](https://github.com/mriscoc/Special_Configu
 CVLM - [Creative CV laser module](https://github.com/mriscoc/Special_Configurations/releases/tag/CVLM)  
 IS - [Input Shaping](https://github.com/mriscoc/Ender3V2S1/wiki/Input-Shaping-(IS))  
 LA - [Linear Advance](https://github.com/mriscoc/Ender3V2S1/wiki/Linear-Advance-(LA))  
-MPC - [Model Predictive Temperature Control](https://github.com/mriscoc/Special_Configurations/releases/tag/MPC)  
+MPC - [Model Predictive Temperature Control](https://github.com/mriscoc/Ender3V2S1/wiki/Model-Predictive-Temperature-Control-(MPC))  
 NP - Support for Neopixel  
 Speaker - Support for speaker tones  
 
