@@ -15,17 +15,7 @@
   {
     "op": "Enable",
     "searchfor": "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
-    "comment": "Probe connected to BLTouch port. Miguels BLT disables this, we need to REENABLE it to use the old Z-MIN endstop port (PA7)"
-  },
-  {
-    "op": "Enable",
-    "searchfor": "Z_MIN_PROBE_PIN"
-  },
-  {
-    "op": "CustomVal",
-    "searchfor": "Z_MIN_PROBE_PIN",
-    "value": "PA7",
-    "comment": "Defaults to disabled, specify the non-BLTport - PA7 is the traditional 422/427 z-min endstop port"
+    "comment": "Manual of the BqMPv2 recomends to connect the output to the Z_STOP_PIN pin"
   },
   {
     "op": "Enable",
@@ -44,8 +34,8 @@
   {
     "op": "CustomVal",
     "searchfor": "PROBE_ENABLE_PIN",
-    "value": "PB0",
-    "comment": "BQMPv2 uses the default BLT port to deploy. PB0 is that pin on the 422/427 boards"
+    "value": "SERVO0_PIN",
+    "comment": "BQMPv2 uses the default BLT port to deploy."
   },
   {
     "op": "CustomVal",
