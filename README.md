@@ -34,7 +34,8 @@ F4 - Creality board V2.4.S1.301 with STM32F401 SoC (301F4)
 SKRME3V3 - BIGTREETECH board SKR Mini E3 V3  
 
 MM - Firmware for Manual Mesh, use it if you don't have a probe.  
-BLT - BL/3D/CR Touch probe support.  
+BLT - BL/3D/CR Touch probe support.
+BQMPv2 - [Biqu microprove v2](https://biqu.equipment/collections/leveling-system/products/microprobe-v1-0-for-b1-printers-h2-extruders-ender-3)
 UBL - [Unified Bed Leveling](https://marlinfw.org/docs/features/unified_bed_leveling.html)  
 
 CR10DSPLY - Former monochrome LCD display 12864  
