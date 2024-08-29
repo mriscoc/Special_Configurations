@@ -1,0 +1,100 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "USE_PROBE_FOR_Z_HOMING"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "PROBE_MANUALLY"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "MAG_MOUNTED_PROBE",
+    "comment": "Klackender Sensor"
+  },
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "MAG_MOUNTED_DEPLOY_1",
+    "value":"{ PROBE_DEPLOY_FEEDRATE, { 245, 114, 20 } }",
+    "comment": "Move to side Dock / Attach probe"
+  },
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "MAG_MOUNTED_DEPLOY_2",
+    "value":"{ PROBE_DEPLOY_FEEDRATE, { 200, 114, 20 } }",
+    "comment": "Move probe off doce"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "MAG_MOUNTED_DEPLOY_3",
+    "comment": "Extra move if needed"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "MAG_MOUNTED_DEPLOY_4",
+    "comment": "Extra move if needed"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "MAG_MOUNTED_DEPLOY_5",
+    "comment": "Extra move if needed"
+  },
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "MAG_MOUNTED_STOW_1",
+    "value":"{ PROBE_STOW_FEEDRATE, { 245, 114, 20 } }",
+    "comment": "Move to dock"
+  },
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "MAG_MOUNTED_STOW_2",
+    "value":"{ PROBE_STOW_FEEDRATE, { 245, 114,  0 } }",
+    "comment": "Place probe beside remover"
+  },
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "MAG_MOUNTED_STOW_3",
+    "value":"{ PROBE_STOW_FEEDRATE, { 230, 114,  0 } }",
+    "comment": "Side move to remove probe"
+  },
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "MAG_MOUNTED_STOW_4",
+    "value":"{ PROBE_STOW_FEEDRATE, { 230, 114,  20 } }",
+    "comment": "Ensure probe is off"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "MAG_MOUNTED_STOW_5",
+    "comment": "Extra move if needed"
+  },
+  {
+    "op": "Custom",
+    "mask": "{.*}",
+    "searchfor": "NOZZLE_TO_PROBE_OFFSET",
+    "value": "{ 8, 21, 1.2 }",
+    "comment": "--> set correct offset"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PROBING_MARGIN",
+    "value": "15",
+    "comment": "more clearance to the sides of bed."
+  }
+],
+"Configuration_adv.h" : [
+],
+"Version.h" : [
+]   
+}
