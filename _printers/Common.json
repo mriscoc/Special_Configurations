@@ -179,6 +179,30 @@
     "comment": "MRiscoC increase probe Z speed"
   },
   {
+    "op": "CustomVal",
+    "searchfor": "PROBE_OFFSET_XMIN",
+    "value": "-100",
+    "comment": "MRiscoC increase compatibility with some extruder/probe combinations"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PROBE_OFFSET_XMAX",
+    "value": "100",
+    "comment": "MRiscoC increase compatibility with some extruder/probe combinations"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PROBE_OFFSET_YMIN",
+    "value": "-100",
+    "comment": "MRiscoC increase compatibility with some extruder/probe combinations"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PROBE_OFFSET_YMAX",
+    "value": "100",
+    "comment": "MRiscoC increase compatibility with some extruder/probe combinations"
+  },
+  {
     "op": "Enable",
     "searchfor": "HOME_AFTER_DEACTIVATE",
     "comment": "MRiscoC Enabled for safety"
