@@ -1,0 +1,267 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "STRING_CONFIG_H_AUTHOR",
+    "mask": "\".+\"",
+    "value": "\"(Dracrius, Ender 3 S1 F4)\""
+  },
+  {
+    "op": "Custom",
+    "searchfor": "CUSTOM_MACHINE_NAME",
+    "mask": "\".+\"",
+    "value": "\"M.O.E. - S1\""
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_TRAVEL_ACCELERATION",
+    "value":"1500",
+    "comment": "A little Faster!!"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_X_DIR",
+    "value":"false"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Y_DIR",
+    "value":"false"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Z_DIR",
+    "value":"true"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "TEMP_SENSOR_BED",
+    "value": "1",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "HEATER_0_MINTEMP",
+    "value": "5",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BED_MINTEMP",
+    "value": "5",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BED_MAXTEMP",
+    "value": "120",
+    "comment": "Ender 3 S1 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kp",
+    "value": "28.3"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Ki",
+    "value": "3.08"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_Kd",
+    "value": "65.08"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKp",
+    "value": "191.14"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKi",
+    "value": "35.14"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_bedKd",
+    "value": "693.19"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "DEFAULT_AXIS_STEPS_PER_UNIT",
+    "mask": "{.*}",
+    "value":"{ 80, 80, 400, 424.9 }",
+    "comment": "MRiscoC Tune (Ender Configs - 80, 80, 400, 430)"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_XJERK",
+    "value": "5.0",
+    "comment": "MRiscoC Tune (Ender Configs 10)"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_YJERK",
+    "value": "5.0",
+    "comment": "MRiscoC Tune (Ender Configs 10)"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_ZJERK",
+    "value": "0.3",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_EJERK",
+    "value": "5.0",
+    "comment": "Ender Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "NOZZLE_TO_PROBE_OFFSET",
+    "mask": "{.*}",
+    "value":"{ -47.32, -1.52, -1.02 }",
+    "comment": "Mighty Oak Minimal Z Offset With HeroMe Duct"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_BED_SIZE",
+    "value": "235",
+    "comment": "True Bed Size (MRiscoC Max usable bed size 220)"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_BED_SIZE",
+    "value": "231",
+    "comment": "True Bed Size 235, Y axis movement makes useable 231 (MRiscoC Max usable bed size)"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_MIN_POS",
+    "value": "-3.5",
+    "comment": "MOE S1 measured physical limit"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_MIN_POS",
+    "value": "-2",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_MAX_POS",
+    "value": "238.5",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_MAX_POS",
+    "value": "233",
+    "comment": "MRiscoC Stock physical limit"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_MAX_POS",
+    "value": "275",
+    "comment": "Ender 3 S1 Configs"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "FILAMENT_RUNOUT_DISTANCE_MM",
+    "value": "25",
+    "comment": "MRiscoC Customizable by menu"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "MESH_INSET",
+    "value": "1",
+    "comment": "Max probing Area (MRiscoC Center mesh 38)"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "ABL_BILINEAR_SUBDIVISION",
+    "comment": "Original Ender 3 S1 Configs set this to Enable"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BILINEAR_SUBDIVISIONS",
+    "value": "5",
+    "comment": "Ender 3 S1 Configs"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "NOZZLE_PARK_POINT",
+    "mask": "{.*}",
+    "value":"{ 2, (Y_MAX_POS - 2), 20 }"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "TRAMMING_POINT_XY",
+    "mask": "{.*}",
+    "value":"{ { 30, 30 }, { 205, 205 }, { 205, 30 }, { 30, 205 } }"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "TRAMMING_SCREW_THREAD",
+    "value": "40"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_LENGTH",
+    "value": "0.5",
+    "comment": "Ender 3 S1 Configs (MRiscoC Directdrive 1)"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_FEEDRATE",
+    "value": "40",
+    "comment": "MRiscoC Bowden"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "RETRACT_RECOVER_FEEDRATE",
+    "value": "8",
+    "comment": "Ender 3 S1 Configs (MRiscoC Bowden 40)"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MIN_X",
+    "mask" : ".*",
+    "value": "MESH_INSET",
+    "comment": "Ender 3 S1 Configs (MRiscoC suggestion 10)"
+  }, 
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MAX_X",
+    "mask" : ".*",
+    "value": "X_BED_SIZE - (MESH_INSET)",
+    "comment": "Ender 3 S1 Configs (MRiscoC suggestion 195)"
+  }, 
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MIN_Y",
+    "mask" : ".*",
+    "value": "MESH_INSET",
+    "comment": "Ender 3 S1 Configs (MRiscoC suggestion 10)"
+  }, 
+  {
+    "op": "Custom",
+    "searchfor": "MESH_MAX_Y",
+    "mask" : ".*",
+    "value": "X_BED_SIZE - (MESH_INSET)",
+    "comment": "Ender 3 S1 Configs (MRiscoC suggestion 175)"
+  }
+],
+"Version.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "MACHINE_NAME",
+    "mask": "\".+\"",
+    "value": "\"M.O.E. - S1\""
+  }
+]   
+}

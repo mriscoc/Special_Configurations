@@ -18,25 +18,25 @@
     "op": "CustomVal",
     "searchfor": "Z_CLEARANCE_DEPLOY_PROBE",
     "value": "5",
-    "comment": "MRiscoC Increase speed"
+    "comment": "MRiscoC Increase speed - Was 10"
   },
   {
     "op": "CustomVal",
     "searchfor": "Z_CLEARANCE_BETWEEN_PROBES",
     "value": "5",
-    "comment": "MRiscoC Increase probe compatibility"
+    "comment": "MRiscoC Increase probe compatibility - No Change"
   },
   {
     "op": "CustomVal",
     "searchfor": "Z_CLEARANCE_MULTI_PROBE",
     "value": "5",
-    "comment": "MRiscoC Increase speed"
+    "comment": "MRiscoC Increase speed - No Change"
   },
   {
     "op": "CustomVal",
     "searchfor": "Z_PROBE_LOW_POINT",
-    "value": "-3",
-    "comment": "MRiscoC allows reach lower points"
+    "value": "-4",
+    "comment": "S1 Default -4 (MRiscoC allows reach lower points suggested -3)"
   },
   {
     "op": "Enable",

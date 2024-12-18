@@ -22,7 +22,7 @@
   {
     "op": "CustomVal",
     "searchfor": "ADVANCE_K",
-    "value": "0.0"
+    "value": "0.01"
   }   
 ],
 "Version.h" : [

@@ -1,0 +1,92 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Custom",
+    "searchfor": "PREHEAT_1_LABEL",
+    "mask": "\".+\"",
+    "value": "\"Preheat Bed\""
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_1_TEMP_HOTEND",
+    "value": "0"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_1_TEMP_BED",
+    "value": "60"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_1_FAN_SPEED",
+    "value": "0"
+  },  
+  {
+    "op": "Custom",
+    "searchfor": "PREHEAT_2_LABEL",
+    "mask": "\".+\"",
+    "value": "\"PLA\""
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_2_TEMP_HOTEND",
+    "value": "200"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_2_TEMP_BED",
+    "value": "60"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_2_FAN_SPEED",
+    "value": "0"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "PREHEAT_3_LABEL",
+    "mask": "\".+\"",
+    "value": "\"PETG\""
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_3_TEMP_HOTEND",
+    "value": "245"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_3_TEMP_BED",
+    "value": "90"
+  }, 
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_3_FAN_SPEED",
+    "value": "0"
+  },
+  {
+    "op": "Custom",
+    "searchfor": "PREHEAT_4_LABEL",
+    "mask": "\".+\"",
+    "value": "\"TPU\""
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_4_TEMP_HOTEND",
+    "value": "235"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_4_TEMP_BED",
+    "value": "60"
+  },  
+  {
+    "op": "CustomVal",
+    "searchfor": "PREHEAT_4_FAN_SPEED",
+    "value": "0"
+  }
+],
+"Configuration_adv.h" : [
+],
+"Version.h" : [
+]   
+}

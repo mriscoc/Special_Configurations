@@ -1,0 +1,48 @@
+{
+"Configuration.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "DISPLAY_CHARSET_HD44780",
+    "value": "WESTERN",
+    "comment": "Better file name support"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "UTF_FILENAME_SUPPORT",
+    "comment": "Better file name support"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "NO_SD_HOST_DRIVE",
+    "comment": "Allow Octoprint SD Card Access"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "BABYSTEP_MILLIMETER_UNITS",
+    "comment": "Easier Z Babysteps Tuning"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BABYSTEP_MULTIPLICATOR_Z",
+    "value": "0.01",
+    "comment": "Easier Z Babysteps Tuning"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "DOUBLECLICK_FOR_Z_BABYSTEPPING"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "PAUSE_PARK_NOZZLE_TIMEOUT",
+    "value": "120"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "MONITOR_DRIVER_STATUS"
+  }
+],
+"Version.h" : [
+]   
+}
