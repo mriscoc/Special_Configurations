@@ -98,7 +98,7 @@
  */
 #define BAUDRATE 250000  // MRiscoC increase serial performace
 
-#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate  // MRiscoC Enables change the baudrate
+//#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate  // MRiscoC Enables change the baudrate  // Luro02 Suggested Memory Savings - Not sure how much this saves
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -774,9 +774,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 191.14
-  #define DEFAULT_bedKi 35.14
-  #define DEFAULT_bedKd 693.19
+  #define DEFAULT_bedKp 168.34
+  #define DEFAULT_bedKi 31.88
+  #define DEFAULT_bedKd 592.56
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -2159,7 +2159,7 @@
   //#define UBL_Z_RAISE_WHEN_OFF_MESH 2.5 // When the nozzle is off the mesh, this value is used
                                           // as the Z-Height correction value.
 
-  //#define UBL_MESH_WIZARD         // Run several commands in a row to get a complete mesh
+  #define UBL_MESH_WIZARD         // Run several commands in a row to get a complete mesh
 
   /**
    * Probing not allowed within the position of an obstacle.
@@ -2353,7 +2353,7 @@
  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
  */
 #define EEPROM_SETTINGS     // Persistent storage with M500 and M501  // Ender Configs
-//#define DISABLE_M503        // Saves ~2700 bytes of flash. Disable for release!
+#define DISABLE_M503        // Saves ~2700 bytes of flash. Disable for release!  // Luro02 Suggested Memory Savings
 #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save flash.
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
 #if ENABLED(EEPROM_SETTINGS)
@@ -2559,7 +2559,7 @@
  *
  * View the current statistics with M78.
  */
-#define PRINTCOUNTER  // MRiscoC Enable Print Statistics
+//#define PRINTCOUNTER  // MRiscoC Enable Print Statistics  // Luro02 Suggested Memory Savings
 #if ENABLED(PRINTCOUNTER)
   #define PRINTCOUNTER_SAVE_INTERVAL 60 // (minutes) EEPROM save interval during print. A value of 0 will save stats at end of print.
 #endif
@@ -2733,7 +2733,7 @@
 // Add individual axis homing items (Home X, Home Y, and Home Z) to the LCD menu.
 //
 //#define INDIVIDUAL_AXIS_HOMING_MENU
-#define INDIVIDUAL_AXIS_HOMING_SUBMENU
+//#define INDIVIDUAL_AXIS_HOMING_SUBMENU  // Luro02 Suggested Memory Savings
 
 //
 // SPEAKER/BUZZER
@@ -3429,7 +3429,7 @@
     #define HAS_GCODE_PREVIEW 1
     #define HAS_TOOLBAR 1
   #endif
-  #define HAS_CUSTOM_COLORS 1
+  //#define HAS_CUSTOM_COLORS 1  // Luro02 Suggested Memory Savings
   #define HAS_CUSTOM_COLORS_MENU 1
   #define HAS_PLOT 1
   #define HAS_ESDIAG 1
@@ -3440,8 +3440,8 @@
   //#define ACTIVATE_MESH_ITEM   // Allows temporary enabling of mesh leveling
   #define RUNOUT_TUNE_ITEM     // Allows enable/disable the run out filament sensor while printing
   #define PLR_TUNE_ITEM        // Allows enable/disable the power lost recovery while printing
-  //#define JD_TUNE_ITEM         // Enable only if Juntion Deviation is enabled
-  //#define ADVK_TUNE_ITEM       // Enable only if Linear Advance is enabled
+  #define JD_TUNE_ITEM         // Enable only if Juntion Deviation is enabled
+  #define ADVK_TUNE_ITEM       // Enable only if Linear Advance is enabled
   //#define MEDIASORT_MENU_ITEM  // Allows enable/disable file list sorting
   #define SHOW_SPEED_IND       // Show the axes speed in mm/s intermittently with the speed percentage
   //#define NO_BLINK_IND         // Disables dashboard icon background blink indicator

@@ -11,6 +11,10 @@
     "comment": "MRiscoC UBL"
   },
   {
+    "op": "Enable",
+    "searchfor": "UBL_MESH_WIZARD"
+  },
+  {
     "op": "Disable",
     "searchfor": "UBL_SAVE_ACTIVE_ON_M500",
     "comment": "Disabled for AML compatibility"

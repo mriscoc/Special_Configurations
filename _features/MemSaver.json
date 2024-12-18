@@ -1,0 +1,63 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "BAUD_RATE_GCODE",
+    "comment": "Luro02 Suggested Memory Savings - Not sure how much this saves"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "DISABLE_M503",
+    "comment": "Luro02 Suggested Memory Savings"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "PRINTCOUNTER",
+    "comment": "Luro02 Suggested Memory Savings"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "INDIVIDUAL_AXIS_HOMING_SUBMENU",
+    "comment": "Luro02 Suggested Memory Savings"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "HAS_CUSTOM_COLORS",
+    "comment": "Luro02 Suggested Memory Savings"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "NO_SD_AUTOSTART",
+    "comment": "Luro02 Suggested Memory Savings"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "LONG_FILENAME_HOST_SUPPORT",
+    "comment": "Luro02 Suggested Memory Savings"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "LONG_FILENAME_WRITE_SUPPORT",
+    "comment": "Luro02 Suggested Memory Savings"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "CUSTOM_FIRMWARE_UPLOAD",
+    "comment": "Luro02 Suggested Memory Savings"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "ARC_SUPPORT",
+    "comment": "Luro02 Suggested Memory Savings"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "FWRETRACT",
+    "comment": "Luro02 Suggested Memory Savings"
+  }
+],
+"Version.h" : [
+]   
+}

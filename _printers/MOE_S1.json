@@ -75,17 +75,17 @@
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_bedKp",
-    "value": "191.14"
+    "value": "168.34"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_bedKi",
-    "value": "35.14"
+    "value": "31.88"
   },
   {
     "op": "CustomVal",
     "searchfor": "DEFAULT_bedKd",
-    "value": "693.19"
+    "value": "592.56"
   },
   {
     "op": "Custom",

@@ -12,7 +12,15 @@
     "op": "CustomVal",
     "searchfor": "JUNCTION_DEVIATION_MM",
     "value": "0.1"
-  }  
+  },
+  {
+    "op": "Enable",
+    "searchfor": "JD_TUNE_ITEM"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "ADVK_TUNE_ITEM"
+  }
 ],
 "Configuration_adv.h" : [
   {
