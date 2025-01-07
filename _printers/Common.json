@@ -272,6 +272,11 @@
   },
   {
     "op": "Enable",
+    "searchfor": "EDITABLE_HOMING_FEEDRATE",
+    "comment": "MRiscoC Homing editable speed"
+  },
+  {
+    "op": "Enable",
     "searchfor": "EEPROM_SETTINGS",
     "comment": "Ender Configs"
   },
