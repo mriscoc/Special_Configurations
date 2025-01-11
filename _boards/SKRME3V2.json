@@ -1,0 +1,160 @@
+{
+"Configuration.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "MOTHERBOARD",
+    "value": "BOARD_BTT_SKR_MINI_E3_V2_0",
+    "comment": "BTT SKR MINI E3 V2"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "SERIAL_PORT",
+    "value": "-1"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "BAUDRATE",
+    "value": "115200",
+    "comment": "115K for SKR MINI"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_DRIVER_TYPE",
+    "value": "TMC2209"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_DRIVER_TYPE",
+    "value": "TMC2209"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_DRIVER_TYPE",
+    "value": "TMC2209"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "E0_DRIVER_TYPE",
+    "value": "TMC2209"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_X_DIR",
+    "value":"true"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Y_DIR",
+    "value":"true"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_Z_DIR",
+    "value":"false"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "INVERT_E0_DIR",
+    "value": "true"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "FIL_RUNOUT_STATE",
+    "value":"LOW"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "FIL_RUNOUT_PULLUP"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "FIL_RUNOUT_PULLDOWN"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "NEOPIXEL_PIN",
+    "value": "PA8"
+  }
+],
+"Configuration_adv.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "E0_AUTO_FAN_PIN",
+    "value": "-1"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_CURRENT",
+    "value": "580"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_CURRENT",
+    "value": "580"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_CURRENT",
+    "value": "580"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "E0_CURRENT",
+    "value": "700"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "X_STALL_SENSITIVITY",
+    "value": "72"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Y_STALL_SENSITIVITY",
+    "value": "70"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "Z_STALL_SENSITIVITY",
+    "value": "10"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "IMPROVE_HOMING_RELIABILITY",
+    "comment": "SKR MINIE3V2"
+  },  
+  {
+    "op": "Enable",
+    "searchfor": "USE_CONTROLLER_FAN",
+    "comment": "SKR MINIE3V2"
+  },  
+  {
+    "op": "Disabled",
+    "searchfor": "CONTROLLER_FAN_PIN"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "POWER_LOSS_PIN",
+    "value": "-1"
+  },
+  {
+    "op": "CustomVal",
+    "searchfor": "CHOPPER_TIMING",
+    "value": "CHOPPER_DEFAULT_24V",
+    "comment": "MRiscoC Correct value for UART mode drivers"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "ADAPTIVE_STEP_SMOOTHING",
+    "comment": "Workaround to fix interrrupt handling in SKR MINIE3V2"
+  }  
+],
+"Version.h" : [
+],   
+"platformio.ini" : [
+  {
+    "op": "Replace",
+    "searchfor": "default_envs = mega2560",
+    "value": "default_envs = STM32G0B1RE_btt"
+  }
+]
+}

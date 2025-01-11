@@ -104,15 +104,6 @@
     "value": "SPI_HALF_SPEED"
   },
   {
-    "op": "Disable",
-    "searchfor": "BINARY_FILE_TRANSFER"
-  },
-  {
-    "op": "CustomVal",
-    "searchfor": "SDSORT_LIMIT",
-    "value": "40"
-  },
-  {
     "op": "CustomVal",
     "searchfor": "CHOPPER_TIMING",
     "value": "CHOPPER_DEFAULT_24V",

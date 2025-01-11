@@ -1,0 +1,17 @@
+{
+"Configuration.h" : [
+],
+"Configuration_adv.h" : [
+  {
+    "op": "CustomVal",
+    "searchfor": "DEFAULT_STEPPER_TIMEOUT_SEC",
+    "value": "300"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "SD_FINISHED_STEPPERRELEASE"
+  }
+],
+"Version.h" : [
+]   
+}
