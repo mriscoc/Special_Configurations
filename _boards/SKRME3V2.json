@@ -128,7 +128,7 @@
     "comment": "SKR MINIE3V2"
   },  
   {
-    "op": "Disabled",
+    "op": "Disable",
     "searchfor": "CONTROLLER_FAN_PIN"
   },
   {
