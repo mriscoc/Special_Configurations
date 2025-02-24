@@ -811,7 +811,7 @@
     "op": "Custom",
     "searchfor": "SHORT_BUILD_VERSION",
     "mask" : "\".*\"",
-    "value": "\"2.1.3 MRiscoC\""
+    "value": "\"2.1.4 MRiscoC\""
   },
   {
     "op": "InsertAfter",

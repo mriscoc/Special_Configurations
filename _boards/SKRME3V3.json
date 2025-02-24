@@ -146,7 +146,7 @@
   {
     "op": "Disable",
     "searchfor": "ADAPTIVE_STEP_SMOOTHING",
-    "comment": "Workaround to fix interrrupt handling in SKR MINIE3V3"
+    "comment": "Workaround to fix interrupt handling in SKR MINIE3V3"
   }  
 ],
 "Version.h" : [
