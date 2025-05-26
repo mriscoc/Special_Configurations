@@ -4,6 +4,10 @@
     "op": "InsertAfter",
     "searchfor": "#define DWIN_LCD_PROUI",
     "newline": "#define TJC_DISPLAY"
+  },
+  {
+    "op": "Disable",
+    "searchfor": "HAS_PLOT"
   }
 ],
 "Configuration_adv.h" : [

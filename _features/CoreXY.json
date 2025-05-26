@@ -1,0 +1,21 @@
+{
+"Configuration.h" : [
+  {
+    "op": "Enable",
+    "searchfor": "COREXY"
+  },
+  {
+    "op": "Enable",
+    "searchfor": "SOFT_ENDSTOPS_MENU_ITEM"
+  }
+
+],
+"Configuration_adv.h" : [
+  {
+    "op": "Disable",
+    "searchfor": "QUICK_HOME"
+  }
+],
+"Version.h" : [
+]   
+}
