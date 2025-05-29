@@ -154,7 +154,7 @@
   {
     "op": "Replace",
     "searchfor": "default_envs = mega2560",
-    "value": "default_envs = STM32G0B1RE_btt"
+    "value": "default_envs = STM32F103RC_btt"
   }
 ]
 }
