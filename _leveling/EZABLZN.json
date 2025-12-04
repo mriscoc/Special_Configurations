@@ -89,11 +89,6 @@
     "value":"HIGH"
   },
   {
-    "op": "Disable",
-    "searchfor": "BED_TRAMMING_INSET_LFRB",
-    "comment": "ProUI use mesh insets for bed tramming"
-  },
-  {
     "op": "Enable",
     "searchfor": "BED_TRAMMING_USE_PROBE",
     "comment": "Use a probe if it is available"

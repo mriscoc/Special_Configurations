@@ -5,7 +5,7 @@
     "searchfor": "CLASSIC_JERK"
   },
   {
-    "op": "Disable",
+    "-op": "Disable",
     "searchfor": "S_CURVE_ACCELERATION"
   },
   {

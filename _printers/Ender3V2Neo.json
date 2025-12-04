@@ -37,32 +37,32 @@
   },
   {
     "op": "CustomVal",
-    "searchfor": "DEFAULT_Kp",
+    "searchfor": "DEFAULT_KP",
     "value": "28.72"
   },
   {
     "op": "CustomVal",
-    "searchfor": "DEFAULT_Ki",
+    "searchfor": "DEFAULT_KI",
     "value": "2.62"
   },
   {
     "op": "CustomVal",
-    "searchfor": "DEFAULT_Kd",
+    "searchfor": "DEFAULT_KD",
     "value": " 78.81"
   },
   {
     "op": "CustomVal",
-    "searchfor": "DEFAULT_bedKp",
+    "searchfor": "DEFAULT_BED_KP",
     "value": "112.83"
   },
   {
     "op": "CustomVal",
-    "searchfor": "DEFAULT_bedKi",
+    "searchfor": "DEFAULT_BED_KI",
     "value": " 21.05"
   },
   {
     "op": "CustomVal",
-    "searchfor": "DEFAULT_bedKd",
+    "searchfor": "DEFAULT_BED_KD",
     "value": "403.18"
   },
   {

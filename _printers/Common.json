@@ -137,9 +137,9 @@
     "comment": "Ender Configs"
   },
   {
-    "op": "Enable",
+    "op": "Disable",
     "searchfor": "CLASSIC_JERK",
-    "comment": "Ender Configs"
+    "comment": "Enable JUNCTION DEVIATION"
   },
   {
     "op": "Enable",
@@ -153,6 +153,11 @@
     "value":"{ 20, 20, 1, 20 }",
     "comment": "MRiscoC allows higher limits"
   },
+  {
+    "op": "CustomVal",
+    "searchfor": "JUNCTION_DEVIATION_MM",
+    "value": "0.1"
+  }, 
   {
     "op": "Enable",
     "searchfor": "S_CURVE_ACCELERATION",
@@ -391,7 +396,7 @@
   {
     "op": "InsertAfter",
     "searchfor": "// Professional firmware features:",   
-    "newline": "#if ENABLED(DWIN_LCD_PROUI)\n  #if PROUI_EX\n    #if ENABLED(LCD_BED_TRAMMING)\n      #define HAS_TRAMMING_WIZARD 1\n    #endif\n    #define HAS_GCODE_PREVIEW 1\n    #define HAS_TOOLBAR 1\n  #endif\n  #define HAS_CUSTOM_COLORS 1\n  #define HAS_CUSTOM_COLORS_MENU 1\n  #define HAS_PLOT 1\n  #define HAS_ESDIAG 1\n  #define HAS_LOCKSCREEN 1\n  #define MESH_EDIT_MENU\n  #define PREVIEW_MENU_ITEM    // Allows enable/disable Thumbnail preview via menu and C250\n  #define SHOW_REAL_POS        // Display the real axes position in cartesian printers\n  #define ACTIVATE_MESH_ITEM   // Allows temporary enabling of mesh leveling\n  #define RUNOUT_TUNE_ITEM     // Allows enable/disable the run out filament sensor while printing\n  #define PLR_TUNE_ITEM        // Allows enable/disable the power lost recovery while printing\n  #define JD_TUNE_ITEM         // Enable only if Juntion Deviation is enabled\n  #define ADVK_TUNE_ITEM       // Enable only if Linear Advance is enabled\n  #define MEDIASORT_MENU_ITEM  // Allows enable/disable file list sorting\n  #define SHOW_SPEED_IND       // Show the axes speed in mm/s intermittently with the speed percentage\n  #define NO_BLINK_IND         // Disables dashboard icon background blink indicator\n#endif\n  #define ZOFFSET_SAVE_SETTINGS // Saves settings after changing the z-offset via the menu"
+    "newline": "#if ENABLED(DWIN_LCD_PROUI)\n  #if PROUI_EX\n    #if ENABLED(LCD_BED_TRAMMING)\n      #define HAS_TRAMMING_WIZARD 1\n    #endif\n    #define HAS_GCODE_PREVIEW 1\n    #define HAS_TOOLBAR 1\n  #endif\n  #define HAS_CUSTOM_COLORS 1\n  #define HAS_CUSTOM_COLORS_MENU 1\n  #define HAS_PLOT 1\n  #define HAS_ESDIAG 1\n  #define HAS_LOCKSCREEN 1\n  #define MESH_EDIT_MENU\n  #define PREVIEW_MENU_ITEM    // Allows enable/disable Thumbnail preview via menu and C250\n  #define SHOW_REAL_POS        // Display the real axes position in cartesian printers\n  #define ACTIVATE_MESH_ITEM   // Allows temporary enabling of mesh leveling\n  #define RUNOUT_TUNE_ITEM     // Allows enable/disable the run out filament sensor while printing\n  #define PLR_TUNE_ITEM        // Allows enable/disable the power lost recovery while printing\n  #define JD_TUNE_ITEM         // Enable only if Juntion Deviation is enabled\n  #define ADVK_TUNE_ITEM       // Enable only if Linear Advance is enabled\n  #define MEDIASORT_MENU_ITEM  // Allows enable/disable file list sorting\n  #define SHOW_SPEED_IND       // Show the axes speed in mm/s intermittently with the speed percentage\n  #define NO_BLINK_IND         // Disables dashboard icon background blink indicator\n#endif\n#define ZOFFSET_SAVE_SETTINGS // Saves settings after changing the z-offset via the menu"
   },
   {
     "op": "InsertAfter",
@@ -645,12 +650,6 @@
     "op": "Enable",
     "searchfor": "BABYSTEP_ALWAYS_AVAILABLE",
     "comment": "MRiscoC Active BbS always"
-  },
-  {
-    "op": "CustomVal",
-    "searchfor": "BABYSTEP_MULTIPLICATOR_Z",
-    "value": "40",
-    "comment": "Ender Configs"
   },
   {
     "op": "Enable",
