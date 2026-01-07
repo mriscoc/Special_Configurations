@@ -36,3 +36,5 @@ __pycache__
 *.bak
 /_features/BradyLP.json
 log.txt
+*.7z
+*.zip
